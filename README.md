@@ -1,20 +1,20 @@
 # fibjs-rados_bin_and_doc
-This repository store fibjs-for-rados binary file and document
+Fibjs for librados, this repository offer fibjs executable binary file via a .sh format file. You can use fibjs to act as a librados client connecting to ceph rados cluster. 
 
-#download
+# download
 ```
 	git clone https://github.com/asionius/fibjs-rados_bin_and_doc.git
 ```
-#install
+# install
 ```
 	cd fibjs-rados_bin_and_doc
 	sh installer-linux-20170614
 ```
-#test
+# test
 ```
 	fibjs rados_test.js
 ```
 
-#document
+# document
 - cd html
 - 双击index.html
