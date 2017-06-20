@@ -14,7 +14,16 @@ Fibjs for librados, this repository offer fibjs executable binary file via a .sh
 ```
 	fibjs rados_test.js
 ```
-
+# example
+```
+ var rados = require('rados');
+ var cluster = new rados.Rados('clusterName', 'userName', '/path/to/myceph.conf');
+ cluster.connect();
+ var io = cluster.createIoCtx('poolName');
+ var s = io.open('key');
+ s.write('hello key');
+ console.log(s.readAll().toString());
+```
 # document
 - cd html
 - 双击index.html
