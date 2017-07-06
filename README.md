@@ -15,9 +15,9 @@ sh installer-linux-20170706
 fibjs rados_test.js
 ```
 # src code
-```
-https://github.com/asionius/fibjs/tree/librbd
-```
+
+[https://github.com/asionius/fibjs/tree/librbd](https://github.com/asionius/fibjs/tree/librbd)
+
 # example
 - rados
 ```
