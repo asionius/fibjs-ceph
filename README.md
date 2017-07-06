@@ -7,8 +7,8 @@ git clone https://github.com/asionius/fibjs-ceph.git
 ```
 # install
 ```
-cd fibjs-rados_bin_and_doc
-sh installer-linux-20170614
+cd fibjs-ceph
+sh installer-linux-20170706
 ```
 # test
 ```
