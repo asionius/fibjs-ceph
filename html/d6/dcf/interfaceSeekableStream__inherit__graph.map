@@ -1,7 +1,8 @@
 <map id="SeekableStream" name="SeekableStream">
-<area shape="rect" id="node4" href="$d3/d3a/interfaceFile.html" title="文件操作对象，用于二进制文件读写 " alt="" coords="5,536,95,649"/>
-<area shape="rect" id="node5" href="$d2/d93/interfaceMemoryStream.html" title="内存流对象 " alt="" coords="120,536,253,649"/>
-<area shape="rect" id="node6" href="$d6/deb/interfaceRadosStream.html" title="rados流操作对象，用于读写rados存储 " alt="" coords="276,529,379,656"/>
-<area shape="rect" id="node2" href="$d4/dc7/interfaceStream.html" title="流操作对象，用于二进制数据流读写 " alt="" coords="144,180,228,293"/>
-<area shape="rect" id="node3" href="$db/d38/interfaceobject.html" title="基础对象，所有对象均继承于此 " alt="" coords="142,5,230,132"/>
+<area shape="rect" id="node4" href="$d3/d3a/interfaceFile.html" title="文件操作对象，用于二进制文件读写 " alt="" coords="5,596,95,709"/>
+<area shape="rect" id="node5" href="$d2/d93/interfaceMemoryStream.html" title="内存流对象 " alt="" coords="120,596,253,709"/>
+<area shape="rect" id="node6" href="$d6/deb/interfaceRadosStream.html" title="rados流操作对象，用于读写rados存储 " alt="" coords="276,589,379,716"/>
+<area shape="rect" id="node7" href="$d1/dc3/interfaceRbdImage.html" title="rbd image对象，用于读写rbd image " alt="" coords="403,529,548,776"/>
+<area shape="rect" id="node2" href="$d4/dc7/interfaceStream.html" title="流操作对象，用于二进制数据流读写 " alt="" coords="215,180,299,293"/>
+<area shape="rect" id="node3" href="$db/d38/interfaceobject.html" title="基础对象，所有对象均继承于此 " alt="" coords="213,5,301,132"/>
 </map>

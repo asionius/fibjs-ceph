@@ -1,5 +1,12 @@
 var interfaceRadosIoCtx =
 [
+    [ "createImage", "db/d25/interfaceRadosIoCtx.html#af4069cf4a7c65badfc1b03ed1e1684d2", null ],
+    [ "cloneImage", "db/d25/interfaceRadosIoCtx.html#a3ba7856fe48206d8c487a8ce77c9df0a", null ],
+    [ "removeImage", "db/d25/interfaceRadosIoCtx.html#a14a68deb241785644deeed27b089238b", null ],
+    [ "renameImage", "db/d25/interfaceRadosIoCtx.html#a13e6d44329177c7a837350a37d8e4fae", null ],
+    [ "listImages", "db/d25/interfaceRadosIoCtx.html#a63a36fb596e389bc35c763f9bcae7725", null ],
+    [ "openImage", "db/d25/interfaceRadosIoCtx.html#accfb0d92837e094716c91900bc61db05", null ],
+    [ "version", "db/d25/interfaceRadosIoCtx.html#a70e8ca234c4fd262bd6a080edbc09243", null ],
     [ "open", "db/d25/interfaceRadosIoCtx.html#a276b9c2e071b2ee7dc1d11fefc360b62", null ],
     [ "remove", "db/d25/interfaceRadosIoCtx.html#a9b3010a04ce8cfbd97122248590080ee", null ],
     [ "createSnap", "db/d25/interfaceRadosIoCtx.html#a1d46452d61eb828797ff2e4f6ab3111e", null ],

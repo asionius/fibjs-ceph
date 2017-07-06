@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Javascript on Fiber: RbdImage.idl 源文件</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="../../logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Javascript on Fiber
+   </div>
+   <div id="projectbrief">基于 Google v8 引擎实现的协程应用开发框架</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('da/d86/RbdImage_8idl_source.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">RbdImage.idl</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../d1/dc3/interfaceRbdImage.html">   15</a></span>&#160;<span class="keyword">interface </span><a class="code" href="../../d1/dc3/interfaceRbdImage.html">RbdImage</a> : <a class="code" href="../../d6/d9c/interfaceSeekableStream.html">SeekableStream</a></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../d1/dc3/interfaceRbdImage.html#a608ada7e7ed09314630f0bd57578992b">   18</a></span>&#160;    readonly Long <a class="code" href="../../d1/dc3/interfaceRbdImage.html#a608ada7e7ed09314630f0bd57578992b">stripe_unit</a>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="../../d1/dc3/interfaceRbdImage.html#a9515320894e23733f5aeac7dfc51c02f">   21</a></span>&#160;    readonly Long <a class="code" href="../../d1/dc3/interfaceRbdImage.html#a9515320894e23733f5aeac7dfc51c02f">stripe_count</a>;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d1/dc3/interfaceRbdImage.html#ac33cebe9954403da1e7d5709bba42791">   24</a></span>&#160;    readonly Long <a class="code" href="../../d1/dc3/interfaceRbdImage.html#ac33cebe9954403da1e7d5709bba42791">features</a>;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d1/dc3/interfaceRbdImage.html#a83a7fc121877124d8f1153e3e35dd981">   27</a></span>&#160;    readonly Date <a class="code" href="../../d1/dc3/interfaceRbdImage.html#a83a7fc121877124d8f1153e3e35dd981">create_timestamp</a>;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d1/dc3/interfaceRbdImage.html#a50ec9e9c4437c0833246e2b7d104ac1a">   30</a></span>&#160;    readonly String <a class="code" href="../../d1/dc3/interfaceRbdImage.html#a50ec9e9c4437c0833246e2b7d104ac1a">block_name_prefix</a>;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../d1/dc3/interfaceRbdImage.html#a94112c74da3ae59d6b9e95809cd9bdb1">resize</a>(Long bytes) async;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../d1/dc3/interfaceRbdImage.html#a26f12e5130def8bf4fadbfcee89b41b4">flush</a>() async;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="../../d1/dc3/interfaceRbdImage.html#a61c27ba84230302e50573035e37e2790">createSnap</a>(String snapname) async;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="../../d1/dc3/interfaceRbdImage.html#aca2580bf8456436c01bf399873fb25d2">removeSnap</a>(String snapname) async;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="../../d1/dc3/interfaceRbdImage.html#a745c917c1d068b2c38e7e9db2bedfb63">rollbackSnap</a>(String snapname) async;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="../../de/dd8/interfaceList.html">List</a> <a class="code" href="../../d1/dc3/interfaceRbdImage.html#ac4bebc6317883cf3cdcfc392a7a9505e">listSnaps</a>() async;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="../../d1/dc3/interfaceRbdImage.html#a56147b52b479442fde7a5230923d29b9">protectSnap</a>(String snapname) async;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="../../d1/dc3/interfaceRbdImage.html#adeb6bd865b75e91c26460060f009eacc">unprotectSnap</a>(String snapname) async;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="../../d1/dc3/interfaceRbdImage.html#a38bff9d1025a70a9ac0c25136c7705fb">setSnap</a>(String snapname = &quot;&quot;) async;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    Boolean <a class="code" href="../../d1/dc3/interfaceRbdImage.html#a461cf58468f2037bcde1d480e6030911">isSnapProtected</a>(String snapname) async;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;};</div><div class="ttc" id="interfaceRbdImage_html_ac33cebe9954403da1e7d5709bba42791"><div class="ttname"><a href="../../d1/dc3/interfaceRbdImage.html#ac33cebe9954403da1e7d5709bba42791">RbdImage.features</a></div><div class="ttdeci">readonly Long features</div><div class="ttdoc">查询镜像的feature </div><div class="ttdef"><b>Definition:</b> RbdImage.idl:24</div></div>
+<div class="ttc" id="interfaceRbdImage_html_ac4bebc6317883cf3cdcfc392a7a9505e"><div class="ttname"><a href="../../d1/dc3/interfaceRbdImage.html#ac4bebc6317883cf3cdcfc392a7a9505e">RbdImage.listSnaps</a></div><div class="ttdeci">List listSnaps() async</div><div class="ttdoc">列举一个rbd镜像的所有快照 </div></div>
+<div class="ttc" id="interfaceRbdImage_html_a94112c74da3ae59d6b9e95809cd9bdb1"><div class="ttname"><a href="../../d1/dc3/interfaceRbdImage.html#a94112c74da3ae59d6b9e95809cd9bdb1">RbdImage.resize</a></div><div class="ttdeci">resize(Long bytes) async</div><div class="ttdoc">修改rbd image大小 </div></div>
+<div class="ttc" id="interfaceRbdImage_html_a50ec9e9c4437c0833246e2b7d104ac1a"><div class="ttname"><a href="../../d1/dc3/interfaceRbdImage.html#a50ec9e9c4437c0833246e2b7d104ac1a">RbdImage.block_name_prefix</a></div><div class="ttdeci">readonly String block_name_prefix</div><div class="ttdoc">查询镜像在pool中全称的前缀 </div><div class="ttdef"><b>Definition:</b> RbdImage.idl:30</div></div>
+<div class="ttc" id="interfaceRbdImage_html_a83a7fc121877124d8f1153e3e35dd981"><div class="ttname"><a href="../../d1/dc3/interfaceRbdImage.html#a83a7fc121877124d8f1153e3e35dd981">RbdImage.create_timestamp</a></div><div class="ttdeci">readonly Date create_timestamp</div><div class="ttdoc">查询镜像的feature </div><div class="ttdef"><b>Definition:</b> RbdImage.idl:27</div></div>
+<div class="ttc" id="interfaceRbdImage_html_aca2580bf8456436c01bf399873fb25d2"><div class="ttname"><a href="../../d1/dc3/interfaceRbdImage.html#aca2580bf8456436c01bf399873fb25d2">RbdImage.removeSnap</a></div><div class="ttdeci">removeSnap(String snapname) async</div><div class="ttdoc">移除一个rbd镜像的快照 </div></div>
+<div class="ttc" id="interfaceRbdImage_html"><div class="ttname"><a href="../../d1/dc3/interfaceRbdImage.html">RbdImage</a></div><div class="ttdoc">rbd image对象，用于读写rbd image </div><div class="ttdef"><b>Definition:</b> RbdImage.idl:15</div></div>
+<div class="ttc" id="interfaceRbdImage_html_a38bff9d1025a70a9ac0c25136c7705fb"><div class="ttname"><a href="../../d1/dc3/interfaceRbdImage.html#a38bff9d1025a70a9ac0c25136c7705fb">RbdImage.setSnap</a></div><div class="ttdeci">setSnap(String snapname=&quot;&quot;) async</div><div class="ttdoc">设置一个rbd镜像的快照为只读 </div></div>
+<div class="ttc" id="interfaceRbdImage_html_a608ada7e7ed09314630f0bd57578992b"><div class="ttname"><a href="../../d1/dc3/interfaceRbdImage.html#a608ada7e7ed09314630f0bd57578992b">RbdImage.stripe_unit</a></div><div class="ttdeci">readonly Long stripe_unit</div><div class="ttdoc">查询条纹大小 </div><div class="ttdef"><b>Definition:</b> RbdImage.idl:18</div></div>
+<div class="ttc" id="interfaceRbdImage_html_adeb6bd865b75e91c26460060f009eacc"><div class="ttname"><a href="../../d1/dc3/interfaceRbdImage.html#adeb6bd865b75e91c26460060f009eacc">RbdImage.unprotectSnap</a></div><div class="ttdeci">unprotectSnap(String snapname) async</div><div class="ttdoc">取消对一个rbd镜像的保护,允许其被删除 </div></div>
+<div class="ttc" id="interfaceRbdImage_html_a9515320894e23733f5aeac7dfc51c02f"><div class="ttname"><a href="../../d1/dc3/interfaceRbdImage.html#a9515320894e23733f5aeac7dfc51c02f">RbdImage.stripe_count</a></div><div class="ttdeci">readonly Long stripe_count</div><div class="ttdoc">查询连续写入条纹个数 </div><div class="ttdef"><b>Definition:</b> RbdImage.idl:21</div></div>
+<div class="ttc" id="interfaceSeekableStream_html"><div class="ttname"><a href="../../d6/d9c/interfaceSeekableStream.html">SeekableStream</a></div><div class="ttdoc">可移动当前指针的流对象接口 </div><div class="ttdef"><b>Definition:</b> SeekableStream.idl:3</div></div>
+<div class="ttc" id="interfaceRbdImage_html_a61c27ba84230302e50573035e37e2790"><div class="ttname"><a href="../../d1/dc3/interfaceRbdImage.html#a61c27ba84230302e50573035e37e2790">RbdImage.createSnap</a></div><div class="ttdeci">createSnap(String snapname) async</div><div class="ttdoc">为一个rbd镜像创建一个快照 </div></div>
+<div class="ttc" id="interfaceRbdImage_html_a26f12e5130def8bf4fadbfcee89b41b4"><div class="ttname"><a href="../../d1/dc3/interfaceRbdImage.html#a26f12e5130def8bf4fadbfcee89b41b4">RbdImage.flush</a></div><div class="ttdeci">flush() async</div><div class="ttdoc">阻塞直到将文件缓冲区内容写入物理设备 </div></div>
+<div class="ttc" id="interfaceRbdImage_html_a745c917c1d068b2c38e7e9db2bedfb63"><div class="ttname"><a href="../../d1/dc3/interfaceRbdImage.html#a745c917c1d068b2c38e7e9db2bedfb63">RbdImage.rollbackSnap</a></div><div class="ttdeci">rollbackSnap(String snapname) async</div><div class="ttdoc">回滚到一个rbd镜像的快照 </div></div>
+<div class="ttc" id="interfaceList_html"><div class="ttname"><a href="../../de/dd8/interfaceList.html">List</a></div><div class="ttdoc">Variant 数组对象，一般用以返回一组 Variant 数据 </div><div class="ttdef"><b>Definition:</b> List.idl:10</div></div>
+<div class="ttc" id="interfaceRbdImage_html_a461cf58468f2037bcde1d480e6030911"><div class="ttname"><a href="../../d1/dc3/interfaceRbdImage.html#a461cf58468f2037bcde1d480e6030911">RbdImage.isSnapProtected</a></div><div class="ttdeci">Boolean isSnapProtected(String snapname) async</div><div class="ttdoc">判断一个快照是否是不可删除的 </div></div>
+<div class="ttc" id="interfaceRbdImage_html_a56147b52b479442fde7a5230923d29b9"><div class="ttname"><a href="../../d1/dc3/interfaceRbdImage.html#a56147b52b479442fde7a5230923d29b9">RbdImage.protectSnap</a></div><div class="ttdeci">protectSnap(String snapname) async</div><div class="ttdoc">保护一个rbd镜像的快照以防快照被删除 </div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<style type="text/css">
+body {
+	color: #666666;
+}
+a, .contents a:visited {
+	color: #3399ee;
+}
+.icona, #nav-sync {
+  display:none;
+}
+.directory td.entry, .directory td.desc {
+  padding: 8px;
+}
+</style>
+</body>
+</html>

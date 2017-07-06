@@ -24,6 +24,7 @@ var searchData=
   ['setnx',['setNX',['../d7/d32/interfaceRedis.html#af0e5289d7ddc2fa794a4ac6eee382d8c',1,'Redis::setNX()'],['../d9/d58/interfaceRedisHash.html#a61b0ac109f970cbf51ea426f81310fe5',1,'RedisHash::setNX()']]],
   ['setpixel',['setPixel',['../d2/d41/interfaceImage.html#aa59563ed17d30a71f39ff1e1755deff4',1,'Image']]],
   ['setrange',['setRange',['../d7/d32/interfaceRedis.html#af7bf9f409e81d623feda1fb04ced4719',1,'Redis']]],
+  ['setsnap',['setSnap',['../d1/dc3/interfaceRbdImage.html#a38bff9d1025a70a9ac0c25136c7705fb',1,'RbdImage']]],
   ['setthickness',['setThickness',['../d2/d41/interfaceImage.html#a9b5de8a61435f88549dc600ca26e76d8',1,'Image']]],
   ['settime',['setTime',['../d2/d93/interfaceMemoryStream.html#a4ea172a3400976947b6e6ce3c947c9bc',1,'MemoryStream']]],
   ['settimeout',['setTimeout',['../d4/dfd/namespaceglobal.html#ac00dfff0257504ca0d4a9d9e01e52e6f',1,'global::setTimeout()'],['../dc/d2c/namespacetimers.html#a94b391ea3e31e232375ba9e18d675fc5',1,'timers::setTimeout()']]],

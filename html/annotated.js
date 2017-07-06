@@ -56,6 +56,7 @@ var annotated =
     [ "RadosIoCtx", "db/d25/interfaceRadosIoCtx.html", "db/d25/interfaceRadosIoCtx" ],
     [ "RadosStat", "db/d41/interfaceRadosStat.html", "db/d41/interfaceRadosStat" ],
     [ "RadosStream", "d6/deb/interfaceRadosStream.html", "d6/deb/interfaceRadosStream" ],
+    [ "RbdImage", "d1/dc3/interfaceRbdImage.html", "d1/dc3/interfaceRbdImage" ],
     [ "Redis", "d7/d32/interfaceRedis.html", "d7/d32/interfaceRedis" ],
     [ "RedisHash", "d9/d58/interfaceRedisHash.html", "d9/d58/interfaceRedisHash" ],
     [ "RedisList", "d0/da2/interfaceRedisList.html", "d0/da2/interfaceRedisList" ],

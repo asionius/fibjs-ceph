@@ -22,6 +22,7 @@ var searchData=
   ['property',['property',['../d0/df6/interfaceExpect.html#a359caa66686e380b8cad24a84911a25c',1,'Expect::property(Value prop)'],['../d0/df6/interfaceExpect.html#ab6b9e0f41589eaae6b968a8585885548',1,'Expect::property(Value prop, Value value)'],['../d2/dab/namespaceassert.html#aad5f5c5d5948e086adbe453e7efa957f',1,'assert::property()']]],
   ['propertynotval',['propertyNotVal',['../d2/dab/namespaceassert.html#a5c45a31ca66fedc3926f3d68544fa189',1,'assert']]],
   ['propertyval',['propertyVal',['../d2/dab/namespaceassert.html#af1a7b26c9b66ed3ed7cd017316b56f7b',1,'assert']]],
+  ['protectsnap',['protectSnap',['../d1/dc3/interfaceRbdImage.html#a56147b52b479442fde7a5230923d29b9',1,'RbdImage']]],
   ['pseudorandombytes',['pseudoRandomBytes',['../de/d36/namespacecrypto.html#af3ccf0095d4f7beb02aaf14da40671ec',1,'crypto']]],
   ['psub',['psub',['../d7/d32/interfaceRedis.html#a566a7ac5b0ddb180adf9e923e4fc1f70',1,'Redis::psub(String pattern, Function func)'],['../d7/d32/interfaceRedis.html#a1ff4f50f05ac259f0deca3a8ba26e8f9',1,'Redis::psub(Object map)']]],
   ['pub',['pub',['../d7/d32/interfaceRedis.html#ae11d8554fc2d37dc908ea7ecd7e4f9a8',1,'Redis']]],

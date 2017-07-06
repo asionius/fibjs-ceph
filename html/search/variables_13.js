@@ -33,6 +33,8 @@ var searchData=
   ['stdout',['stdout',['../d8/d10/interfaceSubProcess.html#a33914fe2eb22865fc20391313a1b3f70',1,'SubProcess']]],
   ['stream',['stream',['../d0/d37/interfaceBufferedStream.html#adc842e860f92cdb58347758fcf2532af',1,'BufferedStream::stream()'],['../d6/db7/interfaceMessage.html#a9b19686184c56df8c1fca416751a71b3',1,'Message::stream()'],['../d0/d97/interfaceSslSocket.html#a70536bb732533a509bd43b725a331cbc',1,'SslSocket::stream()'],['../de/d36/namespacecrypto.html#ac35a8e1830f19f2f10d6837b800f2bb3',1,'crypto::STREAM()']]],
   ['string',['string',['../d0/df6/interfaceExpect.html#a82d5903aca490a3a6c416b138cadc2f0',1,'Expect']]],
+  ['stripe_5fcount',['stripe_count',['../d1/dc3/interfaceRbdImage.html#a9515320894e23733f5aeac7dfc51c02f',1,'RbdImage']]],
+  ['stripe_5funit',['stripe_unit',['../d1/dc3/interfaceRbdImage.html#a608ada7e7ed09314630f0bd57578992b',1,'RbdImage']]],
   ['sub',['SUB',['../d0/db9/namespacezmq.html#aabb3b82c6fd99038391fb98dfa76d9e3',1,'zmq']]],
   ['subject',['subject',['../dc/d22/interfaceX509Cert.html#a496a03ab80e5b3c6bdc01626df6900ba',1,'X509Cert::subject()'],['../d7/d8b/interfaceX509Req.html#a3f636dc3d8417ac6e5b508989f6d91c6',1,'X509Req::subject()']]],
   ['systemid',['systemId',['../d4/d35/interfaceXmlDocumentType.html#a09ec50ecc1cd4b52071dc654324d3081',1,'XmlDocumentType']]],

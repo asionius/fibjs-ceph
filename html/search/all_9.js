@@ -70,6 +70,7 @@ var searchData=
   ['isregexp',['isRegExp',['../d6/d72/namespaceutil.html#a197f6d19eb64708964feb8aeb51bc7a3',1,'util']]],
   ['isrunning',['isRunning',['../d1/db9/interfaceService.html#a15e519e09244886ec05da940f741b15c',1,'Service']]],
   ['isset',['isSet',['../d7/ddf/interfaceEvent.html#a13d0c232c1ce2ecf3276bc1fae80a508',1,'Event']]],
+  ['issnapprotected',['isSnapProtected',['../d1/dc3/interfaceRbdImage.html#a461cf58468f2037bcde1d480e6030911',1,'RbdImage']]],
   ['issocket',['isSocket',['../dc/da9/interfaceStat.html#a86560561f60b45ca4af6b9e935f18143',1,'Stat']]],
   ['isstring',['isString',['../d2/dab/namespaceassert.html#ad8d4452d1c18ac0762f27ad30d754d3e',1,'assert::isString()'],['../d6/d72/namespaceutil.html#a53b05938f4a3601a494f3733d1015d26',1,'util::isString()']]],
   ['issuer',['issuer',['../dc/d22/interfaceX509Cert.html#a72345ac653b7808dc7eb2cc0a9db1268',1,'X509Cert']]],
