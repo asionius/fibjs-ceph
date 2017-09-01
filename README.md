@@ -10,7 +10,8 @@ git clone https://github.com/asionius/fibjs-ceph.git
 # install
 ```
 cd fibjs-ceph
-sh installer-linux-20170706
+chmod +x fibjs-for-ceph-linux-x86-v0.12
+cp ./fibjs-for-ceph-linux-x86-v0.12 /usr/local/bin/fibjs
 ```
 # test
 ```
