@@ -46,5 +46,4 @@ fibjs rados_test.js
 ```
 
 # document
-- cd html
-- open index.html in browser
+- click docs -> click manual -> click module -> click ifs -> click rados
