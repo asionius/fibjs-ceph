@@ -2,15 +2,15 @@
 [rados](../../module/ifs/rados.md)集群操作对象，用于创建对[rados](../../module/ifs/rados.md)集群进行读写的ioctx
 
 [rados](../../module/ifs/rados.md)集群对象，用于创建对[rados](../../module/ifs/rados.md)集群进行存取的ioctx对象，可使用 [rados](../../module/ifs/rados.md) 模块创建
-@code
-var [rados](../../module/ifs/rados.md) = require('[rados](../../module/ifs/rados.md)');
-var cluster = new [rados.Rados](../../module/ifs/rados.md#Rados)('clusterName', 'userName', '/[path](../../module/ifs/path.md)/to/myceph.conf');
+```
+var rados = require('rados');
+var cluster = new rados.Rados('clusterName', 'userName', '/path/to/myceph.conf');
 cluster.connect();
-var [io](../../module/ifs/io.md) = cluster.createIoCtx('poolName');
+var io = cluster.createIoCtx('poolName');
 var s = io.open('key');
 s.write('hello key');
-[console.log](../../module/ifs/console.md#log)(s.readAll().toString());
-@endcode
+console.log(s.readAll().toString());
+```
 
 ## 继承关系
 ```dot

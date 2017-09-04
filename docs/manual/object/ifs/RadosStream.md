@@ -2,15 +2,15 @@
 [rados](../../module/ifs/rados.md)流操作对象，用于读写[rados](../../module/ifs/rados.md)存储
 
 [rados](../../module/ifs/rados.md) KV存储对象,用于对[rados](../../module/ifs/rados.md)集群kv存储进行操作，可使用 [RadosIoCtx](RadosIoCtx.md) 对象创建
-@code
-var [rados](../../module/ifs/rados.md) = require('[rados](../../module/ifs/rados.md)');
-var cluster = new [rados.Rados](../../module/ifs/rados.md#Rados)('clusterName', 'userName', '/[path](../../module/ifs/path.md)/to/myceph.conf');
+```
+var rados = require('rados');
+var cluster = new rados.Rados('clusterName', 'userName', '/path/to/myceph.conf');
 cluster.connect();
-var [io](../../module/ifs/io.md) = cluster.createIoCtx('poolName');
+var io = cluster.createIoCtx('poolName');
 var s = io.open('key');
 s.write('hello key');
-[console.log](../../module/ifs/console.md#log)(s.readAll().toString());
-@endcode
+console.log(s.readAll().toString());
+```
 
 ## 继承关系
 ```dot

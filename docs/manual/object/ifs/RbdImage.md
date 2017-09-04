@@ -2,16 +2,16 @@
 rbd image对象，用于读写rbd image
 
 rbd image对象,用于对rbd image进行操作，可使用 [RadosIoCtx](RadosIoCtx.md) 对象创建
-@code
-var [rados](../../module/ifs/rados.md) = require('[rados](../../module/ifs/rados.md)');
-var cluster = new [rados.Rados](../../module/ifs/rados.md#Rados)('clusterName', 'userName', '/[path](../../module/ifs/path.md)/to/myceph.conf');
+```
+var rados = require('rados');
+var cluster = new rados.Rados('clusterName', 'userName', '/path/to/myceph.conf');
 cluster.connect();
-var [io](../../module/ifs/io.md) = cluster.createIoCtx('poolName');
+var io = cluster.createIoCtx('poolName');
 io.createImage("myImage");
 var image = io.openImage('myImage');
 image.write('hello key');
-[console.log](../../module/ifs/console.md#log)(image.readAll().toString());
-@endcode
+console.log(image.readAll().toString());
+```
 
 ## 继承关系
 ```dot
