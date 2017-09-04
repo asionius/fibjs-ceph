@@ -10,7 +10,7 @@ var db = require('db');
 ## 静态函数
         
 ### open
-** 打开一个数据库，此方法为通用入口，根据提供的 connString 不同调用不同的引擎 **
+**打开一个数据库，此方法为通用入口，根据提供的 connString 不同调用不同的引擎**
 
 ```JavaScript
 static object db.open(String connString) async;
@@ -24,7 +24,7 @@ static object db.open(String connString) async;
 
 --------------------------
 ### openMySQL
-** 打开一个 mysql 数据库 **
+**打开一个 mysql 数据库**
 
 ```JavaScript
 static MySQL db.openMySQL(String connString) async;
@@ -38,7 +38,7 @@ static MySQL db.openMySQL(String connString) async;
 
 --------------------------
 ### openMSSQL
-** 打开一个 mysql 数据库 **
+**打开一个 mysql 数据库**
 
 ```JavaScript
 static MSSQL db.openMSSQL(String connString) async;
@@ -52,21 +52,21 @@ static MSSQL db.openMSSQL(String connString) async;
 
 --------------------------
 ### openSQLite
-** 打开一个 sqlite 数据库 **
+**打开一个 sqlite 数据库**
 
 ```JavaScript
 static SQLite db.openSQLite(String connString) async;
 ```
 
 调用参数:
-* connString: String, 数据库描述，如：sqlite:[test](test.md).db 或者 [test](test.md).db
+* connString: String, 数据库描述，如：sqlite:test.db 或者 test.db
 
 返回结果:
 * [SQLite](../../object/ifs/SQLite.md), 返回数据库连接对象
 
 --------------------------
 ### openMongoDB
-** 打开一个 mongodb 数据库 **
+**打开一个 mongodb 数据库**
 
 ```JavaScript
 static MongoDB db.openMongoDB(String connString) async;
@@ -80,21 +80,21 @@ static MongoDB db.openMongoDB(String connString) async;
 
 --------------------------
 ### openLevelDB
-** 打开一个 leveldb 数据库 **
+**打开一个 leveldb 数据库**
 
 ```JavaScript
 static LevelDB db.openLevelDB(String connString) async;
 ```
 
 调用参数:
-* connString: String, 数据库描述，如：level:[test](test.md).db 或者 [test](test.md).db
+* connString: String, 数据库描述，如：level:test.db 或者 test.db
 
 返回结果:
 * [LevelDB](../../object/ifs/LevelDB.md), 返回数据库对象
 
 --------------------------
 ### openRedis
-** 打开一个 [Redis](../../object/ifs/Redis.md) 数据库 **
+**打开一个 [Redis](../../object/ifs/Redis.md) 数据库**
 
 ```JavaScript
 static Redis db.openRedis(String connString) async;
@@ -108,55 +108,55 @@ static Redis db.openRedis(String connString) async;
 
 --------------------------
 ### format
-** 格式化一个 sql 命令，并返回格式化结果 **
+**格式化一个 sql 命令，并返回格式化结果**
 
 ```JavaScript
 static String db.format(String sql,
-    ...);
+    ...args);
 ```
 
 调用参数:
 * sql: String, 格式化字符串，可选参数用 ? 指定。例如：'SELECT FROM TEST WHERE [id]=?'
-* ...: 可选参数列表
+* args: ..., 可选参数列表
 
 返回结果:
 * String, 返回格式化之后的 sql 命令
 
 --------------------------
 ### formatMySQL
-** 格式化一个 mysql 命令，并返回格式化结果 **
+**格式化一个 mysql 命令，并返回格式化结果**
 
 ```JavaScript
 static String db.formatMySQL(String sql,
-    ...);
+    ...args);
 ```
 
 调用参数:
 * sql: String, 格式化字符串，可选参数用 ? 指定。例如：'SELECT FROM TEST WHERE [id]=?'
-* ...: 可选参数列表
+* args: ..., 可选参数列表
 
 返回结果:
 * String, 返回格式化之后的 sql 命令
 
 --------------------------
 ### formatMSSQL
-** 格式化一个 mssql 命令，并返回格式化结果 **
+**格式化一个 mssql 命令，并返回格式化结果**
 
 ```JavaScript
 static String db.formatMSSQL(String sql,
-    ...);
+    ...args);
 ```
 
 调用参数:
 * sql: String, 格式化字符串，可选参数用 ? 指定。例如：'SELECT FROM TEST WHERE [id]=?'
-* ...: 可选参数列表
+* args: ..., 可选参数列表
 
 返回结果:
 * String, 返回格式化之后的 sql 命令
 
 --------------------------
 ### escape
-** 将字符串编码为 SQL 安全编码字符串 **
+**将字符串编码为 SQL 安全编码字符串**
 
 ```JavaScript
 static String db.escape(String str,

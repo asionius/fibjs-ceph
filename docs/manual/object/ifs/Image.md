@@ -9,104 +9,21 @@ var img1 = gd.load(data);
 ```
 
 ## 继承关系
-<div class="inherits"><svg width="114pt" height="814pt" viewBox="0.00 0.00 114.00 814.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 810)">
-<title>%0</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-810 110,-810 110,4 -4,4"/>
-<!-- object -->
-<g id="node1" class="node">
-<title>object</title>
-<g id="a_node1"><a xlink:href="object.md" xlink:title="object">
-<polygon fill="#ffffff" stroke="transparent" points="24.5,-714 24.5,-806 81.5,-806 81.5,-714 24.5,-714"/>
-<polygon fill="none" stroke="#000000" points="25,-784 25,-806 82,-806 82,-784 25,-784"/>
-<text text-anchor="start" x="40.1625" y="-792" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">object</text>
-<polygon fill="none" stroke="#000000" points="25,-714 25,-784 82,-784 82,-714 25,-714"/>
-<text text-anchor="start" x="30" y="-770" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> dispose()</text>
-<text text-anchor="start" x="30" y="-758" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> equals()</text>
-<text text-anchor="start" x="30" y="-746" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> toString()</text>
-<text text-anchor="start" x="30" y="-734" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> toJSON()</text>
-<text text-anchor="start" x="30" y="-722" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> valueOf()</text>
-</a>
-</g>
-</g>
-<!-- Image -->
-<g id="node2" class="node">
-<title>Image</title>
-<g id="a_node2"><a xlink:title="Image">
-<polygon fill="#d3d3d3" stroke="transparent" points="0,0 0,-678 106,-678 106,0 0,0"/>
-<polygon fill="none" stroke="#000000" points="0,-656 0,-678 106,-678 106,-656 0,-656"/>
-<text text-anchor="start" x="39.1075" y="-664" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Image</text>
-<polygon fill="none" stroke="#000000" points="0,-550 0,-656 106,-656 106,-550 0,-550"/>
-<text text-anchor="start" x="5" y="-642" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> width</text>
-<text text-anchor="start" x="5" y="-630" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> height</text>
-<text text-anchor="start" x="5" y="-618" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> format</text>
-<text text-anchor="start" x="5" y="-606" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> type</text>
-<text text-anchor="start" x="5" y="-594" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> colorsTotal</text>
-<text text-anchor="start" x="5" y="-582" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> transparent</text>
-<text text-anchor="start" x="5" y="-570" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> progressive</text>
-<text text-anchor="start" x="5" y="-558" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> alphaBlending</text>
-<polygon fill="none" stroke="#000000" points="0,0 0,-550 106,-550 106,0 0,0"/>
-<text text-anchor="start" x="5" y="-536" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> getData()</text>
-<text text-anchor="start" x="5" y="-524" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> save()</text>
-<text text-anchor="start" x="5" y="-512" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> colorAllocate()</text>
-<text text-anchor="start" x="5" y="-500" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> colorAllocateAlpha()</text>
-<text text-anchor="start" x="5" y="-488" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> colorClosest()</text>
-<text text-anchor="start" x="5" y="-476" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> colorClosestHWB()</text>
-<text text-anchor="start" x="5" y="-464" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> colorClosestAlpha()</text>
-<text text-anchor="start" x="5" y="-452" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> colorExact()</text>
-<text text-anchor="start" x="5" y="-440" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> colorExactAlpha()</text>
-<text text-anchor="start" x="5" y="-428" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> colorResolve()</text>
-<text text-anchor="start" x="5" y="-416" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> colorResolveAlpha()</text>
-<text text-anchor="start" x="5" y="-404" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> colorDeallocate()</text>
-<text text-anchor="start" x="5" y="-392" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> clip()</text>
-<text text-anchor="start" x="5" y="-380" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> getPixel()</text>
-<text text-anchor="start" x="5" y="-368" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> getTrueColorPixel()</text>
-<text text-anchor="start" x="5" y="-356" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> setPixel()</text>
-<text text-anchor="start" x="5" y="-344" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> setThickness()</text>
-<text text-anchor="start" x="5" y="-332" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> line()</text>
-<text text-anchor="start" x="5" y="-320" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> rectangle()</text>
-<text text-anchor="start" x="5" y="-308" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> filledRectangle()</text>
-<text text-anchor="start" x="5" y="-296" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> polygon()</text>
-<text text-anchor="start" x="5" y="-284" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> openPolygon()</text>
-<text text-anchor="start" x="5" y="-272" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> filledPolygon()</text>
-<text text-anchor="start" x="5" y="-260" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> ellipse()</text>
-<text text-anchor="start" x="5" y="-248" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> filledEllipse()</text>
-<text text-anchor="start" x="5" y="-236" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> arc()</text>
-<text text-anchor="start" x="5" y="-224" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> filledArc()</text>
-<text text-anchor="start" x="5" y="-212" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> fill()</text>
-<text text-anchor="start" x="5" y="-200" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> fillToBorder()</text>
-<text text-anchor="start" x="5" y="-188" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> colorReplace()</text>
-<text text-anchor="start" x="5" y="-176" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> clone()</text>
-<text text-anchor="start" x="5" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> resample()</text>
-<text text-anchor="start" x="5" y="-152" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> crop()</text>
-<text text-anchor="start" x="5" y="-140" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> flip()</text>
-<text text-anchor="start" x="5" y="-128" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> rotate()</text>
-<text text-anchor="start" x="5" y="-116" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> convert()</text>
-<text text-anchor="start" x="5" y="-104" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> copy()</text>
-<text text-anchor="start" x="5" y="-92" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> copyMerge()</text>
-<text text-anchor="start" x="5" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> copyMergeGray()</text>
-<text text-anchor="start" x="5" y="-68" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> copyResized()</text>
-<text text-anchor="start" x="5" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> copyResampled()</text>
-<text text-anchor="start" x="5" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> copyRotated()</text>
-<text text-anchor="start" x="5" y="-32" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> filter()</text>
-<text text-anchor="start" x="5" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> affine()</text>
-<text text-anchor="start" x="5" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> gaussianBlur()</text>
-</a>
-</g>
-</g>
-<!-- object&#45;&gt;Image -->
-<g id="edge1" class="edge">
-<title>object-&gt;Image</title>
-<path fill="none" stroke="#000000" d="M53,-703.6813C53,-695.7363 53,-687.1423 53,-678.0275"/>
-<polygon fill="#000000" stroke="#000000" points="49.5001,-703.7413 53,-713.7413 56.5001,-703.7414 49.5001,-703.7413"/>
-</g>
-</g>
-</svg></div>
+```dot
+digraph {
+    node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
+
+    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
+    Image [tooltip="Image", fillcolor="lightgray", label="{Image|width\lheight\lformat\ltype\lcolorsTotal\ltransparent\lprogressive\lalphaBlending\l|getData()\lsave()\lcolorAllocate()\lcolorAllocateAlpha()\lcolorClosest()\lcolorClosestHWB()\lcolorClosestAlpha()\lcolorExact()\lcolorExactAlpha()\lcolorResolve()\lcolorResolveAlpha()\lcolorDeallocate()\lclip()\lgetPixel()\lgetTrueColorPixel()\lsetPixel()\lsetThickness()\lline()\lrectangle()\lfilledRectangle()\lpolygon()\lopenPolygon()\lfilledPolygon()\lellipse()\lfilledEllipse()\larc()\lfilledArc()\lfill()\lfillToBorder()\lcolorReplace()\lclone()\lresample()\lcrop()\lflip()\lrotate()\lconvert()\lcopy()\lcopyMerge()\lcopyMergeGray()\lcopyResized()\lcopyResampled()\lcopyRotated()\lfilter()\laffine()\lgaussianBlur()\l}"];
+
+    object -> Image [dir=back];
+}
+```
 
 ## 成员属性
         
 ### width
-** Integer, 查询图像宽度 **
+**Integer, 查询图像宽度**
 
 ```JavaScript
 readonly Integer Image.width;
@@ -114,7 +31,7 @@ readonly Integer Image.width;
 
 --------------------------
 ### height
-** Integer, 查询图像高度 **
+**Integer, 查询图像高度**
 
 ```JavaScript
 readonly Integer Image.height;
@@ -122,7 +39,7 @@ readonly Integer Image.height;
 
 --------------------------
 ### format
-** Integer, 查询图像来源格式，结果为 [gd](../../module/ifs/gd.md).PNG, [gd](../../module/ifs/gd.md).JPEG, [gd](../../module/ifs/gd.md).GIF, [gd](../../module/ifs/gd.md).BMP, [gd](../../module/ifs/gd.md).WEBP **
+**Integer, 查询图像来源格式，结果为 [gd.PNG](../../module/ifs/gd.md#PNG), [gd.JPEG](../../module/ifs/gd.md#JPEG), [gd.GIF](../../module/ifs/gd.md#GIF), [gd.BMP](../../module/ifs/gd.md#BMP), [gd.WEBP](../../module/ifs/gd.md#WEBP)**
 
 ```JavaScript
 readonly Integer Image.format;
@@ -130,7 +47,7 @@ readonly Integer Image.format;
 
 --------------------------
 ### type
-** Integer, 查询图像类型，结果为 [gd](../../module/ifs/gd.md).TRUECOLOR, [gd](../../module/ifs/gd.md).PALETTE **
+**Integer, 查询图像类型，结果为 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR), [gd.PALETTE](../../module/ifs/gd.md#PALETTE)**
 
 ```JavaScript
 readonly Integer Image.type;
@@ -138,7 +55,7 @@ readonly Integer Image.type;
 
 --------------------------
 ### colorsTotal
-** Integer, 查询图像颜色表内的颜色总数 **
+**Integer, 查询图像颜色表内的颜色总数**
 
 ```JavaScript
 readonly Integer Image.colorsTotal;
@@ -146,7 +63,7 @@ readonly Integer Image.colorsTotal;
 
 --------------------------
 ### transparent
-** Integer, 查询和设定指定的颜色为透明色 **
+**Integer, 查询和设定指定的颜色为透明色**
 
 ```JavaScript
 Integer Image.transparent;
@@ -154,7 +71,7 @@ Integer Image.transparent;
 
 --------------------------
 ### progressive
-** Boolean, 查询和设定图像是否渐进式，仅支持 jpeg 格式时 **
+**Boolean, 查询和设定图像是否渐进式，仅支持 jpeg 格式时**
 
 ```JavaScript
 Boolean Image.progressive;
@@ -162,7 +79,7 @@ Boolean Image.progressive;
 
 --------------------------
 ### alphaBlending
-** Boolean, 查询和设定绘图时是否计算 alpha 层，缺省为 true **
+**Boolean, 查询和设定绘图时是否计算 alpha 层，缺省为 true**
 
 ```JavaScript
 Boolean Image.alphaBlending;
@@ -171,7 +88,7 @@ Boolean Image.alphaBlending;
 ## 成员函数
         
 ### getData
-** 按照指定的格式返回图像数据 **
+**按照指定的格式返回图像数据**
 
 ```JavaScript
 Buffer Image.getData(Integer format = gd.PNG,
@@ -179,15 +96,15 @@ Buffer Image.getData(Integer format = gd.PNG,
 ```
 
 调用参数:
-* format: Integer, 指定返回数据的格式，允许值为 [gd](../../module/ifs/gd.md).PNG, [gd](../../module/ifs/gd.md).JPEG, [gd](../../module/ifs/gd.md).GIF, [gd](../../module/ifs/gd.md).BMP, [gd](../../module/ifs/gd.md).WEBP, 缺省为 [gd](../../module/ifs/gd.md).PNG
-* quality: Integer, 当格式为 [gd](../../module/ifs/gd.md).JPEG 或 [gd](../../module/ifs/gd.md).WEBP 时用于指定压缩质量，缺省为 85，其他格式忽略此参数
+* format: Integer, 指定返回数据的格式，允许值为 [gd.PNG](../../module/ifs/gd.md#PNG), [gd.JPEG](../../module/ifs/gd.md#JPEG), [gd.GIF](../../module/ifs/gd.md#GIF), [gd.BMP](../../module/ifs/gd.md#BMP), [gd.WEBP](../../module/ifs/gd.md#WEBP), 缺省为 [gd.PNG](../../module/ifs/gd.md#PNG)
+* quality: Integer, 当格式为 [gd.JPEG](../../module/ifs/gd.md#JPEG) 或 [gd.WEBP](../../module/ifs/gd.md#WEBP) 时用于指定压缩质量，缺省为 85，其他格式忽略此参数
 
 返回结果:
 * [Buffer](Buffer.md), 返回格式化的数据
 
 --------------------------
 ### save
-** 按照指定的格式将图像数据存入流对象 **
+**按照指定的格式将图像数据存入流对象**
 
 ```JavaScript
 Image.save(Stream stm,
@@ -197,11 +114,11 @@ Image.save(Stream stm,
 
 调用参数:
 * stm: [Stream](Stream.md), 指定要存入的流对象
-* format: Integer, 指定返回数据的格式，允许值为 [gd](../../module/ifs/gd.md).PNG, [gd](../../module/ifs/gd.md).JPEG, [gd](../../module/ifs/gd.md).GIF, [gd](../../module/ifs/gd.md).BMP, [gd](../../module/ifs/gd.md).WEBP, 缺省为 [gd](../../module/ifs/gd.md).PNG
-* quality: Integer, 当格式为 [gd](../../module/ifs/gd.md).JPEG 或 [gd](../../module/ifs/gd.md).WEBP 时用于指定压缩质量，缺省为 85，其他格式忽略此参数
+* format: Integer, 指定返回数据的格式，允许值为 [gd.PNG](../../module/ifs/gd.md#PNG), [gd.JPEG](../../module/ifs/gd.md#JPEG), [gd.GIF](../../module/ifs/gd.md#GIF), [gd.BMP](../../module/ifs/gd.md#BMP), [gd.WEBP](../../module/ifs/gd.md#WEBP), 缺省为 [gd.PNG](../../module/ifs/gd.md#PNG)
+* quality: Integer, 当格式为 [gd.JPEG](../../module/ifs/gd.md#JPEG) 或 [gd.WEBP](../../module/ifs/gd.md#WEBP) 时用于指定压缩质量，缺省为 85，其他格式忽略此参数
 
 --------------------------
-** 按照指定的格式将图像数据存入指定文件，文件将被强制覆盖 **
+**按照指定的格式将图像数据存入指定文件，文件将被强制覆盖**
 
 ```JavaScript
 Image.save(String fname,
@@ -211,12 +128,12 @@ Image.save(String fname,
 
 调用参数:
 * fname: String, 指定文件名
-* format: Integer, 指定返回数据的格式，允许值为 [gd](../../module/ifs/gd.md).PNG, [gd](../../module/ifs/gd.md).JPEG, [gd](../../module/ifs/gd.md).GIF, [gd](../../module/ifs/gd.md).BMP, [gd](../../module/ifs/gd.md).WEBP, 缺省为 [gd](../../module/ifs/gd.md).PNG
-* quality: Integer, 当格式为 [gd](../../module/ifs/gd.md).JPEG 时用于指定压缩质量，缺省为 85，其他格式忽略此参数
+* format: Integer, 指定返回数据的格式，允许值为 [gd.PNG](../../module/ifs/gd.md#PNG), [gd.JPEG](../../module/ifs/gd.md#JPEG), [gd.GIF](../../module/ifs/gd.md#GIF), [gd.BMP](../../module/ifs/gd.md#BMP), [gd.WEBP](../../module/ifs/gd.md#WEBP), 缺省为 [gd.PNG](../../module/ifs/gd.md#PNG)
+* quality: Integer, 当格式为 [gd.JPEG](../../module/ifs/gd.md#JPEG) 时用于指定压缩质量，缺省为 85，其他格式忽略此参数
 
 --------------------------
 ### colorAllocate
-** 为指定的颜色申请一个颜色号，对于 [gd](../../module/ifs/gd.md).PALETTE 图像，颜色号为调色板索引，对于 [gd](../../module/ifs/gd.md).TRUECOLOR 图像，颜色号为 rgb 编码数值 **
+**为指定的颜色申请一个颜色号，对于 [gd.PALETTE](../../module/ifs/gd.md#PALETTE) 图像，颜色号为调色板索引，对于 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR) 图像，颜色号为 rgb 编码数值**
 
 ```JavaScript
 Integer Image.colorAllocate(Integer red,
@@ -233,21 +150,21 @@ Integer Image.colorAllocate(Integer red,
 * Integer, 返回颜色号，不成功返回 -1
 
 --------------------------
-** 为指定的颜色申请一个颜色号，对于 [gd](../../module/ifs/gd.md).PALETTE 图像，颜色号为调色板索引，对于 [gd](../../module/ifs/gd.md).TRUECOLOR 图像，颜色号为 rgb 编码数值 **
+**为指定的颜色申请一个颜色号，对于 [gd.PALETTE](../../module/ifs/gd.md#PALETTE) 图像，颜色号为调色板索引，对于 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR) 图像，颜色号为 rgb 编码数值**
 
 ```JavaScript
 Integer Image.colorAllocate(Integer color);
 ```
 
 调用参数:
-* color: Integer, 组合颜色值，可由 [gd](../../module/ifs/gd.md).color, gb.rgb, [gd](../../module/ifs/gd.md).rgba 等函数生成
+* color: Integer, 组合颜色值，可由 [gd.color](../../module/ifs/gd.md#color), gb.rgb, [gd.rgba](../../module/ifs/gd.md#rgba) 等函数生成
 
 返回结果:
 * Integer, 返回颜色号，不成功返回 -1
 
 --------------------------
 ### colorAllocateAlpha
-** 为指定的颜色及透明申请一个颜色号，对于 [gd](../../module/ifs/gd.md).PALETTE 图像，颜色号为调色板索引，对于 [gd](../../module/ifs/gd.md).TRUECOLOR 图像，颜色号为 rgba 编码数值 **
+**为指定的颜色及透明申请一个颜色号，对于 [gd.PALETTE](../../module/ifs/gd.md#PALETTE) 图像，颜色号为调色板索引，对于 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR) 图像，颜色号为 rgba 编码数值**
 
 ```JavaScript
 Integer Image.colorAllocateAlpha(Integer red,
@@ -266,21 +183,21 @@ Integer Image.colorAllocateAlpha(Integer red,
 * Integer, 返回颜色号，不成功返回 -1
 
 --------------------------
-** 为指定的颜色及透明申请一个颜色号，对于 [gd](../../module/ifs/gd.md).PALETTE 图像，颜色号为调色板索引，对于 [gd](../../module/ifs/gd.md).TRUECOLOR 图像，颜色号为 rgba 编码数值 **
+**为指定的颜色及透明申请一个颜色号，对于 [gd.PALETTE](../../module/ifs/gd.md#PALETTE) 图像，颜色号为调色板索引，对于 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR) 图像，颜色号为 rgba 编码数值**
 
 ```JavaScript
 Integer Image.colorAllocateAlpha(Integer color);
 ```
 
 调用参数:
-* color: Integer, 组合颜色值，可由 [gd](../../module/ifs/gd.md).color, gb.rgb, [gd](../../module/ifs/gd.md).rgba 等函数生成
+* color: Integer, 组合颜色值，可由 [gd.color](../../module/ifs/gd.md#color), gb.rgb, [gd.rgba](../../module/ifs/gd.md#rgba) 等函数生成
 
 返回结果:
 * Integer, 返回颜色号，不成功返回 -1
 
 --------------------------
 ### colorClosest
-** 为指定的颜色查找一个最接近的颜色号，对于 [gd](../../module/ifs/gd.md).PALETTE 图像，颜色号为调色板索引，对于 [gd](../../module/ifs/gd.md).TRUECOLOR 图像，颜色号为 rgb 编码数值 **
+**为指定的颜色查找一个最接近的颜色号，对于 [gd.PALETTE](../../module/ifs/gd.md#PALETTE) 图像，颜色号为调色板索引，对于 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR) 图像，颜色号为 rgb 编码数值**
 
 ```JavaScript
 Integer Image.colorClosest(Integer red,
@@ -297,21 +214,21 @@ Integer Image.colorClosest(Integer red,
 * Integer, 返回颜色号，不成功返回 -1
 
 --------------------------
-** 为指定的颜色查找一个最接近的颜色号，对于 [gd](../../module/ifs/gd.md).PALETTE 图像，颜色号为调色板索引，对于 [gd](../../module/ifs/gd.md).TRUECOLOR 图像，颜色号为 rgb 编码数值 **
+**为指定的颜色查找一个最接近的颜色号，对于 [gd.PALETTE](../../module/ifs/gd.md#PALETTE) 图像，颜色号为调色板索引，对于 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR) 图像，颜色号为 rgb 编码数值**
 
 ```JavaScript
 Integer Image.colorClosest(Integer color);
 ```
 
 调用参数:
-* color: Integer, 组合颜色值，可由 [gd](../../module/ifs/gd.md).color, gb.rgb, [gd](../../module/ifs/gd.md).rgba 等函数生成
+* color: Integer, 组合颜色值，可由 [gd.color](../../module/ifs/gd.md#color), gb.rgb, [gd.rgba](../../module/ifs/gd.md#rgba) 等函数生成
 
 返回结果:
 * Integer, 返回颜色号，不成功返回 -1
 
 --------------------------
 ### colorClosestHWB
-** 为指定的颜色查找一个最接近的颜色号，此方法使用 Hue/White/Black 计算查找最接近颜色，对于 [gd](../../module/ifs/gd.md).PALETTE 图像，颜色号为调色板索引，对于 [gd](../../module/ifs/gd.md).TRUECOLOR 图像，颜色号为 rgb 编码数值 **
+**为指定的颜色查找一个最接近的颜色号，此方法使用 Hue/White/Black 计算查找最接近颜色，对于 [gd.PALETTE](../../module/ifs/gd.md#PALETTE) 图像，颜色号为调色板索引，对于 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR) 图像，颜色号为 rgb 编码数值**
 
 ```JavaScript
 Integer Image.colorClosestHWB(Integer red,
@@ -328,21 +245,21 @@ Integer Image.colorClosestHWB(Integer red,
 * Integer, 返回颜色号，不成功返回 -1
 
 --------------------------
-** 为指定的颜色查找一个最接近的颜色号，此方法使用 Hue/White/Black 计算查找最接近颜色，对于 [gd](../../module/ifs/gd.md).PALETTE 图像，颜色号为调色板索引，对于 [gd](../../module/ifs/gd.md).TRUECOLOR 图像，颜色号为 rgb 编码数值 **
+**为指定的颜色查找一个最接近的颜色号，此方法使用 Hue/White/Black 计算查找最接近颜色，对于 [gd.PALETTE](../../module/ifs/gd.md#PALETTE) 图像，颜色号为调色板索引，对于 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR) 图像，颜色号为 rgb 编码数值**
 
 ```JavaScript
 Integer Image.colorClosestHWB(Integer color);
 ```
 
 调用参数:
-* color: Integer, 组合颜色值，可由 [gd](../../module/ifs/gd.md).color, gb.rgb, [gd](../../module/ifs/gd.md).rgba 等函数生成
+* color: Integer, 组合颜色值，可由 [gd.color](../../module/ifs/gd.md#color), gb.rgb, [gd.rgba](../../module/ifs/gd.md#rgba) 等函数生成
 
 返回结果:
 * Integer, 返回颜色号，不成功返回 -1
 
 --------------------------
 ### colorClosestAlpha
-** 为指定的颜色及透明查找一个最接近的颜色号，对于 [gd](../../module/ifs/gd.md).PALETTE 图像，颜色号为调色板索引，对于 [gd](../../module/ifs/gd.md).TRUECOLOR 图像，颜色号为 rgba 编码数值 **
+**为指定的颜色及透明查找一个最接近的颜色号，对于 [gd.PALETTE](../../module/ifs/gd.md#PALETTE) 图像，颜色号为调色板索引，对于 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR) 图像，颜色号为 rgba 编码数值**
 
 ```JavaScript
 Integer Image.colorClosestAlpha(Integer red,
@@ -361,21 +278,21 @@ Integer Image.colorClosestAlpha(Integer red,
 * Integer, 返回颜色号，不成功返回 -1
 
 --------------------------
-** 为指定的颜色及透明查找一个最接近的颜色号，对于 [gd](../../module/ifs/gd.md).PALETTE 图像，颜色号为调色板索引，对于 [gd](../../module/ifs/gd.md).TRUECOLOR 图像，颜色号为 rgba 编码数值 **
+**为指定的颜色及透明查找一个最接近的颜色号，对于 [gd.PALETTE](../../module/ifs/gd.md#PALETTE) 图像，颜色号为调色板索引，对于 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR) 图像，颜色号为 rgba 编码数值**
 
 ```JavaScript
 Integer Image.colorClosestAlpha(Integer color);
 ```
 
 调用参数:
-* color: Integer, 组合颜色值，可由 [gd](../../module/ifs/gd.md).color, gb.rgb, [gd](../../module/ifs/gd.md).rgba 等函数生成
+* color: Integer, 组合颜色值，可由 [gd.color](../../module/ifs/gd.md#color), gb.rgb, [gd.rgba](../../module/ifs/gd.md#rgba) 等函数生成
 
 返回结果:
 * Integer, 返回颜色号，不成功返回 -1
 
 --------------------------
 ### colorExact
-** 查找指定的颜色对应的颜色号，对于 [gd](../../module/ifs/gd.md).PALETTE 图像，颜色号为调色板索引，对于 [gd](../../module/ifs/gd.md).TRUECOLOR 图像，颜色号为 rgb 编码数值 **
+**查找指定的颜色对应的颜色号，对于 [gd.PALETTE](../../module/ifs/gd.md#PALETTE) 图像，颜色号为调色板索引，对于 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR) 图像，颜色号为 rgb 编码数值**
 
 ```JavaScript
 Integer Image.colorExact(Integer red,
@@ -392,21 +309,21 @@ Integer Image.colorExact(Integer red,
 * Integer, 返回颜色号，不成功返回 -1
 
 --------------------------
-** 查找指定的颜色对应的颜色号，对于 [gd](../../module/ifs/gd.md).PALETTE 图像，颜色号为调色板索引，对于 [gd](../../module/ifs/gd.md).TRUECOLOR 图像，颜色号为 rgb 编码数值 **
+**查找指定的颜色对应的颜色号，对于 [gd.PALETTE](../../module/ifs/gd.md#PALETTE) 图像，颜色号为调色板索引，对于 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR) 图像，颜色号为 rgb 编码数值**
 
 ```JavaScript
 Integer Image.colorExact(Integer color);
 ```
 
 调用参数:
-* color: Integer, 组合颜色值，可由 [gd](../../module/ifs/gd.md).color, gb.rgb, [gd](../../module/ifs/gd.md).rgba 等函数生成
+* color: Integer, 组合颜色值，可由 [gd.color](../../module/ifs/gd.md#color), gb.rgb, [gd.rgba](../../module/ifs/gd.md#rgba) 等函数生成
 
 返回结果:
 * Integer, 返回颜色号，不成功返回 -1
 
 --------------------------
 ### colorExactAlpha
-** 查找指定的颜色及透明对应的颜色号，对于 [gd](../../module/ifs/gd.md).PALETTE 图像，颜色号为调色板索引，对于 [gd](../../module/ifs/gd.md).TRUECOLOR 图像，颜色号为 rgba 编码数值 **
+**查找指定的颜色及透明对应的颜色号，对于 [gd.PALETTE](../../module/ifs/gd.md#PALETTE) 图像，颜色号为调色板索引，对于 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR) 图像，颜色号为 rgba 编码数值**
 
 ```JavaScript
 Integer Image.colorExactAlpha(Integer red,
@@ -425,21 +342,21 @@ Integer Image.colorExactAlpha(Integer red,
 * Integer, 返回颜色号，不成功返回 -1
 
 --------------------------
-** 查找指定的颜色及透明对应的颜色号，对于 [gd](../../module/ifs/gd.md).PALETTE 图像，颜色号为调色板索引，对于 [gd](../../module/ifs/gd.md).TRUECOLOR 图像，颜色号为 rgba 编码数值 **
+**查找指定的颜色及透明对应的颜色号，对于 [gd.PALETTE](../../module/ifs/gd.md#PALETTE) 图像，颜色号为调色板索引，对于 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR) 图像，颜色号为 rgba 编码数值**
 
 ```JavaScript
 Integer Image.colorExactAlpha(Integer color);
 ```
 
 调用参数:
-* color: Integer, 组合颜色值，可由 [gd](../../module/ifs/gd.md).color, gb.rgb, [gd](../../module/ifs/gd.md).rgba 等函数生成
+* color: Integer, 组合颜色值，可由 [gd.color](../../module/ifs/gd.md#color), gb.rgb, [gd.rgba](../../module/ifs/gd.md#rgba) 等函数生成
 
 返回结果:
 * Integer, 返回颜色号，不成功返回 -1
 
 --------------------------
 ### colorResolve
-** 查找指定的颜色对应的颜色号，如果颜色不存在，则为其申请一个新颜色号，对于 [gd](../../module/ifs/gd.md).PALETTE 图像，颜色号为调色板索引，对于 [gd](../../module/ifs/gd.md).TRUECOLOR 图像，颜色号为 rgb 编码数值 **
+**查找指定的颜色对应的颜色号，如果颜色不存在，则为其申请一个新颜色号，对于 [gd.PALETTE](../../module/ifs/gd.md#PALETTE) 图像，颜色号为调色板索引，对于 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR) 图像，颜色号为 rgb 编码数值**
 
 ```JavaScript
 Integer Image.colorResolve(Integer red,
@@ -456,21 +373,21 @@ Integer Image.colorResolve(Integer red,
 * Integer, 返回颜色号，不成功返回 -1
 
 --------------------------
-** 查找指定的颜色对应的颜色号，如果颜色不存在，则为其申请一个新颜色号，对于 [gd](../../module/ifs/gd.md).PALETTE 图像，颜色号为调色板索引，对于 [gd](../../module/ifs/gd.md).TRUECOLOR 图像，颜色号为 rgb 编码数值 **
+**查找指定的颜色对应的颜色号，如果颜色不存在，则为其申请一个新颜色号，对于 [gd.PALETTE](../../module/ifs/gd.md#PALETTE) 图像，颜色号为调色板索引，对于 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR) 图像，颜色号为 rgb 编码数值**
 
 ```JavaScript
 Integer Image.colorResolve(Integer color);
 ```
 
 调用参数:
-* color: Integer, 组合颜色值，可由 [gd](../../module/ifs/gd.md).color, gb.rgb, [gd](../../module/ifs/gd.md).rgba 等函数生成
+* color: Integer, 组合颜色值，可由 [gd.color](../../module/ifs/gd.md#color), gb.rgb, [gd.rgba](../../module/ifs/gd.md#rgba) 等函数生成
 
 返回结果:
 * Integer, 返回颜色号，不成功返回 -1
 
 --------------------------
 ### colorResolveAlpha
-** 查找指定的颜色及透明对应的颜色号，如果颜色不存在，则为其申请一个新颜色号，对于 [gd](../../module/ifs/gd.md).PALETTE 图像，颜色号为调色板索引，对于 [gd](../../module/ifs/gd.md).TRUECOLOR 图像，颜色号为 rgba 编码数值 **
+**查找指定的颜色及透明对应的颜色号，如果颜色不存在，则为其申请一个新颜色号，对于 [gd.PALETTE](../../module/ifs/gd.md#PALETTE) 图像，颜色号为调色板索引，对于 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR) 图像，颜色号为 rgba 编码数值**
 
 ```JavaScript
 Integer Image.colorResolveAlpha(Integer red,
@@ -489,21 +406,21 @@ Integer Image.colorResolveAlpha(Integer red,
 * Integer, 返回颜色号，不成功返回 -1
 
 --------------------------
-** 查找指定的颜色及透明对应的颜色号，如果颜色不存在，则为其申请一个新颜色号，对于 [gd](../../module/ifs/gd.md).PALETTE 图像，颜色号为调色板索引，对于 [gd](../../module/ifs/gd.md).TRUECOLOR 图像，颜色号为 rgba 编码数值 **
+**查找指定的颜色及透明对应的颜色号，如果颜色不存在，则为其申请一个新颜色号，对于 [gd.PALETTE](../../module/ifs/gd.md#PALETTE) 图像，颜色号为调色板索引，对于 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR) 图像，颜色号为 rgba 编码数值**
 
 ```JavaScript
 Integer Image.colorResolveAlpha(Integer color);
 ```
 
 调用参数:
-* color: Integer, 组合颜色值，可由 [gd](../../module/ifs/gd.md).color, gb.rgb, [gd](../../module/ifs/gd.md).rgba 等函数生成
+* color: Integer, 组合颜色值，可由 [gd.color](../../module/ifs/gd.md#color), gb.rgb, [gd.rgba](../../module/ifs/gd.md#rgba) 等函数生成
 
 返回结果:
 * Integer, 返回颜色号，不成功返回 -1
 
 --------------------------
 ### colorDeallocate
-** 释放指定的颜色号，释放的颜色号将会被再次申请后替换 **
+**释放指定的颜色号，释放的颜色号将会被再次申请后替换**
 
 ```JavaScript
 Image.colorDeallocate(Integer color);
@@ -514,7 +431,7 @@ Image.colorDeallocate(Integer color);
 
 --------------------------
 ### clip
-** 设定绘图的剪切窗口，设定后，所有的绘制将被剪切在窗口内部 **
+**设定绘图的剪切窗口，设定后，所有的绘制将被剪切在窗口内部**
 
 ```JavaScript
 Image.clip(Integer x1,
@@ -531,7 +448,7 @@ Image.clip(Integer x1,
 
 --------------------------
 ### getPixel
-** 查询指定位置点的颜色 **
+**查询指定位置点的颜色**
 
 ```JavaScript
 Integer Image.getPixel(Integer x,
@@ -547,7 +464,7 @@ Integer Image.getPixel(Integer x,
 
 --------------------------
 ### getTrueColorPixel
-** 查询指定位置点的真彩色颜色 **
+**查询指定位置点的真彩色颜色**
 
 ```JavaScript
 Integer Image.getTrueColorPixel(Integer x,
@@ -563,7 +480,7 @@ Integer Image.getTrueColorPixel(Integer x,
 
 --------------------------
 ### setPixel
-** 在指定位置画一个点 **
+**在指定位置画一个点**
 
 ```JavaScript
 Image.setPixel(Integer x,
@@ -578,7 +495,7 @@ Image.setPixel(Integer x,
 
 --------------------------
 ### setThickness
-** 设定画线的宽度，line, rectangle, arc 等方法画线时缺省宽度为一个像素，可使用此方法改变线的宽度 **
+**设定画线的宽度，line, rectangle, arc 等方法画线时缺省宽度为一个像素，可使用此方法改变线的宽度**
 
 ```JavaScript
 Image.setThickness(Integer thickness);
@@ -589,7 +506,7 @@ Image.setThickness(Integer thickness);
 
 --------------------------
 ### line
-** 在指定的位置画一条线 **
+**在指定的位置画一条线**
 
 ```JavaScript
 Image.line(Integer x1,
@@ -608,7 +525,7 @@ Image.line(Integer x1,
 
 --------------------------
 ### rectangle
-** 在指定的位置画一个矩形 **
+**在指定的位置画一个矩形**
 
 ```JavaScript
 Image.rectangle(Integer x1,
@@ -627,7 +544,7 @@ Image.rectangle(Integer x1,
 
 --------------------------
 ### filledRectangle
-** 在指定的位置画一个填充的矩形 **
+**在指定的位置画一个填充的矩形**
 
 ```JavaScript
 Image.filledRectangle(Integer x1,
@@ -646,7 +563,7 @@ Image.filledRectangle(Integer x1,
 
 --------------------------
 ### polygon
-** 根据给定的点绘制一个多边形 **
+**根据给定的点绘制一个多边形**
 
 ```JavaScript
 Image.polygon(Array points,
@@ -659,7 +576,7 @@ Image.polygon(Array points,
 
 --------------------------
 ### openPolygon
-** 根据给定的点绘制一个开放多边形 **
+**根据给定的点绘制一个开放多边形**
 
 ```JavaScript
 Image.openPolygon(Array points,
@@ -672,7 +589,7 @@ Image.openPolygon(Array points,
 
 --------------------------
 ### filledPolygon
-** 根据给定的点绘制一个填充多边形 **
+**根据给定的点绘制一个填充多边形**
 
 ```JavaScript
 Image.filledPolygon(Array points,
@@ -685,7 +602,7 @@ Image.filledPolygon(Array points,
 
 --------------------------
 ### ellipse
-** 画一个椭圆 **
+**画一个椭圆**
 
 ```JavaScript
 Image.ellipse(Integer x,
@@ -704,7 +621,7 @@ Image.ellipse(Integer x,
 
 --------------------------
 ### filledEllipse
-** 画一个填充的椭圆 **
+**画一个填充的椭圆**
 
 ```JavaScript
 Image.filledEllipse(Integer x,
@@ -723,7 +640,7 @@ Image.filledEllipse(Integer x,
 
 --------------------------
 ### arc
-** 画一个扇形 **
+**画一个扇形**
 
 ```JavaScript
 Image.arc(Integer x,
@@ -746,7 +663,7 @@ Image.arc(Integer x,
 
 --------------------------
 ### filledArc
-** 画一个填充扇形 **
+**画一个填充扇形**
 
 ```JavaScript
 Image.filledArc(Integer x,
@@ -767,11 +684,11 @@ Image.filledArc(Integer x,
 * start: Integer, 扇形开始的角度，范围为 0-360
 * end: Integer, 扇形结束的角度，范围为 0-360
 * color: Integer, 指定矩形的颜色号
-* style: Integer, 指定扇形的样式，允许的值有 [gd](../../module/ifs/gd.md).ARC, [gd](../../module/ifs/gd.md).CHORD, [gd](../../module/ifs/gd.md).NOFILL, [gd](../../module/ifs/gd.md).EDGED 及其组合
+* style: Integer, 指定扇形的样式，允许的值有 [gd.ARC](../../module/ifs/gd.md#ARC), [gd.CHORD](../../module/ifs/gd.md#CHORD), [gd.NOFILL](../../module/ifs/gd.md#NOFILL), [gd.EDGED](../../module/ifs/gd.md#EDGED) 及其组合
 
 --------------------------
 ### fill
-** 从指定的点开始填充封闭区域 **
+**从指定的点开始填充封闭区域**
 
 ```JavaScript
 Image.fill(Integer x,
@@ -786,7 +703,7 @@ Image.fill(Integer x,
 
 --------------------------
 ### fillToBorder
-** 从指定的点开始在指定颜色的边框内填充封闭区域 **
+**从指定的点开始在指定颜色的边框内填充封闭区域**
 
 ```JavaScript
 Image.fillToBorder(Integer x,
@@ -803,7 +720,7 @@ Image.fillToBorder(Integer x,
 
 --------------------------
 ### colorReplace
-** 替换图像中指定的颜色为新颜色 **
+**替换图像中指定的颜色为新颜色**
 
 ```JavaScript
 Image.colorReplace(Integer src,
@@ -816,7 +733,7 @@ Image.colorReplace(Integer src,
 
 --------------------------
 ### clone
-** 复制当前图像为一个新图像 **
+**复制当前图像为一个新图像**
 
 ```JavaScript
 Image Image.clone() async;
@@ -827,7 +744,7 @@ Image Image.clone() async;
 
 --------------------------
 ### resample
-** 根据图像拉伸生成一个新尺寸的图像 **
+**根据图像拉伸生成一个新尺寸的图像**
 
 ```JavaScript
 Image Image.resample(Integer width,
@@ -843,7 +760,7 @@ Image Image.resample(Integer width,
 
 --------------------------
 ### crop
-** 剪切图像的一部分为一个新的图像 **
+**剪切图像的一部分为一个新的图像**
 
 ```JavaScript
 Image Image.crop(Integer x,
@@ -863,40 +780,40 @@ Image Image.crop(Integer x,
 
 --------------------------
 ### flip
-** 镜像当前图像 **
+**镜像当前图像**
 
 ```JavaScript
 Image.flip(Integer dir = gd.HORIZONTAL) async;
 ```
 
 调用参数:
-* dir: Integer, 镜像方向，允许值为 [gd](../../module/ifs/gd.md).BOTH,[gd](../../module/ifs/gd.md).HORIZONTAL, [gd](../../module/ifs/gd.md).VERTICAL, 缺省为 [gd](../../module/ifs/gd.md).HORIZONTAL
+* dir: Integer, 镜像方向，允许值为 [gd.BOTH](../../module/ifs/gd.md#BOTH),[gd.HORIZONTAL](../../module/ifs/gd.md#HORIZONTAL), [gd.VERTICAL](../../module/ifs/gd.md#VERTICAL), 缺省为 [gd.HORIZONTAL](../../module/ifs/gd.md#HORIZONTAL)
 
 --------------------------
 ### rotate
-** 旋转当前图像 **
+**旋转当前图像**
 
 ```JavaScript
 Image.rotate(Integer dir) async;
 ```
 
 调用参数:
-* dir: Integer, 旋转方向，允许值为 [gd](../../module/ifs/gd.md).LEFT, [gd](../../module/ifs/gd.md).RIGHT
+* dir: Integer, 旋转方向，允许值为 [gd.LEFT](../../module/ifs/gd.md#LEFT), [gd.RIGHT](../../module/ifs/gd.md#RIGHT)
 
 --------------------------
 ### convert
-** 转换当前图像类型 **
+**转换当前图像类型**
 
 ```JavaScript
 Image.convert(Integer color = gd.TRUECOLOR) async;
 ```
 
 调用参数:
-* color: Integer, 指定图像类型，允许值为 [gd](../../module/ifs/gd.md).TRUECOLOR 或 [gd](../../module/ifs/gd.md).PALETTE
+* color: Integer, 指定图像类型，允许值为 [gd.TRUECOLOR](../../module/ifs/gd.md#TRUECOLOR) 或 [gd.PALETTE](../../module/ifs/gd.md#PALETTE)
 
 --------------------------
 ### copy
-** 从一个图像中复制一个区域到指定的位置 **
+**从一个图像中复制一个区域到指定的位置**
 
 ```JavaScript
 Image.copy(Image source,
@@ -919,7 +836,7 @@ Image.copy(Image source,
 
 --------------------------
 ### copyMerge
-** 从一个图像中复制一个区域覆盖到指定的位置 **
+**从一个图像中复制一个区域覆盖到指定的位置**
 
 ```JavaScript
 Image.copyMerge(Image source,
@@ -944,7 +861,7 @@ Image.copyMerge(Image source,
 
 --------------------------
 ### copyMergeGray
-** 从一个图像中复制一个区域的灰度覆盖到指定的位置 **
+**从一个图像中复制一个区域的灰度覆盖到指定的位置**
 
 ```JavaScript
 Image.copyMergeGray(Image source,
@@ -969,7 +886,7 @@ Image.copyMergeGray(Image source,
 
 --------------------------
 ### copyResized
-** 将一个图像中的一个区域拉伸后复制到指定的位置 **
+**将一个图像中的一个区域拉伸后复制到指定的位置**
 
 ```JavaScript
 Image.copyResized(Image source,
@@ -996,7 +913,7 @@ Image.copyResized(Image source,
 
 --------------------------
 ### copyResampled
-** 将一个图像中的一个区域拉伸后复制到指定的位置，不同与 copyResized，此方法拉伸时会对图像进行抖动 **
+**将一个图像中的一个区域拉伸后复制到指定的位置，不同与 copyResized，此方法拉伸时会对图像进行抖动**
 
 ```JavaScript
 Image.copyResampled(Image source,
@@ -1023,7 +940,7 @@ Image.copyResampled(Image source,
 
 --------------------------
 ### copyRotated
-** 将一个图像中的一个区域旋转后复制到指定的位置 **
+**将一个图像中的一个区域旋转后复制到指定的位置**
 
 ```JavaScript
 Image.copyRotated(Image source,
@@ -1048,7 +965,7 @@ Image.copyRotated(Image source,
 
 --------------------------
 ### filter
-** 把过滤器 filterType应用到图像上，根据过滤器类型传入所需参数 **
+**把过滤器 filterType应用到图像上，根据过滤器类型传入所需参数**
 
 ```JavaScript
 Image.filter(Integer filterType,
@@ -1080,7 +997,7 @@ Image.filter(Integer filterType,
 
 --------------------------
 ### affine
-** 根据给定的矩阵，对当前图像进行仿射 **
+**根据给定的矩阵，对当前图像进行仿射**
 
 ```JavaScript
 Image Image.affine(Array affine,
@@ -1110,7 +1027,7 @@ y ' = b0x + b1y + b2;
 
 --------------------------
 ### gaussianBlur
-** 对当前图像进行高斯模糊处理 **
+**对当前图像进行高斯模糊处理**
 
 ```JavaScript
 Image.gaussianBlur(Integer radius) async;
@@ -1121,7 +1038,7 @@ Image.gaussianBlur(Integer radius) async;
 
 --------------------------
 ### dispose
-** 强制回收对象，调用此方法后，对象资源将立即释放 **
+**强制回收对象，调用此方法后，对象资源将立即释放**
 
 ```JavaScript
 Image.dispose();
@@ -1129,21 +1046,21 @@ Image.dispose();
 
 --------------------------
 ### equals
-** 比较当前对象与给定的对象是否相等 **
+**比较当前对象与给定的对象是否相等**
 
 ```JavaScript
 Boolean Image.equals(object expected);
 ```
 
 调用参数:
-* expected: object, 制定比较的目标对象
+* expected: [object](object.md), 制定比较的目标对象
 
 返回结果:
 * Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString
-** 返回对象的字符串表示，一般返回 "[Native Object]"，对象可以根据自己的特性重新实现 **
+**返回对象的字符串表示，一般返回 "[Native Object]"，对象可以根据自己的特性重新实现**
 
 ```JavaScript
 String Image.toString();
@@ -1154,7 +1071,7 @@ String Image.toString();
 
 --------------------------
 ### toJSON
-** 返回对象的 JSON 格式表示，一般返回对象定义的可读属性集合 **
+**返回对象的 JSON 格式表示，一般返回对象定义的可读属性集合**
 
 ```JavaScript
 Value Image.toJSON(String key = "");
@@ -1165,15 +1082,4 @@ Value Image.toJSON(String key = "");
 
 返回结果:
 * Value, 返回包含可 JSON 序列化的值
-
---------------------------
-### valueOf
-** 返回对象本身的数值 **
-
-```JavaScript
-Value Image.valueOf();
-```
-
-返回结果:
-* Value, 返回对象本身的数值
 

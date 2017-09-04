@@ -8,111 +8,21 @@ var buf = new Buffer();
 ```
 
 ## 继承关系
-<div class="inherits"><svg width="96pt" height="892pt" viewBox="0.00 0.00 96.00 892.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 888)">
-<title>%0</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-888 92,-888 92,4 -4,4"/>
-<!-- object -->
-<g id="node1" class="node">
-<title>object</title>
-<g id="a_node1"><a xlink:href="object.md" xlink:title="object">
-<polygon fill="#ffffff" stroke="transparent" points="15.5,-792 15.5,-884 72.5,-884 72.5,-792 15.5,-792"/>
-<polygon fill="none" stroke="#000000" points="16,-862 16,-884 73,-884 73,-862 16,-862"/>
-<text text-anchor="start" x="31.1625" y="-870" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">object</text>
-<polygon fill="none" stroke="#000000" points="16,-792 16,-862 73,-862 73,-792 16,-792"/>
-<text text-anchor="start" x="21" y="-848" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> dispose()</text>
-<text text-anchor="start" x="21" y="-836" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> equals()</text>
-<text text-anchor="start" x="21" y="-824" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> toString()</text>
-<text text-anchor="start" x="21" y="-812" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> toJSON()</text>
-<text text-anchor="start" x="21" y="-800" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> valueOf()</text>
-</a>
-</g>
-</g>
-<!-- Buffer -->
-<g id="node2" class="node">
-<title>Buffer</title>
-<g id="a_node2"><a xlink:title="Buffer">
-<polygon fill="#d3d3d3" stroke="transparent" points="0,0 0,-756 88,-756 88,0 0,0"/>
-<polygon fill="none" stroke="#000000" points="0,-734 0,-756 88,-756 88,-734 0,-734"/>
-<text text-anchor="start" x="30.663" y="-742" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Buffer</text>
-<polygon fill="none" stroke="#000000" points="0,-712 0,-734 88,-734 88,-712 0,-712"/>
-<text text-anchor="start" x="5" y="-720" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">  new Buffer()</text>
-<polygon fill="none" stroke="#000000" points="0,-690 0,-712 88,-712 88,-690 0,-690"/>
-<text text-anchor="start" x="5" y="-698" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> operator[]</text>
-<polygon fill="none" stroke="#000000" points="0,-656 0,-690 88,-690 88,-656 0,-656"/>
-<text text-anchor="start" x="5" y="-676" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> isBuffer()</text>
-<text text-anchor="start" x="5" y="-664" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> concat()</text>
-<polygon fill="none" stroke="#000000" points="0,-634 0,-656 88,-656 88,-634 0,-634"/>
-<text text-anchor="start" x="5" y="-642" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> length</text>
-<polygon fill="none" stroke="#000000" points="0,0 0,-634 88,-634 88,0 0,0"/>
-<text text-anchor="start" x="5" y="-620" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> resize()</text>
-<text text-anchor="start" x="5" y="-608" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> append()</text>
-<text text-anchor="start" x="5" y="-596" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> write()</text>
-<text text-anchor="start" x="5" y="-584" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> fill()</text>
-<text text-anchor="start" x="5" y="-572" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> indexOf()</text>
-<text text-anchor="start" x="5" y="-560" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> compare()</text>
-<text text-anchor="start" x="5" y="-548" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> copy()</text>
-<text text-anchor="start" x="5" y="-536" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readUInt8()</text>
-<text text-anchor="start" x="5" y="-524" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readUInt16LE()</text>
-<text text-anchor="start" x="5" y="-512" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readUInt16BE()</text>
-<text text-anchor="start" x="5" y="-500" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readUInt32LE()</text>
-<text text-anchor="start" x="5" y="-488" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readUInt32BE()</text>
-<text text-anchor="start" x="5" y="-476" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readUIntLE()</text>
-<text text-anchor="start" x="5" y="-464" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readUIntBE()</text>
-<text text-anchor="start" x="5" y="-452" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readInt8()</text>
-<text text-anchor="start" x="5" y="-440" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readInt16LE()</text>
-<text text-anchor="start" x="5" y="-428" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readInt16BE()</text>
-<text text-anchor="start" x="5" y="-416" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readInt32LE()</text>
-<text text-anchor="start" x="5" y="-404" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readInt32BE()</text>
-<text text-anchor="start" x="5" y="-392" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readIntLE()</text>
-<text text-anchor="start" x="5" y="-380" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readIntBE()</text>
-<text text-anchor="start" x="5" y="-368" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readInt64LE()</text>
-<text text-anchor="start" x="5" y="-356" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readInt64BE()</text>
-<text text-anchor="start" x="5" y="-344" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readFloatLE()</text>
-<text text-anchor="start" x="5" y="-332" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readFloatBE()</text>
-<text text-anchor="start" x="5" y="-320" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readDoubleLE()</text>
-<text text-anchor="start" x="5" y="-308" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> readDoubleBE()</text>
-<text text-anchor="start" x="5" y="-296" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeUInt8()</text>
-<text text-anchor="start" x="5" y="-284" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeUInt16LE()</text>
-<text text-anchor="start" x="5" y="-272" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeUInt16BE()</text>
-<text text-anchor="start" x="5" y="-260" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeUInt32LE()</text>
-<text text-anchor="start" x="5" y="-248" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeUInt32BE()</text>
-<text text-anchor="start" x="5" y="-236" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeUIntLE()</text>
-<text text-anchor="start" x="5" y="-224" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeUIntBE()</text>
-<text text-anchor="start" x="5" y="-212" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeInt8()</text>
-<text text-anchor="start" x="5" y="-200" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeInt16LE()</text>
-<text text-anchor="start" x="5" y="-188" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeInt16BE()</text>
-<text text-anchor="start" x="5" y="-176" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeInt32LE()</text>
-<text text-anchor="start" x="5" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeInt32BE()</text>
-<text text-anchor="start" x="5" y="-152" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeIntLE()</text>
-<text text-anchor="start" x="5" y="-140" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeIntBE()</text>
-<text text-anchor="start" x="5" y="-128" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeInt64LE()</text>
-<text text-anchor="start" x="5" y="-116" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeInt64BE()</text>
-<text text-anchor="start" x="5" y="-104" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeFloatLE()</text>
-<text text-anchor="start" x="5" y="-92" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeFloatBE()</text>
-<text text-anchor="start" x="5" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeDoubleLE()</text>
-<text text-anchor="start" x="5" y="-68" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> writeDoubleBE()</text>
-<text text-anchor="start" x="5" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> slice()</text>
-<text text-anchor="start" x="5" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> hex()</text>
-<text text-anchor="start" x="5" y="-32" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> base64()</text>
-<text text-anchor="start" x="5" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> toArray()</text>
-<text text-anchor="start" x="5" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> toString()</text>
-</a>
-</g>
-</g>
-<!-- object&#45;&gt;Buffer -->
-<g id="edge1" class="edge">
-<title>object-&gt;Buffer</title>
-<path fill="none" stroke="#000000" d="M44,-781.5458C44,-773.7379 44,-765.2925 44,-756.3223"/>
-<polygon fill="#000000" stroke="#000000" points="40.5001,-781.7873 44,-791.7873 47.5001,-781.7873 40.5001,-781.7873"/>
-</g>
-</g>
-</svg></div>
+```dot
+digraph {
+    node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
+
+    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
+    Buffer [tooltip="Buffer", fillcolor="lightgray", label="{Buffer|new Buffer()\l|operator[]\l|isBuffer()\lfrom()\lconcat()\lalloc()\lallocUnsafe()\lallocUnsafeSlow()\lbyteLength()\lisEncoding()\l|length\l|resize()\lappend()\lwrite()\lfill()\lindexOf()\lcompare()\lcopy()\lreadUInt8()\lreadUInt16LE()\lreadUInt16BE()\lreadUInt32LE()\lreadUInt32BE()\lreadUIntLE()\lreadUIntBE()\lreadInt8()\lreadInt16LE()\lreadInt16BE()\lreadInt32LE()\lreadInt32BE()\lreadIntLE()\lreadIntBE()\lreadInt64LE()\lreadInt64BE()\lreadFloatLE()\lreadFloatBE()\lreadDoubleLE()\lreadDoubleBE()\lwriteUInt8()\lwriteUInt16LE()\lwriteUInt16BE()\lwriteUInt32LE()\lwriteUInt32BE()\lwriteUIntLE()\lwriteUIntBE()\lwriteInt8()\lwriteInt16LE()\lwriteInt16BE()\lwriteInt32LE()\lwriteInt32BE()\lwriteIntLE()\lwriteIntBE()\lwriteInt64LE()\lwriteInt64BE()\lwriteFloatLE()\lwriteFloatBE()\lwriteDoubleLE()\lwriteDoubleBE()\lslice()\lreverse()\lhex()\lbase64()\lkeys()\lvalues()\lentries()\ltoArray()\ltoString()\l}"];
+
+    object -> Buffer [dir=back];
+}
+```
 
 ## 构造函数
         
 ### Buffer
-** 缓存对象构造函数 **
+**缓存对象构造函数**
 
 ```JavaScript
 new Buffer(Array datas);
@@ -122,7 +32,7 @@ new Buffer(Array datas);
 * datas: Array, 初始化数据数组
 
 --------------------------
-** 缓存对象构造函数 **
+**缓存对象构造函数**
 
 ```JavaScript
 new Buffer(ArrayBuffer datas);
@@ -132,7 +42,7 @@ new Buffer(ArrayBuffer datas);
 * datas: ArrayBuffer, 初始化数据数组
 
 --------------------------
-** 缓存对象构造函数 **
+**缓存对象构造函数**
 
 ```JavaScript
 new Buffer(TypedArray datas);
@@ -142,7 +52,17 @@ new Buffer(TypedArray datas);
 * datas: TypedArray, 初始化数据数组
 
 --------------------------
-** 缓存对象构造函数 **
+**缓存对象构造函数**
+
+```JavaScript
+new Buffer(ArrayBufferView datas);
+```
+
+调用参数:
+* datas: ArrayBufferView, 初始化数据数组
+
+--------------------------
+**缓存对象构造函数**
 
 ```JavaScript
 new Buffer(Buffer buffer);
@@ -152,7 +72,7 @@ new Buffer(Buffer buffer);
 * buffer: Buffer, 初始化Buffer对象
 
 --------------------------
-** 缓存对象构造函数 **
+**缓存对象构造函数**
 
 ```JavaScript
 new Buffer(String str,
@@ -164,7 +84,7 @@ new Buffer(String str,
 * codec: String, 指定编码格式，允许值为："[hex](../../module/ifs/hex.md)", "[base64](../../module/ifs/base64.md)", "utf8", 或者系统支持的字符集
 
 --------------------------
-** 缓存对象构造函数 **
+**缓存对象构造函数**
 
 ```JavaScript
 new Buffer(Integer size = 0);
@@ -175,7 +95,7 @@ new Buffer(Integer size = 0);
 
 ## 下标操作
         
-** 缓存对象可使用下标直接访问二进制数据 **
+**缓存对象可使用下标直接访问二进制数据**
 
 ```JavaScript
 Integer Buffer[];
@@ -184,7 +104,7 @@ Integer Buffer[];
 ## 静态函数
         
 ### isBuffer
-** 检测给定的变量是否是 Buffer 对象 **
+**检测给定的变量是否是 Buffer 对象**
 
 ```JavaScript
 static Boolean Buffer.isBuffer(Value v);
@@ -197,8 +117,58 @@ static Boolean Buffer.isBuffer(Value v);
 * Boolean, 传入对象是否 Buffer 对象
 
 --------------------------
+### from
+**通过其他 Buffer 创建 Buffer 对象**
+
+```JavaScript
+static Buffer Buffer.from(Buffer buffer,
+    Integer byteOffset = 0,
+    Integer length = -1);
+```
+
+调用参数:
+* buffer: Buffer, 给定 Buffer 类型变量用于创建 Buffer 对象
+* byteOffset: Integer, 指定数据起始位置，起始为 0
+* length: Integer, 指定数据长度，起始位 -1，表示剩余所有数据
+
+返回结果:
+* Buffer, 返回 Buffer 实例
+
+--------------------------
+**通过字符串创建 Buffer 对象**
+
+```JavaScript
+static Buffer Buffer.from(String str,
+    Integer byteOffset = 0,
+    Integer length = -1);
+```
+
+调用参数:
+* str: String, 初始化字符串，字符串将以 utf-8 格式写入
+* byteOffset: Integer, 指定数据起始位置，起始为 0
+* length: Integer, 指定数据长度，起始位 -1，表示剩余所有数据
+
+返回结果:
+* Buffer, 返回 Buffer 实例
+
+--------------------------
+**通过字符串创建 Buffer 对象**
+
+```JavaScript
+static Buffer Buffer.from(String str,
+    String codec = "utf8");
+```
+
+调用参数:
+* str: String, 初始化字符串，字符串将以 utf-8 格式写入，缺省则创建一个空对象
+* codec: String, 指定编码格式，允许值为："[hex](../../module/ifs/hex.md)", "[base64](../../module/ifs/base64.md)", "utf8", 或者系统支持的字符集
+
+返回结果:
+* Buffer, 返回 Buffer 实例
+
+--------------------------
 ### concat
-** 拼接多个缓存区中的数据 **
+**拼接多个缓存区中的数据**
 
 ```JavaScript
 static Buffer Buffer.concat(Array buflist,
@@ -212,10 +182,165 @@ static Buffer Buffer.concat(Array buflist,
 返回结果:
 * Buffer, 拼接后产生的新 Buffer 对象
 
+--------------------------
+### alloc
+**分配一个指定长度的新缓存区。如果大小为0，将创建一个零长度的缓存区。**
+
+```JavaScript
+static Buffer Buffer.alloc(Integer size,
+    Integer fill = 0,
+    String codec = "utf8");
+```
+
+调用参数:
+* size: Integer, 缓冲区的所需长度
+* fill: Integer, 预先填充新缓冲区的值，可使用 string/buffer/integer 值类型。 默认值：0
+* codec: String, 指定编码格式，允许值为："[hex](../../module/ifs/hex.md)", "[base64](../../module/ifs/base64.md)", "utf8", 或者系统支持的字符集
+
+返回结果:
+* Buffer, 填充好的新 Buffer 对象
+
+--------------------------
+**分配一个指定长度的新缓存区。如果大小为0，将创建一个零长度的缓存区。**
+
+```JavaScript
+static Buffer Buffer.alloc(Integer size,
+    String fill = "",
+    String codec = "utf8");
+```
+
+调用参数:
+* size: Integer, 缓冲区的所需长度
+* fill: String, 预先填充新缓冲区的值，可使用 string/buffer/integer 值类型。 默认值：0
+* codec: String, 指定编码格式，允许值为："[hex](../../module/ifs/hex.md)", "[base64](../../module/ifs/base64.md)", "utf8", 或者系统支持的字符集
+
+返回结果:
+* Buffer, 填充好的新 Buffer 对象
+
+--------------------------
+**分配一个指定长度的新缓存区。如果大小为0，将创建一个零长度的缓存区。**
+
+```JavaScript
+static Buffer Buffer.alloc(Integer size,
+    Buffer fill,
+    String codec = "utf8");
+```
+
+调用参数:
+* size: Integer, 缓冲区的所需长度
+* fill: Buffer, 预先填充新缓冲区的值，可使用 string/buffer/integer 值类型。 默认值：0
+* codec: String, 指定编码格式，允许值为："[hex](../../module/ifs/hex.md)", "[base64](../../module/ifs/base64.md)", "utf8", 或者系统支持的字符集
+
+返回结果:
+* Buffer, 填充好的新 Buffer 对象
+
+--------------------------
+### allocUnsafe
+**分配一个指定长度的新缓存区。如果大小为0，将创建一个零长度的缓存区。**
+
+```JavaScript
+static Buffer Buffer.allocUnsafe(Integer size);
+```
+
+调用参数:
+* size: Integer, 缓冲区的所需长度
+
+返回结果:
+* Buffer, 指定尺寸的新 Buffer 对象
+
+--------------------------
+### allocUnsafeSlow
+**分配一个指定长度的新缓存区。如果大小为0，将创建一个零长度的缓存区。**
+
+```JavaScript
+static Buffer Buffer.allocUnsafeSlow(Integer size);
+```
+
+调用参数:
+* size: Integer, 缓冲区的所需长度
+
+返回结果:
+* Buffer, 指定尺寸的新 Buffer 对象
+
+--------------------------
+### byteLength
+**返回字符串的实际字节长度**
+
+```JavaScript
+static Integer Buffer.byteLength(String str,
+    String codec = "utf8");
+```
+
+调用参数:
+* str: String, 待取字节的字符串，如果str为 ArrayBuffer/TypedArray/DataView/Buffer 对象，则返回它们的实际长度
+* codec: String, 指定编码格式，允许值为："[hex](../../module/ifs/hex.md)", "[base64](../../module/ifs/base64.md)", "utf8", 或者系统支持的字符集
+
+返回结果:
+* Integer, 返回实际字节长度
+
+--------------------------
+**返回字符串的实际字节长度**
+
+```JavaScript
+static Integer Buffer.byteLength(ArrayBuffer str,
+    String codec = "utf8");
+```
+
+调用参数:
+* str: ArrayBuffer, 待取字节的字符串，如果str为 ArrayBuffer/TypedArray/DataView/Buffer 对象，则返回它们的实际长度
+* codec: String, 指定编码格式，允许值为："[hex](../../module/ifs/hex.md)", "[base64](../../module/ifs/base64.md)", "utf8", 或者系统支持的字符集
+
+返回结果:
+* Integer, 返回实际字节长度
+
+--------------------------
+**返回字符串的实际字节长度**
+
+```JavaScript
+static Integer Buffer.byteLength(ArrayBufferView str,
+    String codec = "utf8");
+```
+
+调用参数:
+* str: ArrayBufferView, 待取字节的字符串，如果 str 为 ArrayBuffer/TypedArray/DataView/Buffer 对象，则返回它们的实际长度
+* codec: String, 指定编码格式，允许值为："[hex](../../module/ifs/hex.md)", "[base64](../../module/ifs/base64.md)", "utf8", 或者系统支持的字符集
+
+返回结果:
+* Integer, 返回实际字节长度
+
+--------------------------
+**返回字符串的实际字节长度**
+
+```JavaScript
+static Integer Buffer.byteLength(Buffer str,
+    String codec = "utf8");
+```
+
+调用参数:
+* str: Buffer, 待取字节的字符串，如果str为 ArrayBuffer/TypedArray/DataView/Buffer 对象，则返回它们的实际长度
+* codec: String, 指定编码格式，允许值为："[hex](../../module/ifs/hex.md)", "[base64](../../module/ifs/base64.md)", "utf8", 或者系统支持的字符集
+
+返回结果:
+* Integer, 返回实际字节长度
+
+--------------------------
+### isEncoding
+**检测编码格式是否被支持**
+
+```JavaScript
+static Boolean Buffer.isEncoding(String codec);
+```
+
+调用参数:
+* codec: String, 待检测的编码格式
+
+返回结果:
+* Boolean, 是否支持
+
 ## 成员属性
         
 ### length
-** Integer, 获取缓存对象的尺寸 **
+**Integer, 获取缓存对象的尺寸**
 
 ```JavaScript
 readonly Integer Buffer.length;
@@ -224,7 +349,7 @@ readonly Integer Buffer.length;
 ## 成员函数
         
 ### resize
-** 修改缓存对象尺寸 **
+**修改缓存对象尺寸**
 
 ```JavaScript
 Buffer.resize(Integer sz);
@@ -235,37 +360,7 @@ Buffer.resize(Integer sz);
 
 --------------------------
 ### append
-** 在缓存对象尾部写入一组数据 **
-
-```JavaScript
-Buffer.append(Array datas);
-```
-
-调用参数:
-* datas: Array, 初始化数据数组
-
---------------------------
-** 在缓存对象尾部写入一组数据 **
-
-```JavaScript
-Buffer.append(TypedArray datas);
-```
-
-调用参数:
-* datas: TypedArray, 初始化数据数组
-
---------------------------
-** 在缓存对象尾部写入一组数据 **
-
-```JavaScript
-Buffer.append(ArrayBuffer datas);
-```
-
-调用参数:
-* datas: ArrayBuffer, 初始化数据数组
-
---------------------------
-** 在缓存对象尾部写入一组二进制数据 **
+**在缓存对象尾部写入一组二进制数据**
 
 ```JavaScript
 Buffer.append(Buffer data);
@@ -275,7 +370,7 @@ Buffer.append(Buffer data);
 * data: Buffer, 初始化二进制数据
 
 --------------------------
-** 在缓存对象尾部写入字符串，字符串将以 utf-8 格式写入 **
+**在缓存对象尾部写入字符串，字符串将以 utf-8 格式写入**
 
 ```JavaScript
 Buffer.append(String str,
@@ -288,7 +383,7 @@ Buffer.append(String str,
 
 --------------------------
 ### write
-** 向缓存对象写入指定字符串，字符串默认为utf-8，越界时只写入部分数据 **
+**向缓存对象写入指定字符串，字符串默认为utf-8，越界时只写入部分数据**
 
 ```JavaScript
 Integer Buffer.write(String str,
@@ -307,7 +402,7 @@ Integer Buffer.write(String str,
 * Integer, 写入的数据字节长度
 
 --------------------------
-** 向缓存对象写入指定字符串，字符串默认为utf-8，越界时只写入部分数据 **
+**向缓存对象写入指定字符串，字符串默认为utf-8，越界时只写入部分数据**
 
 ```JavaScript
 Integer Buffer.write(String str,
@@ -324,7 +419,7 @@ Integer Buffer.write(String str,
 * Integer, 写入的数据字节长度
 
 --------------------------
-** 向缓存对象写入指定字符串，字符串默认为utf-8，越界时只写入部分数据 **
+**向缓存对象写入指定字符串，字符串默认为utf-8，越界时只写入部分数据**
 
 ```JavaScript
 Integer Buffer.write(String str,
@@ -340,7 +435,7 @@ Integer Buffer.write(String str,
 
 --------------------------
 ### fill
-** 为 Buffer 对象填充指定内容数据 **
+**为 Buffer 对象填充指定内容数据**
 
 ```JavaScript
 Buffer Buffer.fill(Integer v,
@@ -357,7 +452,7 @@ Buffer Buffer.fill(Integer v,
 * Buffer, 返回当前 Buffer 对象
 
 --------------------------
-** 为 Buffer 对象填充指定内容数据 **
+**为 Buffer 对象填充指定内容数据**
 
 ```JavaScript
 Buffer Buffer.fill(Buffer v,
@@ -374,7 +469,7 @@ Buffer Buffer.fill(Buffer v,
 * Buffer, 返回当前 Buffer 对象
 
 --------------------------
-** 为 Buffer 对象填充指定内容数据 **
+**为 Buffer 对象填充指定内容数据**
 
 ```JavaScript
 Buffer Buffer.fill(String v,
@@ -392,7 +487,7 @@ Buffer Buffer.fill(String v,
 
 --------------------------
 ### indexOf
-** 返回某个指定数据在 Buffer 中首次出现的位置 **
+**返回某个指定数据在 Buffer 中首次出现的位置**
 
 ```JavaScript
 Integer Buffer.indexOf(Integer v,
@@ -407,7 +502,7 @@ Integer Buffer.indexOf(Integer v,
 * Integer, 返回查找到的位置，未找到返回 -1
 
 --------------------------
-** 返回某个指定数据在 Buffer 中首次出现的位置 **
+**返回某个指定数据在 Buffer 中首次出现的位置**
 
 ```JavaScript
 Integer Buffer.indexOf(Buffer v,
@@ -422,7 +517,7 @@ Integer Buffer.indexOf(Buffer v,
 * Integer, 返回查找到的位置，未找到返回 -1
 
 --------------------------
-** 返回某个指定数据在 Buffer 中首次出现的位置 **
+**返回某个指定数据在 Buffer 中首次出现的位置**
 
 ```JavaScript
 Integer Buffer.indexOf(String v,
@@ -438,7 +533,7 @@ Integer Buffer.indexOf(String v,
 
 --------------------------
 ### compare
-** 比较缓存区的内容 **
+**比较缓存区的内容**
 
 ```JavaScript
 Integer Buffer.compare(Buffer buf);
@@ -452,7 +547,7 @@ Integer Buffer.compare(Buffer buf);
 
 --------------------------
 ### copy
-** 从源缓存对象区域拷贝数据到目标缓存对象区域 **
+**从源缓存对象区域拷贝数据到目标缓存对象区域**
 
 ```JavaScript
 Integer Buffer.copy(Buffer targetBuffer,
@@ -472,7 +567,7 @@ Integer Buffer.copy(Buffer targetBuffer,
 
 --------------------------
 ### readUInt8
-** 从缓存对象读取一个 8 位无符号整型数值 **
+**从缓存对象读取一个 8 位无符号整型数值**
 
 ```JavaScript
 Integer Buffer.readUInt8(Integer offset = 0,
@@ -488,7 +583,7 @@ Integer Buffer.readUInt8(Integer offset = 0,
 
 --------------------------
 ### readUInt16LE
-** 从缓存对象读取一个 16 位无符号整型数值，以低字节序的存储方式 **
+**从缓存对象读取一个 16 位无符号整型数值，以低字节序的存储方式**
 
 ```JavaScript
 Integer Buffer.readUInt16LE(Integer offset = 0,
@@ -504,7 +599,7 @@ Integer Buffer.readUInt16LE(Integer offset = 0,
 
 --------------------------
 ### readUInt16BE
-** 从缓存对象读取一个 16 位无符号整型数值，以高字节序的存储方式 **
+**从缓存对象读取一个 16 位无符号整型数值，以高字节序的存储方式**
 
 ```JavaScript
 Integer Buffer.readUInt16BE(Integer offset = 0,
@@ -520,7 +615,7 @@ Integer Buffer.readUInt16BE(Integer offset = 0,
 
 --------------------------
 ### readUInt32LE
-** 从缓存对象读取一个 32 位无符号整型数值，以低字节序的存储方式 **
+**从缓存对象读取一个 32 位无符号整型数值，以低字节序的存储方式**
 
 ```JavaScript
 Long Buffer.readUInt32LE(Integer offset = 0,
@@ -536,7 +631,7 @@ Long Buffer.readUInt32LE(Integer offset = 0,
 
 --------------------------
 ### readUInt32BE
-** 从缓存对象读取一个 32 位无符号整型数值，以高字节序的存储方式 **
+**从缓存对象读取一个 32 位无符号整型数值，以高字节序的存储方式**
 
 ```JavaScript
 Long Buffer.readUInt32BE(Integer offset = 0,
@@ -552,7 +647,7 @@ Long Buffer.readUInt32BE(Integer offset = 0,
 
 --------------------------
 ### readUIntLE
-** 从缓存对象读取一个无符号整型数值，最大支持 48 位，以低字节序的存储方式 **
+**从缓存对象读取一个无符号整型数值，最大支持 48 位，以低字节序的存储方式**
 
 ```JavaScript
 Long Buffer.readUIntLE(Integer offset = 0,
@@ -568,7 +663,7 @@ Long Buffer.readUIntLE(Integer offset = 0,
 
 --------------------------
 ### readUIntBE
-** 从缓存对象读取一个无符号整型数值，最大支持 48 位，以高字节序的存储方式 **
+**从缓存对象读取一个无符号整型数值，最大支持 48 位，以高字节序的存储方式**
 
 ```JavaScript
 Long Buffer.readUIntBE(Integer offset = 0,
@@ -584,7 +679,7 @@ Long Buffer.readUIntBE(Integer offset = 0,
 
 --------------------------
 ### readInt8
-** 从缓存对象读取一个 8 位整型数值 **
+**从缓存对象读取一个 8 位整型数值**
 
 ```JavaScript
 Integer Buffer.readInt8(Integer offset = 0,
@@ -600,7 +695,7 @@ Integer Buffer.readInt8(Integer offset = 0,
 
 --------------------------
 ### readInt16LE
-** 从缓存对象读取一个 16 位整型数值，以低字节序的存储方式 **
+**从缓存对象读取一个 16 位整型数值，以低字节序的存储方式**
 
 ```JavaScript
 Integer Buffer.readInt16LE(Integer offset = 0,
@@ -616,7 +711,7 @@ Integer Buffer.readInt16LE(Integer offset = 0,
 
 --------------------------
 ### readInt16BE
-** 从缓存对象读取一个 16 位整型数值，以高字节序的存储方式 **
+**从缓存对象读取一个 16 位整型数值，以高字节序的存储方式**
 
 ```JavaScript
 Integer Buffer.readInt16BE(Integer offset = 0,
@@ -632,7 +727,7 @@ Integer Buffer.readInt16BE(Integer offset = 0,
 
 --------------------------
 ### readInt32LE
-** 从缓存对象读取一个 32 位整型数值，以低字节序的存储方式 **
+**从缓存对象读取一个 32 位整型数值，以低字节序的存储方式**
 
 ```JavaScript
 Integer Buffer.readInt32LE(Integer offset = 0,
@@ -648,7 +743,7 @@ Integer Buffer.readInt32LE(Integer offset = 0,
 
 --------------------------
 ### readInt32BE
-** 从缓存对象读取一个 32 位整型数值，以高字节序的存储方式 **
+**从缓存对象读取一个 32 位整型数值，以高字节序的存储方式**
 
 ```JavaScript
 Integer Buffer.readInt32BE(Integer offset = 0,
@@ -664,7 +759,7 @@ Integer Buffer.readInt32BE(Integer offset = 0,
 
 --------------------------
 ### readIntLE
-** 从缓存对象读取一个整型数值，最大支持 48 位，以低字节序的存储方式 **
+**从缓存对象读取一个整型数值，最大支持 48 位，以低字节序的存储方式**
 
 ```JavaScript
 Long Buffer.readIntLE(Integer offset = 0,
@@ -680,7 +775,7 @@ Long Buffer.readIntLE(Integer offset = 0,
 
 --------------------------
 ### readIntBE
-** 从缓存对象读取一个整型数值，最大支持 48 位，以高字节序的存储方式 **
+**从缓存对象读取一个整型数值，最大支持 48 位，以高字节序的存储方式**
 
 ```JavaScript
 Long Buffer.readIntBE(Integer offset = 0,
@@ -696,7 +791,7 @@ Long Buffer.readIntBE(Integer offset = 0,
 
 --------------------------
 ### readInt64LE
-** 从缓存对象读取一个 64 位整型数值，以低字节序的存储方式 **
+**从缓存对象读取一个 64 位整型数值，以低字节序的存储方式**
 
 ```JavaScript
 Int64 Buffer.readInt64LE(Integer offset = 0,
@@ -712,7 +807,7 @@ Int64 Buffer.readInt64LE(Integer offset = 0,
 
 --------------------------
 ### readInt64BE
-** 从缓存对象读取一个 64 位整型数值，以高字节序的存储方式 **
+**从缓存对象读取一个 64 位整型数值，以高字节序的存储方式**
 
 ```JavaScript
 Int64 Buffer.readInt64BE(Integer offset = 0,
@@ -728,7 +823,7 @@ Int64 Buffer.readInt64BE(Integer offset = 0,
 
 --------------------------
 ### readFloatLE
-** 从缓存对象读取一个浮点数，以低字节序的存储方式 **
+**从缓存对象读取一个浮点数，以低字节序的存储方式**
 
 ```JavaScript
 Number Buffer.readFloatLE(Integer offset = 0,
@@ -744,7 +839,7 @@ Number Buffer.readFloatLE(Integer offset = 0,
 
 --------------------------
 ### readFloatBE
-** 从缓存对象读取一个浮点数，以高字节序的存储方式 **
+**从缓存对象读取一个浮点数，以高字节序的存储方式**
 
 ```JavaScript
 Number Buffer.readFloatBE(Integer offset = 0,
@@ -760,7 +855,7 @@ Number Buffer.readFloatBE(Integer offset = 0,
 
 --------------------------
 ### readDoubleLE
-** 从缓存对象读取一个双精度浮点数，以低字节序的存储方式 **
+**从缓存对象读取一个双精度浮点数，以低字节序的存储方式**
 
 ```JavaScript
 Number Buffer.readDoubleLE(Integer offset = 0,
@@ -776,7 +871,7 @@ Number Buffer.readDoubleLE(Integer offset = 0,
 
 --------------------------
 ### readDoubleBE
-** 从缓存对象读取一个双精度浮点数，以高字节序的存储方式 **
+**从缓存对象读取一个双精度浮点数，以高字节序的存储方式**
 
 ```JavaScript
 Number Buffer.readDoubleBE(Integer offset = 0,
@@ -792,10 +887,10 @@ Number Buffer.readDoubleBE(Integer offset = 0,
 
 --------------------------
 ### writeUInt8
-** 向缓存对象写入一个 8 位无符号整型数值 **
+**向缓存对象写入一个 8 位无符号整型数值**
 
 ```JavaScript
-Buffer.writeUInt8(Integer value,
+Integer Buffer.writeUInt8(Integer value,
     Integer offset = 0,
     Boolean noAssert = false);
 ```
@@ -804,13 +899,16 @@ Buffer.writeUInt8(Integer value,
 * value: Integer, 指定写入的数值
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
+
+返回结果:
+* Integer, offset 加上写入的字节数
 
 --------------------------
 ### writeUInt16LE
-** 向缓存对象写入一个 16 位无符号整型数值，以低字节序的存储方式 **
+**向缓存对象写入一个 16 位无符号整型数值，以低字节序的存储方式**
 
 ```JavaScript
-Buffer.writeUInt16LE(Integer value,
+Integer Buffer.writeUInt16LE(Integer value,
     Integer offset = 0,
     Boolean noAssert = false);
 ```
@@ -819,13 +917,16 @@ Buffer.writeUInt16LE(Integer value,
 * value: Integer, 指定写入的数值
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
+
+返回结果:
+* Integer, offset 加上写入的字节数
 
 --------------------------
 ### writeUInt16BE
-** 向缓存对象写入一个 16 位无符号整型数值，以高字节序的存储方式 **
+**向缓存对象写入一个 16 位无符号整型数值，以高字节序的存储方式**
 
 ```JavaScript
-Buffer.writeUInt16BE(Integer value,
+Integer Buffer.writeUInt16BE(Integer value,
     Integer offset = 0,
     Boolean noAssert = false);
 ```
@@ -834,13 +935,16 @@ Buffer.writeUInt16BE(Integer value,
 * value: Integer, 指定写入的数值
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
+
+返回结果:
+* Integer, offset 加上写入的字节数
 
 --------------------------
 ### writeUInt32LE
-** 向缓存对象写入一个 32 位无符号整型数值，以低字节序的存储方式 **
+**向缓存对象写入一个 32 位无符号整型数值，以低字节序的存储方式**
 
 ```JavaScript
-Buffer.writeUInt32LE(Long value,
+Integer Buffer.writeUInt32LE(Long value,
     Integer offset = 0,
     Boolean noAssert = false);
 ```
@@ -849,13 +953,16 @@ Buffer.writeUInt32LE(Long value,
 * value: Long, 指定写入的数值
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
+
+返回结果:
+* Integer, offset 加上写入的字节数
 
 --------------------------
 ### writeUInt32BE
-** 向缓存对象写入一个 32 位无符号整型数值，以高字节序的存储方式 **
+**向缓存对象写入一个 32 位无符号整型数值，以高字节序的存储方式**
 
 ```JavaScript
-Buffer.writeUInt32BE(Long value,
+Integer Buffer.writeUInt32BE(Long value,
     Integer offset = 0,
     Boolean noAssert = false);
 ```
@@ -864,13 +971,16 @@ Buffer.writeUInt32BE(Long value,
 * value: Long, 指定写入的数值
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
+
+返回结果:
+* Integer, offset 加上写入的字节数
 
 --------------------------
 ### writeUIntLE
-** 向缓存对象写入一个无符号整型数值，最大支持 48 位，以低字节序的存储方式 **
+**向缓存对象写入一个无符号整型数值，最大支持 48 位，以低字节序的存储方式**
 
 ```JavaScript
-Buffer.writeUIntLE(Long value,
+Integer Buffer.writeUIntLE(Long value,
     Integer offset = 0,
     Boolean noAssert = false);
 ```
@@ -879,13 +989,16 @@ Buffer.writeUIntLE(Long value,
 * value: Long, 指定写入的数值
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
+
+返回结果:
+* Integer, offset 加上写入的字节数
 
 --------------------------
 ### writeUIntBE
-** 向缓存对象写入一个无符号整型数值，最大支持 48 位，以高字节序的存储方式 **
+**向缓存对象写入一个无符号整型数值，最大支持 48 位，以高字节序的存储方式**
 
 ```JavaScript
-Buffer.writeUIntBE(Long value,
+Integer Buffer.writeUIntBE(Long value,
     Integer offset = 0,
     Boolean noAssert = false);
 ```
@@ -894,13 +1007,16 @@ Buffer.writeUIntBE(Long value,
 * value: Long, 指定写入的数值
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
+
+返回结果:
+* Integer, offset 加上写入的字节数
 
 --------------------------
 ### writeInt8
-** 向缓存对象写入一个 8 位整型数值 **
+**向缓存对象写入一个 8 位整型数值**
 
 ```JavaScript
-Buffer.writeInt8(Integer value,
+Integer Buffer.writeInt8(Integer value,
     Integer offset = 0,
     Boolean noAssert = false);
 ```
@@ -909,13 +1025,16 @@ Buffer.writeInt8(Integer value,
 * value: Integer, 指定写入的数值
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
+
+返回结果:
+* Integer, offset 加上写入的字节数
 
 --------------------------
 ### writeInt16LE
-** 向缓存对象写入一个 16 位整型数值，以低字节序的存储方式 **
+**向缓存对象写入一个 16 位整型数值，以低字节序的存储方式**
 
 ```JavaScript
-Buffer.writeInt16LE(Integer value,
+Integer Buffer.writeInt16LE(Integer value,
     Integer offset = 0,
     Boolean noAssert = false);
 ```
@@ -924,13 +1043,16 @@ Buffer.writeInt16LE(Integer value,
 * value: Integer, 指定写入的数值
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
+
+返回结果:
+* Integer, offset 加上写入的字节数
 
 --------------------------
 ### writeInt16BE
-** 向缓存对象写入一个 16 位整型数值，以高字节序的存储方式 **
+**向缓存对象写入一个 16 位整型数值，以高字节序的存储方式**
 
 ```JavaScript
-Buffer.writeInt16BE(Integer value,
+Integer Buffer.writeInt16BE(Integer value,
     Integer offset = 0,
     Boolean noAssert = false);
 ```
@@ -939,13 +1061,16 @@ Buffer.writeInt16BE(Integer value,
 * value: Integer, 指定写入的数值
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
+
+返回结果:
+* Integer, offset 加上写入的字节数
 
 --------------------------
 ### writeInt32LE
-** 向缓存对象写入一个 32 位整型数值，以低字节序的存储方式 **
+**向缓存对象写入一个 32 位整型数值，以低字节序的存储方式**
 
 ```JavaScript
-Buffer.writeInt32LE(Integer value,
+Integer Buffer.writeInt32LE(Integer value,
     Integer offset = 0,
     Boolean noAssert = false);
 ```
@@ -954,13 +1079,16 @@ Buffer.writeInt32LE(Integer value,
 * value: Integer, 指定写入的数值
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
+
+返回结果:
+* Integer, offset 加上写入的字节数
 
 --------------------------
 ### writeInt32BE
-** 向缓存对象写入一个 32 位整型数值，以高字节序的存储方式 **
+**向缓存对象写入一个 32 位整型数值，以高字节序的存储方式**
 
 ```JavaScript
-Buffer.writeInt32BE(Integer value,
+Integer Buffer.writeInt32BE(Integer value,
     Integer offset = 0,
     Boolean noAssert = false);
 ```
@@ -970,12 +1098,15 @@ Buffer.writeInt32BE(Integer value,
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
 
+返回结果:
+* Integer, offset 加上写入的字节数
+
 --------------------------
 ### writeIntLE
-** 向缓存对象写入一个整型数值，最大支持 48 位，以低字节序的存储方式 **
+**向缓存对象写入一个整型数值，最大支持 48 位，以低字节序的存储方式**
 
 ```JavaScript
-Buffer.writeIntLE(Long value,
+Integer Buffer.writeIntLE(Long value,
     Integer offset = 0,
     Boolean noAssert = false);
 ```
@@ -984,13 +1115,16 @@ Buffer.writeIntLE(Long value,
 * value: Long, 指定写入的数值
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
+
+返回结果:
+* Integer, offset 加上写入的字节数
 
 --------------------------
 ### writeIntBE
-** 向缓存对象写入一个整型数值，最大支持 48 位，以高字节序的存储方式 **
+**向缓存对象写入一个整型数值，最大支持 48 位，以高字节序的存储方式**
 
 ```JavaScript
-Buffer.writeIntBE(Long value,
+Integer Buffer.writeIntBE(Long value,
     Integer offset = 0,
     Boolean noAssert = false);
 ```
@@ -1000,12 +1134,15 @@ Buffer.writeIntBE(Long value,
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
 
+返回结果:
+* Integer, offset 加上写入的字节数
+
 --------------------------
 ### writeInt64LE
-** 向缓存对象写入一个 64 位整型数值，以低字节序的存储方式 **
+**向缓存对象写入一个 64 位整型数值，以低字节序的存储方式**
 
 ```JavaScript
-Buffer.writeInt64LE(Int64 value,
+Integer Buffer.writeInt64LE(Int64 value,
     Integer offset = 0,
     Boolean noAssert = false);
 ```
@@ -1014,13 +1151,16 @@ Buffer.writeInt64LE(Int64 value,
 * value: [Int64](Int64.md), 指定写入的数值
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
+
+返回结果:
+* Integer, offset 加上写入的字节数
 
 --------------------------
 ### writeInt64BE
-** 向缓存对象写入一个 64 位整型数值，以高字节序的存储方式 **
+**向缓存对象写入一个 64 位整型数值，以高字节序的存储方式**
 
 ```JavaScript
-Buffer.writeInt64BE(Int64 value,
+Integer Buffer.writeInt64BE(Int64 value,
     Integer offset = 0,
     Boolean noAssert = false);
 ```
@@ -1030,12 +1170,15 @@ Buffer.writeInt64BE(Int64 value,
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
 
+返回结果:
+* Integer, offset 加上写入的字节数
+
 --------------------------
 ### writeFloatLE
-** 向缓存对象写入一个浮点数，以低字节序的存储方式 **
+**向缓存对象写入一个浮点数，以低字节序的存储方式**
 
 ```JavaScript
-Buffer.writeFloatLE(Number value,
+Integer Buffer.writeFloatLE(Number value,
     Integer offset,
     Boolean noAssert = false);
 ```
@@ -1044,13 +1187,16 @@ Buffer.writeFloatLE(Number value,
 * value: Number, 指定写入的数值
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
+
+返回结果:
+* Integer, offset 加上写入的字节数
 
 --------------------------
 ### writeFloatBE
-** 向缓存对象写入一个浮点数，以高字节序的存储方式 **
+**向缓存对象写入一个浮点数，以高字节序的存储方式**
 
 ```JavaScript
-Buffer.writeFloatBE(Number value,
+Integer Buffer.writeFloatBE(Number value,
     Integer offset,
     Boolean noAssert = false);
 ```
@@ -1059,13 +1205,16 @@ Buffer.writeFloatBE(Number value,
 * value: Number, 指定写入的数值
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
+
+返回结果:
+* Integer, offset 加上写入的字节数
 
 --------------------------
 ### writeDoubleLE
-** 向缓存对象写入一个双精度浮点数，以低字节序的存储方式 **
+**向缓存对象写入一个双精度浮点数，以低字节序的存储方式**
 
 ```JavaScript
-Buffer.writeDoubleLE(Number value,
+Integer Buffer.writeDoubleLE(Number value,
     Integer offset,
     Boolean noAssert = false);
 ```
@@ -1074,13 +1223,16 @@ Buffer.writeDoubleLE(Number value,
 * value: Number, 指定写入的数值
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
+
+返回结果:
+* Integer, offset 加上写入的字节数
 
 --------------------------
 ### writeDoubleBE
-** 向缓存对象写入一个双精度浮点数，以高字节序的存储方式 **
+**向缓存对象写入一个双精度浮点数，以高字节序的存储方式**
 
 ```JavaScript
-Buffer.writeDoubleBE(Number value,
+Integer Buffer.writeDoubleBE(Number value,
     Integer offset,
     Boolean noAssert = false);
 ```
@@ -1090,9 +1242,12 @@ Buffer.writeDoubleBE(Number value,
 * offset: Integer, 指定写入的起始位置
 * noAssert: Boolean, 指定写入越界时不抛出错误，缺省为 flase，抛出
 
+返回结果:
+* Integer, offset 加上写入的字节数
+
 --------------------------
 ### slice
-** 返回一个新缓存对象，包含指定起始到缓存结尾的数据 **
+**返回一个新缓存对象，包含指定起始到缓存结尾的数据**
 
 ```JavaScript
 Buffer Buffer.slice(Integer start = 0);
@@ -1105,7 +1260,7 @@ Buffer Buffer.slice(Integer start = 0);
 * Buffer, 返回新的缓存对象
 
 --------------------------
-** 返回一个新缓存对象，包含指定范围的数据，若范围超出缓存，则只返回有效部分数据 **
+**返回一个新缓存对象，包含指定范围的数据，若范围超出缓存，则只返回有效部分数据**
 
 ```JavaScript
 Buffer Buffer.slice(Integer start,
@@ -1120,8 +1275,19 @@ Buffer Buffer.slice(Integer start,
 * Buffer, 返回新的缓存对象
 
 --------------------------
+### reverse
+**返回一个新缓存对象，包含当前对象数据的倒序**
+
+```JavaScript
+Buffer Buffer.reverse();
+```
+
+返回结果:
+* Buffer, 返回新的缓存对象
+
+--------------------------
 ### hex
-** 使用 16 进制编码缓存对象内容 **
+**使用 16 进制编码缓存对象内容**
 
 ```JavaScript
 String Buffer.hex();
@@ -1132,7 +1298,7 @@ String Buffer.hex();
 
 --------------------------
 ### base64
-** 使用 [base64](../../module/ifs/base64.md) 编码缓存对象内容 **
+**使用 [base64](../../module/ifs/base64.md) 编码缓存对象内容**
 
 ```JavaScript
 String Buffer.base64();
@@ -1142,8 +1308,41 @@ String Buffer.base64();
 * String, 返回编码字符串
 
 --------------------------
+### keys
+**返回全部二进制数据的数组**
+
+```JavaScript
+Iterator Buffer.keys();
+```
+
+返回结果:
+* Iterator, 返回包含对象数据索引的迭代器
+
+--------------------------
+### values
+**返回全部二进制数据的数组**
+
+```JavaScript
+Iterator Buffer.values();
+```
+
+返回结果:
+* Iterator, 返回包含对象数据值的迭代器
+
+--------------------------
+### entries
+**返回包含对象数据 [index, byte] 对的迭代器**
+
+```JavaScript
+Iterator Buffer.entries();
+```
+
+返回结果:
+* Iterator, [index, byte] 对的迭代器
+
+--------------------------
 ### toArray
-** 返回全部二进制数据的数组 **
+**返回全部二进制数据的数组**
 
 ```JavaScript
 Array Buffer.toArray();
@@ -1154,7 +1353,7 @@ Array Buffer.toArray();
 
 --------------------------
 ### toString
-** 返回二进制数据的编码字符串 **
+**返回二进制数据的编码字符串**
 
 ```JavaScript
 String Buffer.toString(String codec,
@@ -1171,7 +1370,7 @@ String Buffer.toString(String codec,
 * String, 返回对象的字符串表示
 
 --------------------------
-** 返回二进制数据的 utf8 编码字符串 **
+**返回二进制数据的 utf8 编码字符串**
 
 ```JavaScript
 String Buffer.toString();
@@ -1182,7 +1381,7 @@ String Buffer.toString();
 
 --------------------------
 ### dispose
-** 强制回收对象，调用此方法后，对象资源将立即释放 **
+**强制回收对象，调用此方法后，对象资源将立即释放**
 
 ```JavaScript
 Buffer.dispose();
@@ -1190,21 +1389,21 @@ Buffer.dispose();
 
 --------------------------
 ### equals
-** 比较当前对象与给定的对象是否相等 **
+**比较当前对象与给定的对象是否相等**
 
 ```JavaScript
 Boolean Buffer.equals(object expected);
 ```
 
 调用参数:
-* expected: object, 制定比较的目标对象
+* expected: [object](object.md), 制定比较的目标对象
 
 返回结果:
 * Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString
-** 返回对象的字符串表示，一般返回 "[Native Object]"，对象可以根据自己的特性重新实现 **
+**返回对象的字符串表示，一般返回 "[Native Object]"，对象可以根据自己的特性重新实现**
 
 ```JavaScript
 String Buffer.toString();
@@ -1215,7 +1414,7 @@ String Buffer.toString();
 
 --------------------------
 ### toJSON
-** 返回对象的 JSON 格式表示，一般返回对象定义的可读属性集合 **
+**返回对象的 JSON 格式表示，一般返回对象定义的可读属性集合**
 
 ```JavaScript
 Value Buffer.toJSON(String key = "");
@@ -1226,15 +1425,4 @@ Value Buffer.toJSON(String key = "");
 
 返回结果:
 * Value, 返回包含可 JSON 序列化的值
-
---------------------------
-### valueOf
-** 返回对象本身的数值 **
-
-```JavaScript
-Value Buffer.valueOf();
-```
-
-返回结果:
-* Value, 返回对象本身的数值
 

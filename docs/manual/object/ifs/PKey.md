@@ -8,68 +8,21 @@ var k = new crypto.PKey();
 ```
 
 ## 继承关系
-<div class="inherits"><svg width="82pt" height="380pt" viewBox="0.00 0.00 82.00 380.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 376)">
-<title>%0</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-376 78,-376 78,4 -4,4"/>
-<!-- object -->
-<g id="node1" class="node">
-<title>object</title>
-<g id="a_node1"><a xlink:href="object.md" xlink:title="object">
-<polygon fill="#ffffff" stroke="transparent" points="8.5,-280 8.5,-372 65.5,-372 65.5,-280 8.5,-280"/>
-<polygon fill="none" stroke="#000000" points="9,-350 9,-372 66,-372 66,-350 9,-350"/>
-<text text-anchor="start" x="24.1625" y="-358" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">object</text>
-<polygon fill="none" stroke="#000000" points="9,-280 9,-350 66,-350 66,-280 9,-280"/>
-<text text-anchor="start" x="14" y="-336" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> dispose()</text>
-<text text-anchor="start" x="14" y="-324" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> equals()</text>
-<text text-anchor="start" x="14" y="-312" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> toString()</text>
-<text text-anchor="start" x="14" y="-300" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> toJSON()</text>
-<text text-anchor="start" x="14" y="-288" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> valueOf()</text>
-</a>
-</g>
-</g>
-<!-- PKey -->
-<g id="node2" class="node">
-<title>PKey</title>
-<g id="a_node2"><a xlink:title="PKey">
-<polygon fill="#d3d3d3" stroke="transparent" points="0,0 0,-244 74,-244 74,0 0,0"/>
-<polygon fill="none" stroke="#000000" points="0,-222 0,-244 74,-244 74,-222 0,-222"/>
-<text text-anchor="start" x="25.0515" y="-230" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">PKey</text>
-<polygon fill="none" stroke="#000000" points="0,-200 0,-222 74,-222 74,-200 0,-200"/>
-<text text-anchor="start" x="5" y="-208" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">  new PKey()</text>
-<polygon fill="none" stroke="#000000" points="0,-154 0,-200 74,-200 74,-154 0,-154"/>
-<text text-anchor="start" x="5" y="-186" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> name</text>
-<text text-anchor="start" x="5" y="-174" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> keySize</text>
-<text text-anchor="start" x="5" y="-162" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> publicKey</text>
-<polygon fill="none" stroke="#000000" points="0,0 0,-154 74,-154 74,0 0,0"/>
-<text text-anchor="start" x="5" y="-140" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> genRsaKey()</text>
-<text text-anchor="start" x="5" y="-128" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> genEcKey()</text>
-<text text-anchor="start" x="5" y="-116" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> isPrivate()</text>
-<text text-anchor="start" x="5" y="-104" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> clone()</text>
-<text text-anchor="start" x="5" y="-92" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> importKey()</text>
-<text text-anchor="start" x="5" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> importFile()</text>
-<text text-anchor="start" x="5" y="-68" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> exportPem()</text>
-<text text-anchor="start" x="5" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> exportDer()</text>
-<text text-anchor="start" x="5" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> encrypt()</text>
-<text text-anchor="start" x="5" y="-32" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> decrypt()</text>
-<text text-anchor="start" x="5" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> sign()</text>
-<text text-anchor="start" x="5" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> verify()</text>
-</a>
-</g>
-</g>
-<!-- object&#45;&gt;PKey -->
-<g id="edge1" class="edge">
-<title>object-&gt;PKey</title>
-<path fill="none" stroke="#000000" d="M37,-269.9235C37,-261.7711 37,-253.1241 37,-244.2645"/>
-<polygon fill="#000000" stroke="#000000" points="33.5001,-269.964 37,-279.9641 40.5001,-269.9641 33.5001,-269.964"/>
-</g>
-</g>
-</svg></div>
+```dot
+digraph {
+    node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
+
+    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
+    PKey [tooltip="PKey", fillcolor="lightgray", label="{PKey|new PKey()\l|name\lkeySize\lpublicKey\l|genRsaKey()\lgenEcKey()\lisPrivate()\lclone()\limportKey()\limportFile()\lexportPem()\lexportDer()\lexportJson()\lencrypt()\ldecrypt()\lsign()\lverify()\l}"];
+
+    object -> PKey [dir=back];
+}
+```
 
 ## 构造函数
         
 ### PKey
-** PKey 构造函数 **
+**PKey 构造函数**
 
 ```JavaScript
 new PKey();
@@ -78,7 +31,7 @@ new PKey();
 ## 成员属性
         
 ### name
-** String, 返回当前算法名称 **
+**String, 返回当前算法名称**
 
 ```JavaScript
 readonly String PKey.name;
@@ -86,7 +39,7 @@ readonly String PKey.name;
 
 --------------------------
 ### keySize
-** Integer, 返回当前算法密码长度，以位为单位 **
+**Integer, 返回当前算法密码长度，以位为单位**
 
 ```JavaScript
 readonly Integer PKey.keySize;
@@ -94,7 +47,7 @@ readonly Integer PKey.keySize;
 
 --------------------------
 ### publicKey
-** PKey, 返回当前密钥的公钥 **
+**PKey, 返回当前密钥的公钥**
 
 ```JavaScript
 readonly PKey PKey.publicKey;
@@ -106,7 +59,7 @@ readonly PKey PKey.publicKey;
 ## 成员函数
         
 ### genRsaKey
-** 生成一个 RSA 私钥 **
+**生成一个 RSA 私钥**
 
 ```JavaScript
 PKey.genRsaKey(Integer size) async;
@@ -117,7 +70,7 @@ PKey.genRsaKey(Integer size) async;
 
 --------------------------
 ### genEcKey
-** 生成一个 EC 私钥 **
+**生成一个 EC 私钥**
 
 ```JavaScript
 PKey.genEcKey(String curve = "secp521r1") async;
@@ -128,7 +81,7 @@ PKey.genEcKey(String curve = "secp521r1") async;
 
 --------------------------
 ### isPrivate
-** 查询当前密钥是否为私钥 **
+**查询当前密钥是否为私钥**
 
 ```JavaScript
 Boolean PKey.isPrivate();
@@ -139,7 +92,7 @@ Boolean PKey.isPrivate();
 
 --------------------------
 ### clone
-** 复制当前密钥 **
+**复制当前密钥**
 
 ```JavaScript
 PKey PKey.clone();
@@ -150,7 +103,7 @@ PKey PKey.clone();
 
 --------------------------
 ### importKey
-** 加载一个 DER 格式的密钥 **
+**加载一个 DER 格式的密钥**
 
 ```JavaScript
 PKey.importKey(Buffer DerKey,
@@ -162,7 +115,7 @@ PKey.importKey(Buffer DerKey,
 * password: String, 解密密码
 
 --------------------------
-** 加载一个 PEM 格式的密钥 **
+**加载一个 PEM 格式的密钥**
 
 ```JavaScript
 PKey.importKey(String pemKey,
@@ -174,8 +127,67 @@ PKey.importKey(String pemKey,
 * password: String, 解密密码
 
 --------------------------
+**加载一个 JSON 格式的密钥**
+
+```JavaScript
+PKey.importKey(Object jsonKey);
+```
+
+调用参数:
+* jsonKey: Object, JSON 格式的密钥
+
+jsonKey 的格式支持以下四种，RSA 私钥：
+
+```JavaScript
+{
+    "kty": "RSA",
+    "n": "0m5lvKpWqy9JS7tV2HIPqHCYHLquSuxIC3F8strIQLJKO3rZmTT96KTnhsOfBO7Y1bI7mnT0PB3_vcHd9ekWMEoZJQw7MuB8KeM_Wn54-elJr5DNLk5bMppSGxX7ZnumiXGG51_X3Yp-_EbGtDG80GxXXix7Mucyo7K25uE0uW8=",
+    "e": "AQAB",
+    "d": "agN2O9NxMHL1MTMi75WfL9Pxvl-KWXKqZSF6mjzAsF9iKI8euyHIXYFepzU8kual1RsjDhCnzvWqFvZplW8lXqrHf_P-rS_9Y4gBUw6pjnI_DnFIRwWHRvrUHHSCfWOdTCIKdOTkgLZuGFuhEY3RMIW0WSYejjLtftwy0RVxAzk=",
+    "p": "6a4G1qmfwWmn1biigN7IVFlkbLf9oVe6g7rOmHxI-hn1GRxKDSVuAUrmR1IhuAnca9M0y7SD-7TUs6wjOxWxaw==",
+    "q": "5ofkxFKdPBD0CQHMb9q13AMHUVe0rJ-hSjqqIBrmqApUOneyAcMV76M0QyIQnI2p3POa4Qu_7XChDwRVl7LlDQ==",
+    "dp": "2mXGiGwCHl8j-FBWuID-1C6z-BRB3MBEVoeKPOOzxOPruatB3mWEGXsqG7A8SWgV9URxTI2K6P3J6Z7RUpBkvw==",
+    "dq": "oagn5vfb5NQqnOpS9xkSsD67cfIj821ZSFlNFYhnuOzNVda7z_qCtnHm4zDPH0lEFXoKYMfBhfqWJpaugttjPQ==",
+    "qi": "dqEQgxNmOVFrF4s776hTqeC6oEDila8EvpVb2F2ZvwAOLjCQ66OiAZK1BiYGHqUy0NeqNmtlsLSuBEZQZvqZwg=="
+}
+```
+
+RSA 公钥：
+
+```JavaScript
+{
+    "kty": "RSA",
+    "n": "0m5lvKpWqy9JS7tV2HIPqHCYHLquSuxIC3F8strIQLJKO3rZmTT96KTnhsOfBO7Y1bI7mnT0PB3_vcHd9ekWMEoZJQw7MuB8KeM_Wn54-elJr5DNLk5bMppSGxX7ZnumiXGG51_X3Yp-_EbGtDG80GxXXix7Mucyo7K25uE0uW8=",
+    "e": "AQAB"
+}
+```
+
+EC 私钥：
+
+```JavaScript
+{
+    "kty": "EC",
+    "crv": "P-521",
+    "x": "ATfNNFuuvlGxrTGoXgyfSAGgRNNDnO3rN3k74urKJdVS14RYhdnSwm91Bm-F1l-T1XKlAY2yRnzG9w1Ukvo8c0wL",
+    "y": "ASBHqrruB6kdkEUB3vlW3-UIkk4HtKdUeTwN-7m3j2rgZvYR1ffRAapDvWqKGiBjomqWafxokBkbDI0c95f6f4XU",
+    "d": "AfkIbUHXfW41njdpoKuqqKludcoLJS8D_oMEwkj-GVaXFNKccIoF5iKGu2c69kNDjo83R_7wyGlfRczsklkik1ST"
+}
+```
+
+EC 公钥：
+
+```JavaScript
+{
+    "kty": "EC",
+    "crv": "P-521",
+    "x": "ATfNNFuuvlGxrTGoXgyfSAGgRNNDnO3rN3k74urKJdVS14RYhdnSwm91Bm-F1l-T1XKlAY2yRnzG9w1Ukvo8c0wL",
+    "y": "ASBHqrruB6kdkEUB3vlW3-UIkk4HtKdUeTwN-7m3j2rgZvYR1ffRAapDvWqKGiBjomqWafxokBkbDI0c95f6f4XU"
+}
+```
+
+--------------------------
 ### importFile
-** 加载一个 PEM/DER 格式的密钥文件 **
+**加载一个 PEM/DER 格式的密钥文件**
 
 ```JavaScript
 PKey.importFile(String filename,
@@ -188,7 +200,7 @@ PKey.importFile(String filename,
 
 --------------------------
 ### exportPem
-** 返回当前 key 的 PEM 格式编码 **
+**返回当前 key 的 PEM 格式编码**
 
 ```JavaScript
 String PKey.exportPem();
@@ -199,7 +211,7 @@ String PKey.exportPem();
 
 --------------------------
 ### exportDer
-** 返回当前 key 的 DER 格式编码 **
+**返回当前 key 的 DER 格式编码**
 
 ```JavaScript
 Buffer PKey.exportDer();
@@ -209,8 +221,19 @@ Buffer PKey.exportDer();
 * [Buffer](Buffer.md), 当前 key 的 DER 格式编码
 
 --------------------------
+### exportJson
+**返回当前 key 的 DER 格式编码**
+
+```JavaScript
+Object PKey.exportJson();
+```
+
+返回结果:
+* Object, 当前 key 的 DER 格式编码
+
+--------------------------
 ### encrypt
-** 使用当前算法密码公钥加密数据 **
+**使用当前算法密码公钥加密数据**
 
 ```JavaScript
 Buffer PKey.encrypt(Buffer data) async;
@@ -224,7 +247,7 @@ Buffer PKey.encrypt(Buffer data) async;
 
 --------------------------
 ### decrypt
-** 使用当前算法密码私钥解密数据 **
+**使用当前算法密码私钥解密数据**
 
 ```JavaScript
 Buffer PKey.decrypt(Buffer data) async;
@@ -238,7 +261,7 @@ Buffer PKey.decrypt(Buffer data) async;
 
 --------------------------
 ### sign
-** 使用当前算法密码私钥签名数据 **
+**使用当前算法密码私钥签名数据**
 
 ```JavaScript
 Buffer PKey.sign(Buffer data,
@@ -254,23 +277,25 @@ Buffer PKey.sign(Buffer data,
 
 --------------------------
 ### verify
-** 使用当前算法密码公钥验证数据 **
+**使用当前算法密码公钥验证数据**
 
 ```JavaScript
-Boolean PKey.verify(Buffer sign,
-    Buffer data) async;
+Boolean PKey.verify(Buffer data,
+    Buffer sign,
+    Integer alg = 0) async;
 ```
 
 调用参数:
-* sign: [Buffer](Buffer.md), 指定要验证的签名
 * data: [Buffer](Buffer.md), 指定要验证的数据
+* sign: [Buffer](Buffer.md), 指定要验证的签名
+* alg: Integer, 指定要签名的算法, 默认0. 支持算法: 0=NONE,1=MD2,2=MD4,3=MD5,4=SHA1,5=SHA224,6=SHA256,7=SHA384,8=SHA512,9=RIPEMD160
 
 返回结果:
 * Boolean, 返回验证后的结果
 
 --------------------------
 ### dispose
-** 强制回收对象，调用此方法后，对象资源将立即释放 **
+**强制回收对象，调用此方法后，对象资源将立即释放**
 
 ```JavaScript
 PKey.dispose();
@@ -278,21 +303,21 @@ PKey.dispose();
 
 --------------------------
 ### equals
-** 比较当前对象与给定的对象是否相等 **
+**比较当前对象与给定的对象是否相等**
 
 ```JavaScript
 Boolean PKey.equals(object expected);
 ```
 
 调用参数:
-* expected: object, 制定比较的目标对象
+* expected: [object](object.md), 制定比较的目标对象
 
 返回结果:
 * Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString
-** 返回对象的字符串表示，一般返回 "[Native Object]"，对象可以根据自己的特性重新实现 **
+**返回对象的字符串表示，一般返回 "[Native Object]"，对象可以根据自己的特性重新实现**
 
 ```JavaScript
 String PKey.toString();
@@ -303,7 +328,7 @@ String PKey.toString();
 
 --------------------------
 ### toJSON
-** 返回对象的 JSON 格式表示，一般返回对象定义的可读属性集合 **
+**返回对象的 JSON 格式表示，一般返回对象定义的可读属性集合**
 
 ```JavaScript
 Value PKey.toJSON(String key = "");
@@ -314,15 +339,4 @@ Value PKey.toJSON(String key = "");
 
 返回结果:
 * Value, 返回包含可 JSON 序列化的值
-
---------------------------
-### valueOf
-** 返回对象本身的数值 **
-
-```JavaScript
-Value PKey.valueOf();
-```
-
-返回结果:
-* Value, 返回对象本身的数值
 

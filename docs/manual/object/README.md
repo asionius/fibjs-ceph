@@ -6,10 +6,7 @@
 * [Chain](ifs/Chain.md) - 消息处理器链处理对象
 * [Cipher](ifs/Cipher.md) - 对称加密算法对象
 * [Condition](ifs/Condition.md) - 条件变量对象
-* [DatagramPacket](ifs/DatagramPacket.md) - UDP 数据包
 * [DbConnection](ifs/DbConnection.md) - 数据库连接对象，用于建立和维护一个数据库连接会话。
-* [DBResult](ifs/DBResult.md) - 数据库结果集合对象
-* [DBRow](ifs/DBRow.md) - 数据库记录对象
 * [Digest](ifs/Digest.md) - 信息摘要对象
 * [Event](ifs/Event.md) - 事件对象
 * [EventEmitter](ifs/EventEmitter.md) - 事件触发对象，可用于建立观察者模式，支持事件触发的对象均继承于此，同一事件的同一函数只会产生一次回调
@@ -50,12 +47,16 @@
 * [object](ifs/object.md) - 基础对象，所有对象均继承于此
 * [PKey](ifs/PKey.md) - 不对称加密算法对象
 * [Queue](ifs/Queue.md) - FIFO（先进先出）队列对象
+* [RadosCluster](ifs/RadosCluster.md) - rados集群操作对象，用于创建对rados集群进行读写的ioctx
+* [RadosIoCtx](ifs/RadosIoCtx.md) - rados 集群读写io上下文对象，用于打开和关闭kv存储
+* [RadosStat](ifs/RadosStat.md) - rados流状态对象，用于取出流对象大小和最后修改时间
+* [RadosStream](ifs/RadosStream.md) - rados流操作对象，用于读写rados存储
+* [RbdImage](ifs/RbdImage.md) - rbd image对象，用于读写rbd image
 * [Redis](ifs/Redis.md) - Redis 数据库客户端对象
 * [RedisHash](ifs/RedisHash.md) - Redis 数据库客户端 Hash 对象，此对象为包含指定 key 的客户端，只有调用其方法才会操作数据库
 * [RedisList](ifs/RedisList.md) - Redis 数据库客户端 List 对象，此对象为包含指定 key 的客户端，只有调用其方法才会操作数据库
 * [RedisSet](ifs/RedisSet.md) - Redis 数据库客户端 Set 对象，此对象为包含指定 key 的客户端，只有调用其方法才会操作数据库
 * [RedisSortedSet](ifs/RedisSortedSet.md) - Redis 数据库客户端 SortedSet 对象，此对象为包含指定 key 的客户端，只有调用其方法才会操作数据库
-* [Regex](ifs/Regex.md) - 正则表达式对象
 * [Routing](ifs/Routing.md) - 消息处理器路由对象
 * [SandBox](ifs/SandBox.md) - 安全沙箱对象，用于管理一个独立的运行空间
 * [SeekableStream](ifs/SeekableStream.md) - 可移动当前指针的流对象接口

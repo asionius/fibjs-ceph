@@ -9,91 +9,21 @@ var test = new db.openRedis("redis-server");
 ```
 
 ## 继承关系
-<div class="inherits"><svg width="89pt" height="658pt" viewBox="0.00 0.00 89.00 658.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 654)">
-<title>%0</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-654 85,-654 85,4 -4,4"/>
-<!-- object -->
-<g id="node1" class="node">
-<title>object</title>
-<g id="a_node1"><a xlink:href="object.md" xlink:title="object">
-<polygon fill="#ffffff" stroke="transparent" points="12,-558 12,-650 69,-650 69,-558 12,-558"/>
-<polygon fill="none" stroke="#000000" points="12.5,-628 12.5,-650 69.5,-650 69.5,-628 12.5,-628"/>
-<text text-anchor="start" x="27.6625" y="-636" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">object</text>
-<polygon fill="none" stroke="#000000" points="12.5,-558 12.5,-628 69.5,-628 69.5,-558 12.5,-558"/>
-<text text-anchor="start" x="17.5" y="-614" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> dispose()</text>
-<text text-anchor="start" x="17.5" y="-602" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> equals()</text>
-<text text-anchor="start" x="17.5" y="-590" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> toString()</text>
-<text text-anchor="start" x="17.5" y="-578" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> toJSON()</text>
-<text text-anchor="start" x="17.5" y="-566" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> valueOf()</text>
-</a>
-</g>
-</g>
-<!-- Redis -->
-<g id="node2" class="node">
-<title>Redis</title>
-<g id="a_node2"><a xlink:title="Redis">
-<polygon fill="#d3d3d3" stroke="transparent" points="0,0 0,-522 81,-522 81,0 0,0"/>
-<polygon fill="none" stroke="#000000" points=".5,-500 .5,-522 81.5,-522 81.5,-500 .5,-500"/>
-<text text-anchor="start" x="28.222" y="-508" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000">Redis</text>
-<polygon fill="none" stroke="#000000" points=".5,-478 .5,-500 81.5,-500 81.5,-478 .5,-478"/>
-<text text-anchor="start" x="5.5" y="-486" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> onsuberror</text>
-<polygon fill="none" stroke="#000000" points=".5,0 .5,-478 81.5,-478 81.5,0 .5,0"/>
-<text text-anchor="start" x="5.5" y="-464" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> command()</text>
-<text text-anchor="start" x="5.5" y="-452" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> set()</text>
-<text text-anchor="start" x="5.5" y="-440" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> setNX()</text>
-<text text-anchor="start" x="5.5" y="-428" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> setXX()</text>
-<text text-anchor="start" x="5.5" y="-416" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> mset()</text>
-<text text-anchor="start" x="5.5" y="-404" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> msetNX()</text>
-<text text-anchor="start" x="5.5" y="-392" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> append()</text>
-<text text-anchor="start" x="5.5" y="-380" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> setRange()</text>
-<text text-anchor="start" x="5.5" y="-368" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> getRange()</text>
-<text text-anchor="start" x="5.5" y="-356" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> strlen()</text>
-<text text-anchor="start" x="5.5" y="-344" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> bitcount()</text>
-<text text-anchor="start" x="5.5" y="-332" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> get()</text>
-<text text-anchor="start" x="5.5" y="-320" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> mget()</text>
-<text text-anchor="start" x="5.5" y="-308" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> getset()</text>
-<text text-anchor="start" x="5.5" y="-296" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> decr()</text>
-<text text-anchor="start" x="5.5" y="-284" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> incr()</text>
-<text text-anchor="start" x="5.5" y="-272" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> setBit()</text>
-<text text-anchor="start" x="5.5" y="-260" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> getBit()</text>
-<text text-anchor="start" x="5.5" y="-248" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> exists()</text>
-<text text-anchor="start" x="5.5" y="-236" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> type()</text>
-<text text-anchor="start" x="5.5" y="-224" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> keys()</text>
-<text text-anchor="start" x="5.5" y="-212" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> del()</text>
-<text text-anchor="start" x="5.5" y="-200" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> expire()</text>
-<text text-anchor="start" x="5.5" y="-188" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> ttl()</text>
-<text text-anchor="start" x="5.5" y="-176" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> persist()</text>
-<text text-anchor="start" x="5.5" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> rename()</text>
-<text text-anchor="start" x="5.5" y="-152" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> renameNX()</text>
-<text text-anchor="start" x="5.5" y="-140" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> sub()</text>
-<text text-anchor="start" x="5.5" y="-128" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> unsub()</text>
-<text text-anchor="start" x="5.5" y="-116" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> psub()</text>
-<text text-anchor="start" x="5.5" y="-104" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> unpsub()</text>
-<text text-anchor="start" x="5.5" y="-92" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> pub()</text>
-<text text-anchor="start" x="5.5" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> getHash()</text>
-<text text-anchor="start" x="5.5" y="-68" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> getList()</text>
-<text text-anchor="start" x="5.5" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> getSet()</text>
-<text text-anchor="start" x="5.5" y="-44" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> getSortedSet()</text>
-<text text-anchor="start" x="5.5" y="-32" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> dump()</text>
-<text text-anchor="start" x="5.5" y="-20" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> restore()</text>
-<text text-anchor="start" x="5.5" y="-8" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#000000"> close()</text>
-</a>
-</g>
-</g>
-<!-- object&#45;&gt;Redis -->
-<g id="edge1" class="edge">
-<title>object-&gt;Redis</title>
-<path fill="none" stroke="#000000" d="M40.5,-547.6686C40.5,-539.7282 40.5,-531.1754 40.5,-522.163"/>
-<polygon fill="#000000" stroke="#000000" points="37.0001,-547.7415 40.5,-557.7415 44.0001,-547.7415 37.0001,-547.7415"/>
-</g>
-</g>
-</svg></div>
+```dot
+digraph {
+    node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
+
+    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
+    Redis [tooltip="Redis", fillcolor="lightgray", label="{Redis|onsuberror\l|command()\lset()\lsetNX()\lsetXX()\lmset()\lmsetNX()\lappend()\lsetRange()\lgetRange()\lstrlen()\lbitcount()\lget()\lmget()\lgetset()\ldecr()\lincr()\lsetBit()\lgetBit()\lexists()\ltype()\lkeys()\ldel()\lexpire()\lttl()\lpersist()\lrename()\lrenameNX()\lsub()\lunsub()\lpsub()\lunpsub()\lpub()\lgetHash()\lgetList()\lgetSet()\lgetSortedSet()\ldump()\lrestore()\lclose()\l}"];
+
+    object -> Redis [dir=back];
+}
+```
 
 ## 成员属性
         
 ### onsuberror
-** Function, 查询和设置错误处理函数，当 sub 出现错误或者网络中断时回调，当回调发生后，本对象的一切 sub 都将中止 **
+**Function, 查询和设置错误处理函数，当 sub 出现错误或者网络中断时回调，当回调发生后，本对象的一切 sub 都将中止**
 
 ```JavaScript
 Function Redis.onsuberror;
@@ -102,23 +32,23 @@ Function Redis.onsuberror;
 ## 成员函数
         
 ### command
-** redis 基础命令方法 **
+**redis 基础命令方法**
 
 ```JavaScript
 Value Redis.command(String cmd,
-    ...);
+    ...args);
 ```
 
 调用参数:
 * cmd: String, 指定发送的命令
-* ...: 指定发送的参数
+* args: ..., 指定发送的参数
 
 返回结果:
 * Value, 返回服务器返回的结果
 
 --------------------------
 ### set
-** 将字符串值 value 关联到 key，如果 key 已经持有其他值， SET 就覆写旧值，无视类型 **
+**将字符串值 value 关联到 key，如果 key 已经持有其他值， SET 就覆写旧值，无视类型**
 
 ```JavaScript
 Redis.set(Buffer key,
@@ -133,7 +63,7 @@ Redis.set(Buffer key,
 
 --------------------------
 ### setNX
-** 将 key 的值设为 value ，当且仅当 key 不存在。若给定的 key 已经存在，则 SETNX 不做任何动作。 **
+**将 key 的值设为 value ，当且仅当 key 不存在。若给定的 key 已经存在，则 SETNX 不做任何动作。**
 
 ```JavaScript
 Redis.setNX(Buffer key,
@@ -148,7 +78,7 @@ Redis.setNX(Buffer key,
 
 --------------------------
 ### setXX
-** 将 key 的值设为 value，只在键已经存在时，才对键进行设置操作。 **
+**将 key 的值设为 value，只在键已经存在时，才对键进行设置操作。**
 
 ```JavaScript
 Redis.setXX(Buffer key,
@@ -163,7 +93,7 @@ Redis.setXX(Buffer key,
 
 --------------------------
 ### mset
-** 同时设置一个或多个 key-value 对。如果某个给定 key 已经存在，那么 MSET 会用新值覆盖原来的旧值 **
+**同时设置一个或多个 key-value 对。如果某个给定 key 已经存在，那么 MSET 会用新值覆盖原来的旧值**
 
 ```JavaScript
 Redis.mset(Object kvs);
@@ -173,18 +103,18 @@ Redis.mset(Object kvs);
 * kvs: Object, 指定要设置的 key/value 对象
 
 --------------------------
-** 同时设置一个或多个 key-value 对。如果某个给定 key 已经存在，那么 MSET 会用新值覆盖原来的旧值 **
+**同时设置一个或多个 key-value 对。如果某个给定 key 已经存在，那么 MSET 会用新值覆盖原来的旧值**
 
 ```JavaScript
-Redis.mset(...);
+Redis.mset(...kvs);
 ```
 
 调用参数:
-* ...: 指定要设置的 key/value 列表
+* kvs: ..., 指定要设置的 key/value 列表
 
 --------------------------
 ### msetNX
-** 同时设置一个或多个 key-value 对，当且仅当所有给定 key 都不存在 **
+**同时设置一个或多个 key-value 对，当且仅当所有给定 key 都不存在**
 
 ```JavaScript
 Redis.msetNX(Object kvs);
@@ -194,18 +124,18 @@ Redis.msetNX(Object kvs);
 * kvs: Object, 指定要设置的 key/value 对象
 
 --------------------------
-** 同时设置一个或多个 key-value 对，当且仅当所有给定 key 都不存在 **
+**同时设置一个或多个 key-value 对，当且仅当所有给定 key 都不存在**
 
 ```JavaScript
-Redis.msetNX(...);
+Redis.msetNX(...kvs);
 ```
 
 调用参数:
-* ...: 指定要设置的 key/value 列表
+* kvs: ..., 指定要设置的 key/value 列表
 
 --------------------------
 ### append
-** 如果 key 已经存在并且是一个字符串，append 命令将 value 追加到 key 原来的值的末尾。如果 key 不存在，append 就简单地将给定 key 设为 value **
+**如果 key 已经存在并且是一个字符串，append 命令将 value 追加到 key 原来的值的末尾。如果 key 不存在，append 就简单地将给定 key 设为 value**
 
 ```JavaScript
 Integer Redis.append(Buffer key,
@@ -221,7 +151,7 @@ Integer Redis.append(Buffer key,
 
 --------------------------
 ### setRange
-** 用 value 参数覆写给定 key 所储存的字符串值，从偏移量 offset 开始 **
+**用 value 参数覆写给定 key 所储存的字符串值，从偏移量 offset 开始**
 
 ```JavaScript
 Integer Redis.setRange(Buffer key,
@@ -239,7 +169,7 @@ Integer Redis.setRange(Buffer key,
 
 --------------------------
 ### getRange
-** 返回 key 中字符串值的子字符串，字符串的截取范围由 start 和 end 两个偏移量决定(包括 start 和 end 在内) **
+**返回 key 中字符串值的子字符串，字符串的截取范围由 start 和 end 两个偏移量决定(包括 start 和 end 在内)**
 
 ```JavaScript
 Buffer Redis.getRange(Buffer key,
@@ -257,7 +187,7 @@ Buffer Redis.getRange(Buffer key,
 
 --------------------------
 ### strlen
-** 返回 key 所储存的字符串值的长度。当 key 储存的不是字符串值时，返回一个错误 **
+**返回 key 所储存的字符串值的长度。当 key 储存的不是字符串值时，返回一个错误**
 
 ```JavaScript
 Integer Redis.strlen(Buffer key);
@@ -271,7 +201,7 @@ Integer Redis.strlen(Buffer key);
 
 --------------------------
 ### bitcount
-** 计算给定字符串中，被设置为 1 的比特位的数量 **
+**计算给定字符串中，被设置为 1 的比特位的数量**
 
 ```JavaScript
 Integer Redis.bitcount(Buffer key,
@@ -289,7 +219,7 @@ Integer Redis.bitcount(Buffer key,
 
 --------------------------
 ### get
-** 返回 key 所关联的字符串值，如果 key 不存在那么返回特殊值 Null **
+**返回 key 所关联的字符串值，如果 key 不存在那么返回特殊值 Null**
 
 ```JavaScript
 Buffer Redis.get(Buffer key);
@@ -303,7 +233,7 @@ Buffer Redis.get(Buffer key);
 
 --------------------------
 ### mget
-** 返回所有(一个或多个)给定 key 的值。如果给定的 key 里面，有某个 key 不存在，那么这个 key 返回特殊值 nil 。 **
+**返回所有(一个或多个)给定 key 的值。如果给定的 key 里面，有某个 key 不存在，那么这个 key 返回特殊值 nil 。**
 
 ```JavaScript
 List Redis.mget(Array keys);
@@ -316,21 +246,21 @@ List Redis.mget(Array keys);
 * [List](List.md), 一个包含所有给定 key 的值的列表
 
 --------------------------
-** 返回所有(一个或多个)给定 key 的值。如果给定的 key 里面，有某个 key 不存在，那么这个 key 返回特殊值 nil 。 **
+**返回所有(一个或多个)给定 key 的值。如果给定的 key 里面，有某个 key 不存在，那么这个 key 返回特殊值 nil 。**
 
 ```JavaScript
-List Redis.mget(...);
+List Redis.mget(...keys);
 ```
 
 调用参数:
-* ...: 指定要查询的 key 列表
+* keys: ..., 指定要查询的 key 列表
 
 返回结果:
 * [List](List.md), 一个包含所有给定 key 的值的列表
 
 --------------------------
 ### getset
-** 将给定 key 的值设为 value ，并返回 key 的旧值(old value) **
+**将给定 key 的值设为 value ，并返回 key 的旧值(old value)**
 
 ```JavaScript
 Buffer Redis.getset(Buffer key,
@@ -346,7 +276,7 @@ Buffer Redis.getset(Buffer key,
 
 --------------------------
 ### decr
-** 将 key 所储存的值减去减量 **
+**将 key 所储存的值减去减量**
 
 ```JavaScript
 Long Redis.decr(Buffer key,
@@ -362,7 +292,7 @@ Long Redis.decr(Buffer key,
 
 --------------------------
 ### incr
-** 将 key 所储存的值加上增量 **
+**将 key 所储存的值加上增量**
 
 ```JavaScript
 Long Redis.incr(Buffer key,
@@ -378,7 +308,7 @@ Long Redis.incr(Buffer key,
 
 --------------------------
 ### setBit
-** 对 key 所储存的字符串值，设置或清除指定偏移量上的位(bit) **
+**对 key 所储存的字符串值，设置或清除指定偏移量上的位(bit)**
 
 ```JavaScript
 Integer Redis.setBit(Buffer key,
@@ -396,7 +326,7 @@ Integer Redis.setBit(Buffer key,
 
 --------------------------
 ### getBit
-** 对 key 所储存的字符串值，获取指定偏移量上的位(bit) **
+**对 key 所储存的字符串值，获取指定偏移量上的位(bit)**
 
 ```JavaScript
 Integer Redis.getBit(Buffer key,
@@ -412,7 +342,7 @@ Integer Redis.getBit(Buffer key,
 
 --------------------------
 ### exists
-** 检查给定 key 是否存在 **
+**检查给定 key 是否存在**
 
 ```JavaScript
 Boolean Redis.exists(Buffer key);
@@ -426,7 +356,7 @@ Boolean Redis.exists(Buffer key);
 
 --------------------------
 ### type
-** 返回 key 所储存的值的类型 **
+**返回 key 所储存的值的类型**
 
 ```JavaScript
 String Redis.type(Buffer key);
@@ -440,7 +370,7 @@ String Redis.type(Buffer key);
 
 --------------------------
 ### keys
-** 查找所有符合给定模式 pattern 的 key **
+**查找所有符合给定模式 pattern 的 key**
 
 ```JavaScript
 List Redis.keys(String pattern);
@@ -454,7 +384,7 @@ List Redis.keys(String pattern);
 
 --------------------------
 ### del
-** 删除给定的一个或多个 key，不存在的 key 会被忽略 **
+**删除给定的一个或多个 key，不存在的 key 会被忽略**
 
 ```JavaScript
 Integer Redis.del(Array keys);
@@ -467,21 +397,21 @@ Integer Redis.del(Array keys);
 * Integer, 被删除 key 的数量
 
 --------------------------
-** 删除给定的一个或多个 key，不存在的 key 会被忽略 **
+**删除给定的一个或多个 key，不存在的 key 会被忽略**
 
 ```JavaScript
-Integer Redis.del(...);
+Integer Redis.del(...keys);
 ```
 
 调用参数:
-* ...: 指定要删除的 key 列表
+* keys: ..., 指定要删除的 key 列表
 
 返回结果:
 * Integer, 被删除 key 的数量
 
 --------------------------
 ### expire
-** 为给定 key 设置生存时间，当 key 过期时，它会被自动删除 **
+**为给定 key 设置生存时间，当 key 过期时，它会被自动删除**
 
 ```JavaScript
 Boolean Redis.expire(Buffer key,
@@ -497,7 +427,7 @@ Boolean Redis.expire(Buffer key,
 
 --------------------------
 ### ttl
-** 返回给定 key 的剩余生存时间 **
+**返回给定 key 的剩余生存时间**
 
 ```JavaScript
 Long Redis.ttl(Buffer key);
@@ -511,7 +441,7 @@ Long Redis.ttl(Buffer key);
 
 --------------------------
 ### persist
-** 移除给定 key 的生存时间，将这个 key 从『易失的』(带生存时间 key )转换成『持久的』(一个不带生存时间、永不过期的 key) **
+**移除给定 key 的生存时间，将这个 key 从『易失的』(带生存时间 key )转换成『持久的』(一个不带生存时间、永不过期的 key)**
 
 ```JavaScript
 Boolean Redis.persist(Buffer key);
@@ -525,7 +455,7 @@ Boolean Redis.persist(Buffer key);
 
 --------------------------
 ### rename
-** 将 key 改名为 newkey，当 key 和 newkey 相同，或者 key 不存在时，返回一个错误 **
+**将 key 改名为 newkey，当 key 和 newkey 相同，或者 key 不存在时，返回一个错误**
 
 ```JavaScript
 Redis.rename(Buffer key,
@@ -538,7 +468,7 @@ Redis.rename(Buffer key,
 
 --------------------------
 ### renameNX
-** 当且仅当 newkey 不存在时，将 key 改名为 newkey，当 key 不存在时，返回一个错误 **
+**当且仅当 newkey 不存在时，将 key 改名为 newkey，当 key 不存在时，返回一个错误**
 
 ```JavaScript
 Boolean Redis.renameNX(Buffer key,
@@ -554,7 +484,7 @@ Boolean Redis.renameNX(Buffer key,
 
 --------------------------
 ### sub
-** 订阅给定的一个频道的信息，当消息发生时自动调用 func，func 包含两个参数，依次为 channel 和 message，同一频道同一函数只会回调一次 **
+**订阅给定的一个频道的信息，当消息发生时自动调用 func，func 包含两个参数，依次为 channel 和 message，同一频道同一函数只会回调一次**
 
 ```JavaScript
 Redis.sub(Buffer channel,
@@ -566,7 +496,7 @@ Redis.sub(Buffer channel,
 * func: Function, 指定回调函数
 
 --------------------------
-** 订阅给定的一组频道的信息，当消息发生时自动调用相应的回调函数，同一频道同一函数只会回调一次 **
+**订阅给定的一组频道的信息，当消息发生时自动调用相应的回调函数，同一频道同一函数只会回调一次**
 
 ```JavaScript
 Redis.sub(Object map);
@@ -577,7 +507,7 @@ Redis.sub(Object map);
 
 --------------------------
 ### unsub
-** 退订给定的频道的全部回调 **
+**退订给定的频道的全部回调**
 
 ```JavaScript
 Redis.unsub(Buffer channel);
@@ -587,7 +517,7 @@ Redis.unsub(Buffer channel);
 * channel: [Buffer](Buffer.md), 指定退订的频道名称
 
 --------------------------
-** 退订给定的频道的指定回调函数 **
+**退订给定的频道的指定回调函数**
 
 ```JavaScript
 Redis.unsub(Buffer channel,
@@ -599,7 +529,7 @@ Redis.unsub(Buffer channel,
 * func: Function, 指定退订的回调函数
 
 --------------------------
-** 退订一组给定的频道的全部回调 **
+**退订一组给定的频道的全部回调**
 
 ```JavaScript
 Redis.unsub(Array channels);
@@ -609,7 +539,7 @@ Redis.unsub(Array channels);
 * channels: Array, 指定退订的频道数组
 
 --------------------------
-** 退订给定的一组频道的指定回调函数 **
+**退订给定的一组频道的指定回调函数**
 
 ```JavaScript
 Redis.unsub(Object map);
@@ -620,7 +550,7 @@ Redis.unsub(Object map);
 
 --------------------------
 ### psub
-** 按照模板订阅一组频道的信息，当消息发生时自动调用 func，func 包含三个参数，依次为 channel，message 和 pattern，同一模板同一函数只会回调一次 **
+**按照模板订阅一组频道的信息，当消息发生时自动调用 func，func 包含三个参数，依次为 channel，message 和 pattern，同一模板同一函数只会回调一次**
 
 ```JavaScript
 Redis.psub(String pattern,
@@ -632,7 +562,7 @@ Redis.psub(String pattern,
 * func: Function, 指定回调函数
 
 --------------------------
-** 订阅给定的一组频道模板的信息，当消息发生时自动调用相应的 func，同一频道同一函数只会回调一次 **
+**订阅给定的一组频道模板的信息，当消息发生时自动调用相应的 func，同一频道同一函数只会回调一次**
 
 ```JavaScript
 Redis.psub(Object map);
@@ -643,7 +573,7 @@ Redis.psub(Object map);
 
 --------------------------
 ### unpsub
-** 退订给定模板的频道的全部回调 **
+**退订给定模板的频道的全部回调**
 
 ```JavaScript
 Redis.unpsub(String pattern);
@@ -653,7 +583,7 @@ Redis.unpsub(String pattern);
 * pattern: String, 指定退订的频道模板
 
 --------------------------
-** 退订给定模板的频道的指定回调函数 **
+**退订给定模板的频道的指定回调函数**
 
 ```JavaScript
 Redis.unpsub(String pattern,
@@ -665,7 +595,7 @@ Redis.unpsub(String pattern,
 * func: Function, 指定退订的回调函数
 
 --------------------------
-** 退订一组给定模板的频道的全部回调 **
+**退订一组给定模板的频道的全部回调**
 
 ```JavaScript
 Redis.unpsub(Array patterns);
@@ -675,7 +605,7 @@ Redis.unpsub(Array patterns);
 * patterns: Array, 指定发布的频道模板数组
 
 --------------------------
-** 退订一组模板的频道的指定回调函数 **
+**退订一组模板的频道的指定回调函数**
 
 ```JavaScript
 Redis.unpsub(Object map);
@@ -686,7 +616,7 @@ Redis.unpsub(Object map);
 
 --------------------------
 ### pub
-** 将信息 message 发送到指定的频道 channel **
+**将信息 message 发送到指定的频道 channel**
 
 ```JavaScript
 Integer Redis.pub(Buffer channel,
@@ -702,7 +632,7 @@ Integer Redis.pub(Buffer channel,
 
 --------------------------
 ### getHash
-** 获取指定 key 的 Hash 对象，此对象为包含指定 key 的客户端，只有调用其方法才会操作数据库 **
+**获取指定 key 的 Hash 对象，此对象为包含指定 key 的客户端，只有调用其方法才会操作数据库**
 
 ```JavaScript
 RedisHash Redis.getHash(Buffer key);
@@ -716,7 +646,7 @@ RedisHash Redis.getHash(Buffer key);
 
 --------------------------
 ### getList
-** 获取指定 key 的 [List](List.md) 对象，此对象为包含指定 key 的客户端，只有调用其方法才会操作数据库 **
+**获取指定 key 的 [List](List.md) 对象，此对象为包含指定 key 的客户端，只有调用其方法才会操作数据库**
 
 ```JavaScript
 RedisList Redis.getList(Buffer key);
@@ -730,7 +660,7 @@ RedisList Redis.getList(Buffer key);
 
 --------------------------
 ### getSet
-** 获取指定 key 的 Set 对象，此对象为包含指定 key 的客户端，只有调用其方法才会操作数据库 **
+**获取指定 key 的 Set 对象，此对象为包含指定 key 的客户端，只有调用其方法才会操作数据库**
 
 ```JavaScript
 RedisSet Redis.getSet(Buffer key);
@@ -744,7 +674,7 @@ RedisSet Redis.getSet(Buffer key);
 
 --------------------------
 ### getSortedSet
-** 获取指定 key 的 SortedSet 对象，此对象为包含指定 key 的客户端，只有调用其方法才会操作数据库 **
+**获取指定 key 的 SortedSet 对象，此对象为包含指定 key 的客户端，只有调用其方法才会操作数据库**
 
 ```JavaScript
 RedisSortedSet Redis.getSortedSet(Buffer key);
@@ -758,7 +688,7 @@ RedisSortedSet Redis.getSortedSet(Buffer key);
 
 --------------------------
 ### dump
-** 序列化给定 key ，并返回被序列化的值，使用 restore 命令可以将这个值反序列化为 Redis 键 **
+**序列化给定 key ，并返回被序列化的值，使用 restore 命令可以将这个值反序列化为 Redis 键**
 
 ```JavaScript
 Buffer Redis.dump(Buffer key);
@@ -772,7 +702,7 @@ Buffer Redis.dump(Buffer key);
 
 --------------------------
 ### restore
-** 反序列化给定的序列化值，并将它和给定的 key 关联 **
+**反序列化给定的序列化值，并将它和给定的 key 关联**
 
 ```JavaScript
 Redis.restore(Buffer key,
@@ -787,7 +717,7 @@ Redis.restore(Buffer key,
 
 --------------------------
 ### close
-** 关闭当前数据库连接或事务 **
+**关闭当前数据库连接或事务**
 
 ```JavaScript
 Redis.close();
@@ -795,7 +725,7 @@ Redis.close();
 
 --------------------------
 ### dispose
-** 强制回收对象，调用此方法后，对象资源将立即释放 **
+**强制回收对象，调用此方法后，对象资源将立即释放**
 
 ```JavaScript
 Redis.dispose();
@@ -803,21 +733,21 @@ Redis.dispose();
 
 --------------------------
 ### equals
-** 比较当前对象与给定的对象是否相等 **
+**比较当前对象与给定的对象是否相等**
 
 ```JavaScript
 Boolean Redis.equals(object expected);
 ```
 
 调用参数:
-* expected: object, 制定比较的目标对象
+* expected: [object](object.md), 制定比较的目标对象
 
 返回结果:
 * Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString
-** 返回对象的字符串表示，一般返回 "[Native Object]"，对象可以根据自己的特性重新实现 **
+**返回对象的字符串表示，一般返回 "[Native Object]"，对象可以根据自己的特性重新实现**
 
 ```JavaScript
 String Redis.toString();
@@ -828,7 +758,7 @@ String Redis.toString();
 
 --------------------------
 ### toJSON
-** 返回对象的 JSON 格式表示，一般返回对象定义的可读属性集合 **
+**返回对象的 JSON 格式表示，一般返回对象定义的可读属性集合**
 
 ```JavaScript
 Value Redis.toJSON(String key = "");
@@ -839,15 +769,4 @@ Value Redis.toJSON(String key = "");
 
 返回结果:
 * Value, 返回包含可 JSON 序列化的值
-
---------------------------
-### valueOf
-** 返回对象本身的数值 **
-
-```JavaScript
-Value Redis.valueOf();
-```
-
-返回结果:
-* Value, 返回对象本身的数值
 

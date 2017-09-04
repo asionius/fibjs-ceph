@@ -4,7 +4,7 @@
 ## 对象
         
 ### Message
-** 创建一个消息对象，参见 [Message](../../object/ifs/Message.md) **
+**创建一个消息对象，参见 [Message](../../object/ifs/Message.md)**
 
 ```JavaScript
 Message mq.Message;
@@ -12,7 +12,7 @@ Message mq.Message;
 
 --------------------------
 ### HttpHandler
-** 创建一个 [http](http.md) 协议处理器对象，参见 [HttpHandler](../../object/ifs/HttpHandler.md) **
+**创建一个 [http](http.md) 协议处理器对象，参见 [HttpHandler](../../object/ifs/HttpHandler.md)**
 
 ```JavaScript
 HttpHandler mq.HttpHandler;
@@ -20,7 +20,7 @@ HttpHandler mq.HttpHandler;
 
 --------------------------
 ### Handler
-** 创建一个消息处理器对象，传递值内置处理器则直接返回 **
+**创建一个消息处理器对象，传递值内置处理器则直接返回**
 
 ```JavaScript
 Handler mq.Handler;
@@ -32,8 +32,8 @@ Handler mq.Handler;
 hdlr 接受内置消息处理器，处理函数，链式处理数组，路由对象：
 - Function javascript 函数，将使用此函数进行处理
 - [Handler](../../object/ifs/Handler.md) 内置处理器，将使用此处理器进行处理
-- 链式处理数组，等同于返回 new mq.[Chain](../../object/ifs/Chain.md)(hdlr)，参见 [Chain](../../object/ifs/Chain.md)
-- 路由对象，等同于返回 new mq.[Routing](../../object/ifs/Routing.md)(hdlr)，参见 [Routing](../../object/ifs/Routing.md)
+- 链式处理数组，等同于返回 new [mq.Chain](mq.md#Chain)(hdlr)，参见 [Chain](../../object/ifs/Chain.md)
+- 路由对象，等同于返回 new [mq.Routing](mq.md#Routing)(hdlr)，参见 [Routing](../../object/ifs/Routing.md)
 
 消息处理函数语法如下：
 
@@ -44,14 +44,14 @@ function func(v) {}
 参数 v 为正在处理的消息，返回结果允许有四种:
 - Function javascript 函数，将使用此函数进行下一阶段处理
 - [Handler](../../object/ifs/Handler.md) 内置处理器，将使用此处理器进行下一阶段处理
-- 链式处理数组，等同于 new mq.[Chain](../../object/ifs/Chain.md)(v)，参见 [Chain](../../object/ifs/Chain.md)
-- 路由对象，等同于 new mq.[Routing](../../object/ifs/Routing.md)(v)，参见 [Routing](../../object/ifs/Routing.md)
+- 链式处理数组，等同于 new [mq.Chain](mq.md#Chain)(v)，参见 [Chain](../../object/ifs/Chain.md)
+- 路由对象，等同于 new [mq.Routing](mq.md#Routing)(v)，参见 [Routing](../../object/ifs/Routing.md)
 
 无返回或者其他的返回结果将结束消息处理。
 
 --------------------------
 ### Chain
-** 创建一个消息处理器链处理对象，参见 [Chain](../../object/ifs/Chain.md) **
+**创建一个消息处理器链处理对象，参见 [Chain](../../object/ifs/Chain.md)**
 
 ```JavaScript
 Chain mq.Chain;
@@ -59,7 +59,7 @@ Chain mq.Chain;
 
 --------------------------
 ### Routing
-** 创建一个消息处理器路由对象，参见 [Routing](../../object/ifs/Routing.md) **
+**创建一个消息处理器路由对象，参见 [Routing](../../object/ifs/Routing.md)**
 
 ```JavaScript
 Routing mq.Routing;
@@ -68,7 +68,7 @@ Routing mq.Routing;
 ## 静态函数
         
 ### await
-** 创建一个异步等待处理器 **
+**创建一个异步等待处理器**
 
 ```JavaScript
 static Handler mq.await();
@@ -95,7 +95,7 @@ function func(v) {
 
 --------------------------
 ### nullHandler
-** 创建一个空处理器对象，次处理对象不做任何处理直接返回 **
+**创建一个空处理器对象，次处理对象不做任何处理直接返回**
 
 ```JavaScript
 static Handler mq.nullHandler();
@@ -106,7 +106,7 @@ static Handler mq.nullHandler();
 
 --------------------------
 ### invoke
-** 使用给定的处理器处理一个消息或对象 **
+**使用给定的处理器处理一个消息或对象**
 
 ```JavaScript
 static mq.invoke(Handler hdlr,
