@@ -97,6 +97,9 @@ RadosIoCtx RadosCluster.createIoCtx(String poolName) async;
 调用参数:
 * poolName: String, 指定在poolName 上创建[io](../../module/ifs/io.md)上下文
 
+返回结果:
+* [RadosIoCtx](RadosIoCtx.md), 返回[rados](../../module/ifs/rados.md)客户端和服务端连接的上下文
+
 --------------------------
 ### shutdown
 **关闭集群连接**

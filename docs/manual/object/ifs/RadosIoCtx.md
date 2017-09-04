@@ -111,6 +111,9 @@ RbdImage RadosIoCtx.openImage(String name,
 * name: String, 被打开镜像的名称
 * snapshot: String, 被打开镜像的快照名称, 默认没有快照
 
+返回结果:
+* [RbdImage](RbdImage.md), 返回一个rbd镜像
+
 --------------------------
 ### version
 **返回librbd c库的版本号**
@@ -132,6 +135,9 @@ RadosStream RadosIoCtx.open(String key);
 
 调用参数:
 * key: String, 被打开对象的key
+
+返回结果:
+* [RadosStream](RadosStream.md), 返回[rados](../../module/ifs/rados.md)对象流
 
 --------------------------
 ### remove

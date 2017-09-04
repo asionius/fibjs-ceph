@@ -15,3 +15,6 @@ var rados = require('rados');
 RadosCluster rados.Rados;
 ```
 
+返回结果:
+* 返回rados cluster对象
+
