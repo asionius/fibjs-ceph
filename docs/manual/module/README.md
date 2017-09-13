@@ -17,6 +17,7 @@
 * [hash](ifs/hash.md) - 信息摘要计算模块，可用于计算信息摘要和摘要签名
 * [hex](ifs/hex.md) - hex 编码与解码模块
 * [http](ifs/http.md) - 超文本传输协议模块，用以支持 http 协议处理
+* [hyperscan](ifs/hyperscan.md) - 快速检索模块，提供正则急速匹配搜索方案
 * [iconv](ifs/iconv.md) - iconv 编码与解码模块
 * [io](ifs/io.md) - 输入输出处理模块
 * [json](ifs/json.md) - json 编码与解码模块
@@ -33,6 +34,7 @@
 * [rados](ifs/rados.md) - rados模块
 * [registry](ifs/registry.md) - Windows 注册表访问模块
 * [ssl](ifs/ssl.md) - ssl/tls 模块
+* [string_decoder](ifs/string_decoder.md) - 解码 Buffer 到字符串
 * [test](ifs/test.md) - 测试套件模块，用以定义管理测试套件
 * [timers](ifs/timers.md) - timers 模块
 * [tty](ifs/tty.md) - tty 模块

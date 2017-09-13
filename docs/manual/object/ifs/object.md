@@ -33,6 +33,7 @@ digraph {
     HeapGraphEdge [tooltip="HeapGraphEdge", URL="HeapGraphEdge.md", label="{HeapGraphEdge|type\lname\ldescription\l|getFromNode()\lgetToNode()\l}"];
     HeapGraphNode [tooltip="HeapGraphNode", URL="HeapGraphNode.md", label="{HeapGraphNode|type\lname\ldescription\lid\lshallowSize\lchilds\l}"];
     HeapSnapshot [tooltip="HeapSnapshot", URL="HeapSnapshot.md", label="{HeapSnapshot|time\lroot\lnodes\l|diff()\lgetNodeById()\lsave()\l}"];
+    HsRegExp [tooltip="HsRegExp", URL="HsRegExp.md", label="{HsRegExp|scan()\l}"];
     HttpClient [tooltip="HttpClient", URL="HttpClient.md", label="{HttpClient|new HttpClient()\l|cookies\ltimeout\lmaxBodySize\lenableCookie\lautoRedirect\luserAgent\l|request()\lget()\lpost()\ldel()\lput()\lpatch()\l}"];
     HttpCollection [tooltip="HttpCollection", URL="HttpCollection.md", label="{HttpCollection|operator[String]\l|clear()\lhas()\lfirst()\lall()\ladd()\lset()\lremove()\l}"];
     HttpCookie [tooltip="HttpCookie", URL="HttpCookie.md", label="{HttpCookie|new HttpCookie()\l|name\lvalue\ldomain\lpath\lexpires\lhttpOnly\lsecure\l|parse()\lmatch()\l}"];
@@ -47,7 +48,7 @@ digraph {
     Semaphore [tooltip="Semaphore", URL="Semaphore.md", label="{Semaphore|new Semaphore()\l|wait()\lpost()\ltrywait()\l}"];
     LruCache [tooltip="LruCache", URL="LruCache.md", label="{LruCache|new LruCache()\l|size\ltimeout\l|clear()\lhas()\lget()\lset()\lremove()\lisEmpty()\l}"];
     Map [tooltip="Map", URL="Map.md", label="{Map|new Map()\l|operator[String]\l|size\l|clear()\lhas()\lget()\lput()\lset()\lremove()\lisEmpty()\l}"];
-    Message [tooltip="Message", URL="Message.md", label="{Message|new Message()\l|TEXT\lBINARY\l|value\lparams\ltype\ldata\lbody\llength\lstream\lresponse\llastError\l|read()\lreadAll()\lwrite()\lend()\lisEnded()\lclear()\lsendTo()\lreadFrom()\l}"];
+    Message [tooltip="Message", URL="Message.md", label="{Message|new Message()\l|TEXT\lBINARY\l|value\lparams\ltype\ldata\lbody\llength\lstream\lresponse\llastError\l|read()\lreadAll()\lwrite()\ljson()\lend()\lisEnded()\lclear()\lsendTo()\lreadFrom()\l}"];
     HttpMessage [tooltip="HttpMessage", URL="HttpMessage.md", label="{HttpMessage|protocol\lheaders\lkeepAlive\lupgrade\lmaxHeadersCount\lmaxBodySize\lsocket\l|hasHeader()\lfirstHeader()\lallHeader()\laddHeader()\lsetHeader()\lremoveHeader()\l}"];
     HttpRequest [tooltip="HttpRequest", URL="HttpRequest.md", label="{HttpRequest|new HttpRequest()\l|method\laddress\lqueryString\lcookies\lform\lquery\l}"];
     HttpResponse [tooltip="HttpResponse", URL="HttpResponse.md", label="{HttpResponse|new HttpResponse()\l|status\lcookies\l|addCookie()\lredirect()\lsendHeader()\l}"];
@@ -81,6 +82,7 @@ digraph {
     RbdImage [tooltip="RbdImage", URL="RbdImage.md", label="{RbdImage|stripe_unit\lstripe_count\lfeatures\lcreate_timestamp\lblock_name_prefix\l|resize()\lcreateSnap()\lremoveSnap()\lrollbackSnap()\llistSnaps()\lprotectSnap()\lunprotectSnap()\lsetSnap()\lisSnapProtected()\l}"];
     Socket [tooltip="Socket", URL="Socket.md", label="{Socket|new Socket()\l|family\ltype\lremoteAddress\lremotePort\llocalAddress\llocalPort\ltimeout\l|connect()\lbind()\llisten()\laccept()\lrecv()\lrecvfrom()\lsend()\lsendto()\l}"];
     SslSocket [tooltip="SslSocket", URL="SslSocket.md", label="{SslSocket|new SslSocket()\l|verification\lca\lpeerCert\lstream\l|connect()\laccept()\l}"];
+    StringDecoder [tooltip="StringDecoder", URL="StringDecoder.md", label="{StringDecoder|new StringDecoder()\l|lastNeed\llastTotal\llastChar\lencoding\l|end()\lwrite()\ltext()\lfillLast()\l}"];
     TcpServer [tooltip="TcpServer", URL="TcpServer.md", label="{TcpServer|new TcpServer()\l|socket\lhandler\lstats\l|run()\lasyncRun()\lstop()\l}"];
     HttpServer [tooltip="HttpServer", URL="HttpServer.md", label="{HttpServer|new HttpServer()\l|crossDomain\lforceGZIP\lmaxHeadersCount\lmaxBodySize\lserverName\lhttpStats\l|onerror()\l}"];
     HttpsServer [tooltip="HttpsServer", URL="HttpsServer.md", label="{HttpsServer|new HttpsServer()\l|verification\lca\l}"];
@@ -133,6 +135,7 @@ digraph {
     object -> HeapGraphEdge [dir=back];
     object -> HeapGraphNode [dir=back];
     object -> HeapSnapshot [dir=back];
+    object -> HsRegExp [dir=back];
     object -> HttpClient [dir=back];
     object -> HttpCollection [dir=back];
     object -> HttpCookie [dir=back];
@@ -181,6 +184,7 @@ digraph {
     SeekableStream -> RbdImage [dir=back];
     Stream -> Socket [dir=back];
     Stream -> SslSocket [dir=back];
+    object -> StringDecoder [dir=back];
     object -> TcpServer [dir=back];
     TcpServer -> HttpServer [dir=back];
     HttpServer -> HttpsServer [dir=back];
