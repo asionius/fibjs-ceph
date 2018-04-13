@@ -19,7 +19,7 @@ fibjs rados_test.js
 ```
 # src code
 
-[https://github.com/asionius/fibjs/tree/librbd](https://github.com/asionius/fibjs/tree/librbd)
+[https://github.com/asionius/fibjs/tree/rados2](https://github.com/asionius/fibjs/tree/rados2)
 
 # example
 - rados
