@@ -6,16 +6,16 @@ XmlNode 对象是整个 DOM 的基础数据类型
 digraph {
     node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
 
-    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
-    XmlNode [tooltip="XmlNode", fillcolor="lightgray", label="{XmlNode|nodeType\lnodeName\lnodeValue\lownerDocument\lparentNode\lchildNodes\lfirstChild\llastChild\lpreviousSibling\lnextSibling\l|hasChildNodes()\lnormalize()\lcloneNode()\llookupPrefix()\llookupNamespaceURI()\linsertBefore()\linsertAfter()\lappendChild()\lreplaceChild()\lremoveChild()\l}"];
-    XmlCharacterData [tooltip="XmlCharacterData", URL="XmlCharacterData.md", label="{XmlCharacterData|data\llength\l|substringData()\lappendData()\linsertData()\ldeleteData()\lreplaceData()\l}"];
+    object [tooltip="object", URL="object.md", label="{object|toString()\ltoJSON()\l}"];
+    XmlNode [tooltip="XmlNode", fillcolor="lightgray", id="me", label="{XmlNode|nodeType\lnodeName\lnodeValue\lownerDocument\lparentNode\lchildNodes\lfirstChild\llastChild\lpreviousSibling\lnextSibling\l|hasChildNodes()\lnormalize()\lcloneNode()\llookupPrefix()\llookupNamespaceURI()\linsertBefore()\linsertAfter()\lappendChild()\lreplaceChild()\lremoveChild()\l}"];
+    XmlCharacterData [tooltip="XmlCharacterData", URL="XmlCharacterData.md", label="{XmlCharacterData}"];
     XmlComment [tooltip="XmlComment", URL="XmlComment.md", label="{XmlComment}"];
-    XmlText [tooltip="XmlText", URL="XmlText.md", label="{XmlText|splitText()\l}"];
+    XmlText [tooltip="XmlText", URL="XmlText.md", label="{XmlText}"];
     XmlCDATASection [tooltip="XmlCDATASection", URL="XmlCDATASection.md", label="{XmlCDATASection}"];
-    XmlDocument [tooltip="XmlDocument", URL="XmlDocument.md", label="{XmlDocument|new XmlDocument()\l|inputEncoding\lxmlStandalone\lxmlVersion\ldoctype\ldocumentElement\lhead\ltitle\lbody\l|load()\lgetElementsByTagName()\lgetElementsByTagNameNS()\lgetElementById()\lgetElementsByClassName()\lcreateElement()\lcreateElementNS()\lcreateTextNode()\lcreateComment()\lcreateCDATASection()\lcreateProcessingInstruction()\l}"];
-    XmlDocumentType [tooltip="XmlDocumentType", URL="XmlDocumentType.md", label="{XmlDocumentType|name\lpublicId\lsystemId\l}"];
-    XmlElement [tooltip="XmlElement", URL="XmlElement.md", label="{XmlElement|namespaceURI\lprefix\llocalName\ltagName\lid\ltextContent\linnerHTML\lclassName\lattributes\l|getAttribute()\lgetAttributeNS()\lsetAttribute()\lsetAttributeNS()\lremoveAttribute()\lremoveAttributeNS()\lhasAttribute()\lhasAttributeNS()\lgetElementsByTagName()\lgetElementsByTagNameNS()\lgetElementById()\lgetElementsByClassName()\l}"];
-    XmlProcessingInstruction [tooltip="XmlProcessingInstruction", URL="XmlProcessingInstruction.md", label="{XmlProcessingInstruction|target\ldata\l}"];
+    XmlDocument [tooltip="XmlDocument", URL="XmlDocument.md", label="{XmlDocument}"];
+    XmlDocumentType [tooltip="XmlDocumentType", URL="XmlDocumentType.md", label="{XmlDocumentType}"];
+    XmlElement [tooltip="XmlElement", URL="XmlElement.md", label="{XmlElement}"];
+    XmlProcessingInstruction [tooltip="XmlProcessingInstruction", URL="XmlProcessingInstruction.md", label="{XmlProcessingInstruction}"];
 
     object -> XmlNode [dir=back];
     XmlNode -> XmlCharacterData [dir=back];
@@ -289,28 +289,6 @@ XmlNode XmlNode.removeChild(XmlNode oldChild);
 
 返回结果:
 * XmlNode, 如删除成功，此方法可返回被删除的节点，如失败，则返回 null
-
---------------------------
-### dispose
-**强制回收对象，调用此方法后，对象资源将立即释放**
-
-```JavaScript
-XmlNode.dispose();
-```
-
---------------------------
-### equals
-**比较当前对象与给定的对象是否相等**
-
-```JavaScript
-Boolean XmlNode.equals(object expected);
-```
-
-调用参数:
-* expected: [object](object.md), 制定比较的目标对象
-
-返回结果:
-* Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString

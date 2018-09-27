@@ -10,8 +10,8 @@ git clone https://github.com/asionius/fibjs-ceph.git
 # install
 ```
 cd fibjs-ceph
-chmod +x fibjs-for-ceph-linux-x64-v0.20
-cp ./fibjs-for-ceph-linux-x64-v0.20 /usr/local/bin/fibjs
+chmod +x fibjs-for-ceph-linux-x64-v0.27
+cp ./fibjs-for-ceph-linux-x64-v0.27 /usr/local/bin/fibjs
 ```
 # test
 ```
@@ -19,13 +19,13 @@ fibjs rados_test.js
 ```
 # src code
 
-[https://github.com/asionius/fibjs/tree/rados2](https://github.com/asionius/fibjs/tree/rados2)
+[https://github.com/asionius/fibjs/tree/librados](https://github.com/asionius/fibjs/tree/librados)
 
 # example
 - rados
 ```
  var rados = require('rados');
- var cluster = new rados.Rados('clusterName', 'userName', '/path/to/myceph.conf');
+ var cluster = rados.create('clusterName', 'userName', '/path/to/myceph.conf');
  cluster.connect();
  var io = cluster.createIoCtx('poolName');
  var s = io.open('key');
@@ -36,7 +36,7 @@ fibjs rados_test.js
 - rbd
 ```
  var rados = require('rados');
- var cluster = new rados.Rados('clusterName', 'userName', '/path/to/myceph.conf');
+ var cluster = rados.create('clusterName', 'userName', '/path/to/myceph.conf');
  cluster.connect();
  var io = cluster.createIoCtx('poolName');
  var img = io.openImage('imgName');

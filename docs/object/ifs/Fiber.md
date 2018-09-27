@@ -49,8 +49,8 @@ fb.join();
 digraph {
     node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
 
-    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
-    Fiber [tooltip="Fiber", fillcolor="lightgray", label="{Fiber|caller\ltraceInfo\l|join()\l}"];
+    object [tooltip="object", URL="object.md", label="{object|toString()\ltoJSON()\l}"];
+    Fiber [tooltip="Fiber", fillcolor="lightgray", id="me", label="{Fiber|id\lcaller\lstack\l|join()\l}"];
 
     object -> Fiber [dir=back];
 }
@@ -58,6 +58,14 @@ digraph {
 
 ## 成员属性
         
+### id
+**Long, 查询纤程的唯一 id**
+
+```JavaScript
+readonly Long Fiber.id;
+```
+
+--------------------------
 ### caller
 **Fiber, 查询纤程的调用纤程**
 
@@ -66,11 +74,11 @@ readonly Fiber Fiber.caller;
 ```
 
 --------------------------
-### traceInfo
-**String, 查询纤程的调用堆栈，查询非当前纤程的堆栈需要在执行时指定参数：--trace_fiber**
+### stack
+**String, 查询纤程的调用堆栈**
 
 ```JavaScript
-readonly String Fiber.traceInfo;
+readonly String Fiber.stack;
 ```
 
 ## 成员函数
@@ -81,28 +89,6 @@ readonly String Fiber.traceInfo;
 ```JavaScript
 Fiber.join();
 ```
-
---------------------------
-### dispose
-**强制回收对象，调用此方法后，对象资源将立即释放**
-
-```JavaScript
-Fiber.dispose();
-```
-
---------------------------
-### equals
-**比较当前对象与给定的对象是否相等**
-
-```JavaScript
-Boolean Fiber.equals(object expected);
-```
-
-调用参数:
-* expected: [object](object.md), 制定比较的目标对象
-
-返回结果:
-* Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString

@@ -6,8 +6,8 @@
 digraph {
     node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
 
-    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
-    Digest [tooltip="Digest", fillcolor="lightgray", label="{Digest|size\l|update()\ldigest()\l}"];
+    object [tooltip="object", URL="object.md", label="{object|toString()\ltoJSON()\l}"];
+    Digest [tooltip="Digest", fillcolor="lightgray", id="me", label="{Digest|size\l|update()\ldigest()\l}"];
 
     object -> Digest [dir=back];
 }
@@ -42,46 +42,14 @@ Digest Digest.update(Buffer data);
 **计算并返回摘要**
 
 ```JavaScript
-Buffer Digest.digest(Buffer data);
+Value Digest.digest(String codec = "buffer");
 ```
 
 调用参数:
-* data: [Buffer](Buffer.md), 二进制数据块，此数据块将在计算前更新进摘要
+* codec: String, 指定编码格式，允许值为："buffer", "[hex](../../module/ifs/hex.md)", "[base64](../../module/ifs/base64.md)", "utf8", 或者系统支持的字符集
 
 返回结果:
-* [Buffer](Buffer.md), 返回摘要的二进制数据
-
---------------------------
-**计算并返回摘要**
-
-```JavaScript
-Buffer Digest.digest();
-```
-
-返回结果:
-* [Buffer](Buffer.md), 返回摘要的二进制数据
-
---------------------------
-### dispose
-**强制回收对象，调用此方法后，对象资源将立即释放**
-
-```JavaScript
-Digest.dispose();
-```
-
---------------------------
-### equals
-**比较当前对象与给定的对象是否相等**
-
-```JavaScript
-Boolean Digest.equals(object expected);
-```
-
-调用参数:
-* expected: [object](object.md), 制定比较的目标对象
-
-返回结果:
-* Boolean, 返回对象比较的结果
+* Value, 返回指定编码的摘要表示
 
 --------------------------
 ### toString

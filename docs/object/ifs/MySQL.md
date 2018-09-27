@@ -4,7 +4,7 @@ mysql 数据库连接对象
 使用 [db.open](../../module/ifs/db.md#open) 或 [db.openMySQL](../../module/ifs/db.md#openMySQL) 创建，创建方式：
 
 ```JavaScript
-var msql = db.openMySQL("mysql://user:pass@host/db");
+var mysql = db.openMySQL("mysql://user:pass@host/db");
 ```
 
 ## 继承关系
@@ -12,9 +12,9 @@ var msql = db.openMySQL("mysql://user:pass@host/db");
 digraph {
     node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
 
-    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
+    object [tooltip="object", URL="object.md", label="{object|toString()\ltoJSON()\l}"];
     DbConnection [tooltip="DbConnection", URL="DbConnection.md", label="{DbConnection|type\l|close()\lbegin()\lcommit()\lrollback()\ltrans()\lexecute()\lformat()\l}"];
-    MySQL [tooltip="MySQL", fillcolor="lightgray", label="{MySQL|rxBufferSize\ltxBufferSize\l|use()\l}"];
+    MySQL [tooltip="MySQL", fillcolor="lightgray", id="me", label="{MySQL|rxBufferSize\ltxBufferSize\l|use()\l}"];
 
     object -> DbConnection [dir=back];
     DbConnection -> MySQL [dir=back];
@@ -95,11 +95,14 @@ MySQL.rollback() async;
 **进入事务执行一个函数，并根据函数执行情况提交或者回滚**
 
 ```JavaScript
-MySQL.trans(Function func);
+Boolean MySQL.trans(Function func);
 ```
 
 调用参数:
 * func: Function, 以事务方式执行的函数
+
+返回结果:
+* Boolean, 返回事务是否提交，正常 commit 时返回 true, rollback 时返回 false，如果事务出错则抛出错误
 
 func 执行有三种结果：
 * 函数正常返回，包括运行结束和主动 return，此时事务将自动提交
@@ -108,19 +111,6 @@ func 执行有三种结果：
 
 --------------------------
 ### execute
-**执行一个 sql 命令，并返回执行结果**
-
-```JavaScript
-NArray MySQL.execute(String sql) async;
-```
-
-调用参数:
-* sql: String, 格式化字符串，可选参数用 ? 指定。例如：'SELECT FROM TEST WHERE [id]=?'
-
-返回结果:
-* NArray, 返回包含结果记录的数组，如果请求是 UPDATE 或者 INSERT，返回结果还会包含 affected 和 insertId，mssql 不支持 insertId。
-
---------------------------
 **执行一个 sql 命令，并返回执行结果，可根据参数格式化字符串**
 
 ```JavaScript
@@ -150,28 +140,6 @@ String MySQL.format(String sql,
 
 返回结果:
 * String, 返回格式化之后的 sql 命令
-
---------------------------
-### dispose
-**强制回收对象，调用此方法后，对象资源将立即释放**
-
-```JavaScript
-MySQL.dispose();
-```
-
---------------------------
-### equals
-**比较当前对象与给定的对象是否相等**
-
-```JavaScript
-Boolean MySQL.equals(object expected);
-```
-
-调用参数:
-* expected: [object](object.md), 制定比较的目标对象
-
-返回结果:
-* Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString

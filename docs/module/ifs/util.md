@@ -62,6 +62,22 @@ static util.inherits(Value constructor,
 * superConstructor: Value, 被继承的超类
 
 --------------------------
+### inspect
+**方法返回 obj 的字符串表示，主要用于调试。 附加的 options 可用于改变格式化字符串的某些方面。**
+
+```JavaScript
+static String util.inspect(Object obj,
+    Object options = {});
+```
+
+调用参数:
+* obj: Object, 指定需要处理的对象
+* options: Object, 指定格式控制选项
+
+返回结果:
+* String, 返回格式化后的字符串
+
+--------------------------
 ### isEmpty
 **检测给定的变量是否不包含任何值(没有可枚举的属性)**
 
@@ -287,7 +303,7 @@ static Boolean util.isExternal(Value v);
 
 --------------------------
 ### isMap
-**检测给定的变量是否是 [Map](../../object/ifs/Map.md) 类型**
+**检测给定的变量是否是 Map 类型**
 
 ```JavaScript
 static Boolean util.isMap(Value v);
@@ -297,7 +313,7 @@ static Boolean util.isMap(Value v);
 * v: Value, 给定需要检测的变量
 
 返回结果:
-* Boolean, 如果是 [Map](../../object/ifs/Map.md) 类型则返回 True
+* Boolean, 如果是 Map 类型则返回 True
 
 --------------------------
 ### isMapIterator
@@ -484,11 +500,38 @@ static Value util.clone(Value v);
 * Value, 返回克隆结果
 
 --------------------------
+### deepFreeze
+**深度冻结一个对象，被冻结后的对象及其包含的对象都将不允许修改**
+
+```JavaScript
+static util.deepFreeze(Value v);
+```
+
+调用参数:
+* v: Value, 指定要冻结的对象
+
+--------------------------
 ### extend
 **将一个或者多个对象的键值扩展到指定对象**
 
 ```JavaScript
 static Value util.extend(Value v,
+    ...objs);
+```
+
+调用参数:
+* v: Value, 指定要扩展的对象
+* objs: ..., 指定一个或者多个用于扩展的对象
+
+返回结果:
+* Value, 返回扩展的结果
+
+--------------------------
+### _extend
+**将一个或者多个对象的键值扩展到指定对象，是 extend 的别名**
+
+```JavaScript
+static Value util._extend(Value v,
     ...objs);
 ```
 
@@ -836,22 +879,25 @@ static Object util.buildInfo();
 
 ```JavaScript
 {
-    "fibjs": "0.1.0",
-    "svn": 1753,
-    "build": "Dec 10 2013 21:44:17",
+    "fibjs": "0.25.0",
+    "clang": "9.1",
+    "date": "Jun 12 2018 07:22:40",
     "vender": {
-        "ev": "4.11",
-        "exif": "0.6.21",
-        "gd": "2.1.0-alpha",
+        "ev": "4.24",
+        "expat": "2.2.5",
+        "gd": "2.2.4",
         "jpeg": "8.3",
-        "log4cpp": "1.0",
+        "leveldb": "1.17",
         "mongo": "0.7",
         "pcre": "8.21",
         "png": "1.5.4",
-        "sqlite": "3.8.1",
+        "mbedtls": "2.6.1",
+        "snappy": "1.1.2",
+        "sqlite": "3.23.0",
         "tiff": "3.9.5",
         "uuid": "1.6.2",
-        "v8": "3.23.17 (candidate)",
+        "v8": "6.7.288.20",
+        "v8-snapshot": true,
         "zlib": "1.2.7",
         "zmq": "3.1"
     }

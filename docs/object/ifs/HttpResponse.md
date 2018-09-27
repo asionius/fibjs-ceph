@@ -6,10 +6,10 @@
 digraph {
     node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
 
-    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
-    Message [tooltip="Message", URL="Message.md", label="{Message|new Message()\l|TEXT\lBINARY\l|value\lparams\ltype\ldata\lbody\llength\lstream\lresponse\llastError\l|read()\lreadAll()\lwrite()\ljson()\lend()\lisEnded()\lclear()\lsendTo()\lreadFrom()\l}"];
+    object [tooltip="object", URL="object.md", label="{object|toString()\ltoJSON()\l}"];
+    Message [tooltip="Message", URL="Message.md", label="{Message|new Message()\l|TEXT\lBINARY\l|value\lparams\ltype\ldata\lbody\llength\lstream\llastError\l|read()\lreadAll()\lwrite()\ljson()\lend()\lisEnded()\lclear()\lsendTo()\lreadFrom()\l}"];
     HttpMessage [tooltip="HttpMessage", URL="HttpMessage.md", label="{HttpMessage|protocol\lheaders\lkeepAlive\lupgrade\lmaxHeadersCount\lmaxBodySize\lsocket\l|hasHeader()\lfirstHeader()\lallHeader()\laddHeader()\lsetHeader()\lremoveHeader()\l}"];
-    HttpResponse [tooltip="HttpResponse", fillcolor="lightgray", label="{HttpResponse|new HttpResponse()\l|status\lcookies\l|addCookie()\lredirect()\lsendHeader()\l}"];
+    HttpResponse [tooltip="HttpResponse", fillcolor="lightgray", id="me", label="{HttpResponse|new HttpResponse()\l|statusCode\lstatusMessage\lcookies\l|writeHead()\laddCookie()\lredirect()\lsendHeader()\l}"];
 
     object -> Message [dir=back];
     Message -> HttpMessage [dir=back];
@@ -45,19 +45,27 @@ const HttpResponse.BINARY = 2;
 
 ## 成员属性
         
-### status
+### statusCode
 **Integer, 查询和设置响应消息的返回状态**
 
 ```JavaScript
-Integer HttpResponse.status;
+Integer HttpResponse.statusCode;
+```
+
+--------------------------
+### statusMessage
+**String, 查询和设置响应消息的返回消息**
+
+```JavaScript
+String HttpResponse.statusMessage;
 ```
 
 --------------------------
 ### cookies
-**[List](List.md), 返回当前消息的 [HttpCookie](HttpCookie.md) 对象列表**
+**NArray, 返回当前消息的 [HttpCookie](HttpCookie.md) 对象列表**
 
 ```JavaScript
-readonly List HttpResponse.cookies;
+readonly NArray HttpResponse.cookies;
 ```
 
 --------------------------
@@ -126,10 +134,10 @@ String HttpResponse.value;
 
 --------------------------
 ### params
-**[List](List.md), 消息的基本参数**
+**NArray, 消息的基本参数**
 
 ```JavaScript
-List HttpResponse.params;
+readonly NArray HttpResponse.params;
 ```
 
 --------------------------
@@ -173,14 +181,6 @@ readonly Stream HttpResponse.stream;
 ```
 
 --------------------------
-### response
-**[Message](Message.md), 获取响应消息对象**
-
-```JavaScript
-readonly Message HttpResponse.response;
-```
-
---------------------------
 ### lastError
 **String, 查询和设置消息处理的最后错误**
 
@@ -190,6 +190,33 @@ String HttpResponse.lastError;
 
 ## 成员函数
         
+### writeHead
+**设置响应消息的返回状态，返回消息，并添加响应头**
+
+```JavaScript
+HttpResponse.writeHead(Integer statusCode,
+    String statusMessage,
+    Object headers = {});
+```
+
+调用参数:
+* statusCode: Integer, 指定响应消息的返回状态
+* statusMessage: String, 指定响应消息的返回消息
+* headers: Object, 指定响应消息添加的响应头
+
+--------------------------
+**设置响应消息的返回状态，返回消息，并添加响应头**
+
+```JavaScript
+HttpResponse.writeHead(Integer statusCode,
+    Object headers = {});
+```
+
+调用参数:
+* statusCode: Integer, 指定响应消息的返回状态
+* headers: Object, 指定响应消息添加的响应头
+
+--------------------------
 ### addCookie
 **向 cookies 添加一个 [HttpCookie](HttpCookie.md) 对象**
 
@@ -255,25 +282,25 @@ Variant HttpResponse.firstHeader(String name);
 **查询指定键值的全部消息头**
 
 ```JavaScript
-List HttpResponse.allHeader(String name);
+NArray HttpResponse.allHeader(String name);
 ```
 
 调用参数:
 * name: String, 指定要查询的键值
 
 返回结果:
-* [List](List.md), 返回键值所对应全部值的数组，若数据不存在，则返回 null
+* NArray, 返回键值所对应全部值的数组，若数据不存在，则返回 null
 
 --------------------------
 ### addHeader
 **添加一个消息头，添加数据并不修改已存在的键值的消息头**
 
 ```JavaScript
-HttpResponse.addHeader(Map map);
+HttpResponse.addHeader(Object map);
 ```
 
 调用参数:
-* map: [Map](Map.md), 指定要添加的键值数据字典
+* map: Object, 指定要添加的键值数据字典
 
 --------------------------
 **添加一个消息头，添加数据并不修改已存在的键值的消息头**
@@ -292,11 +319,11 @@ HttpResponse.addHeader(String name,
 **设定一个消息头，设定数据将修改键值所对应的第一个数值，并清除相同键值的其余消息头**
 
 ```JavaScript
-HttpResponse.setHeader(Map map);
+HttpResponse.setHeader(Object map);
 ```
 
 调用参数:
-* map: [Map](Map.md), 指定要设定的键值数据字典
+* map: Object, 指定要设定的键值数据字典
 
 --------------------------
 **设定一个消息头，设定数据将修改键值所对应的第一个数值，并清除相同键值的其余消息头**
@@ -429,28 +456,6 @@ HttpResponse.readFrom(Stream stm) async;
 
 调用参数:
 * stm: [Stream](Stream.md), 指定读取格式化消息的流对象
-
---------------------------
-### dispose
-**强制回收对象，调用此方法后，对象资源将立即释放**
-
-```JavaScript
-HttpResponse.dispose();
-```
-
---------------------------
-### equals
-**比较当前对象与给定的对象是否相等**
-
-```JavaScript
-Boolean HttpResponse.equals(object expected);
-```
-
-调用参数:
-* expected: [object](object.md), 制定比较的目标对象
-
-返回结果:
-* Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString

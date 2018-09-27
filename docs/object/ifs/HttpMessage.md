@@ -6,11 +6,11 @@
 digraph {
     node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
 
-    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
-    Message [tooltip="Message", URL="Message.md", label="{Message|new Message()\l|TEXT\lBINARY\l|value\lparams\ltype\ldata\lbody\llength\lstream\lresponse\llastError\l|read()\lreadAll()\lwrite()\ljson()\lend()\lisEnded()\lclear()\lsendTo()\lreadFrom()\l}"];
-    HttpMessage [tooltip="HttpMessage", fillcolor="lightgray", label="{HttpMessage|protocol\lheaders\lkeepAlive\lupgrade\lmaxHeadersCount\lmaxBodySize\lsocket\l|hasHeader()\lfirstHeader()\lallHeader()\laddHeader()\lsetHeader()\lremoveHeader()\l}"];
-    HttpRequest [tooltip="HttpRequest", URL="HttpRequest.md", label="{HttpRequest|new HttpRequest()\l|method\laddress\lqueryString\lcookies\lform\lquery\l}"];
-    HttpResponse [tooltip="HttpResponse", URL="HttpResponse.md", label="{HttpResponse|new HttpResponse()\l|status\lcookies\l|addCookie()\lredirect()\lsendHeader()\l}"];
+    object [tooltip="object", URL="object.md", label="{object|toString()\ltoJSON()\l}"];
+    Message [tooltip="Message", URL="Message.md", label="{Message|new Message()\l|TEXT\lBINARY\l|value\lparams\ltype\ldata\lbody\llength\lstream\llastError\l|read()\lreadAll()\lwrite()\ljson()\lend()\lisEnded()\lclear()\lsendTo()\lreadFrom()\l}"];
+    HttpMessage [tooltip="HttpMessage", fillcolor="lightgray", id="me", label="{HttpMessage|protocol\lheaders\lkeepAlive\lupgrade\lmaxHeadersCount\lmaxBodySize\lsocket\l|hasHeader()\lfirstHeader()\lallHeader()\laddHeader()\lsetHeader()\lremoveHeader()\l}"];
+    HttpRequest [tooltip="HttpRequest", URL="HttpRequest.md", label="{HttpRequest}"];
+    HttpResponse [tooltip="HttpResponse", URL="HttpResponse.md", label="{HttpResponse}"];
 
     object -> Message [dir=back];
     Message -> HttpMessage [dir=back];
@@ -103,10 +103,10 @@ String HttpMessage.value;
 
 --------------------------
 ### params
-**[List](List.md), 消息的基本参数**
+**NArray, 消息的基本参数**
 
 ```JavaScript
-List HttpMessage.params;
+readonly NArray HttpMessage.params;
 ```
 
 --------------------------
@@ -147,14 +147,6 @@ readonly Long HttpMessage.length;
 
 ```JavaScript
 readonly Stream HttpMessage.stream;
-```
-
---------------------------
-### response
-**[Message](Message.md), 获取响应消息对象**
-
-```JavaScript
-readonly Message HttpMessage.response;
 ```
 
 --------------------------
@@ -199,25 +191,25 @@ Variant HttpMessage.firstHeader(String name);
 **查询指定键值的全部消息头**
 
 ```JavaScript
-List HttpMessage.allHeader(String name);
+NArray HttpMessage.allHeader(String name);
 ```
 
 调用参数:
 * name: String, 指定要查询的键值
 
 返回结果:
-* [List](List.md), 返回键值所对应全部值的数组，若数据不存在，则返回 null
+* NArray, 返回键值所对应全部值的数组，若数据不存在，则返回 null
 
 --------------------------
 ### addHeader
 **添加一个消息头，添加数据并不修改已存在的键值的消息头**
 
 ```JavaScript
-HttpMessage.addHeader(Map map);
+HttpMessage.addHeader(Object map);
 ```
 
 调用参数:
-* map: [Map](Map.md), 指定要添加的键值数据字典
+* map: Object, 指定要添加的键值数据字典
 
 --------------------------
 **添加一个消息头，添加数据并不修改已存在的键值的消息头**
@@ -236,11 +228,11 @@ HttpMessage.addHeader(String name,
 **设定一个消息头，设定数据将修改键值所对应的第一个数值，并清除相同键值的其余消息头**
 
 ```JavaScript
-HttpMessage.setHeader(Map map);
+HttpMessage.setHeader(Object map);
 ```
 
 调用参数:
-* map: [Map](Map.md), 指定要设定的键值数据字典
+* map: Object, 指定要设定的键值数据字典
 
 --------------------------
 **设定一个消息头，设定数据将修改键值所对应的第一个数值，并清除相同键值的其余消息头**
@@ -373,28 +365,6 @@ HttpMessage.readFrom(Stream stm) async;
 
 调用参数:
 * stm: [Stream](Stream.md), 指定读取格式化消息的流对象
-
---------------------------
-### dispose
-**强制回收对象，调用此方法后，对象资源将立即释放**
-
-```JavaScript
-HttpMessage.dispose();
-```
-
---------------------------
-### equals
-**比较当前对象与给定的对象是否相等**
-
-```JavaScript
-Boolean HttpMessage.equals(object expected);
-```
-
-调用参数:
-* expected: [object](object.md), 制定比较的目标对象
-
-返回结果:
-* Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString

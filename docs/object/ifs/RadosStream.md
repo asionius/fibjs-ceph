@@ -4,7 +4,7 @@
 [rados](../../module/ifs/rados.md) KV存储对象,用于对[rados](../../module/ifs/rados.md)集群kv存储进行操作，可使用 [RadosIoCtx](RadosIoCtx.md) 对象创建
 ```
 var rados = require('rados');
-var cluster = new rados.Rados('clusterName', 'userName', '/path/to/myceph.conf');
+var cluster = rados.create('clusterName', 'userName', '/path/to/myceph.conf');
 cluster.connect();
 var io = cluster.createIoCtx('poolName');
 var s = io.open('key');
@@ -17,10 +17,10 @@ console.log(s.readAll().toString());
 digraph {
     node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
 
-    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
-    Stream [tooltip="Stream", URL="Stream.md", label="{Stream|read()\lwrite()\lclose()\lcopyTo()\l}"];
-    SeekableStream [tooltip="SeekableStream", URL="SeekableStream.md", label="{SeekableStream|seek()\ltell()\lrewind()\lsize()\lreadAll()\ltruncate()\leof()\lflush()\lstat()\l}"];
-    RadosStream [tooltip="RadosStream", fillcolor="lightgray", label="{RadosStream|key\l|radosStat()\lwriteFull()\lappend()\l}"];
+    object [tooltip="object", URL="object.md", label="{object|toString()\ltoJSON()\l}"];
+    Stream [tooltip="Stream", URL="Stream.md", label="{Stream|read()\lwrite()\lflush()\lclose()\lcopyTo()\l}"];
+    SeekableStream [tooltip="SeekableStream", URL="SeekableStream.md", label="{SeekableStream|seek()\ltell()\lrewind()\lsize()\lreadAll()\ltruncate()\leof()\lstat()\l}"];
+    RadosStream [tooltip="RadosStream", fillcolor="lightgray", id="me", label="{RadosStream|key\l|radosStat()\lwriteFull()\lappend()\l}"];
 
     object -> Stream [dir=back];
     Stream -> SeekableStream [dir=back];
@@ -148,14 +148,6 @@ Boolean RadosStream.eof();
 * Boolean, 返回 True 表示结尾
 
 --------------------------
-### flush
-**将文件缓冲区内容写入物理设备**
-
-```JavaScript
-RadosStream.flush() async;
-```
-
---------------------------
 ### stat
 **查询当前文件的基础信息**
 
@@ -192,6 +184,14 @@ RadosStream.write(Buffer data) async;
 * data: [Buffer](Buffer.md), 给定要写入的数据
 
 --------------------------
+### flush
+**将文件缓冲区内容写入物理设备**
+
+```JavaScript
+RadosStream.flush() async;
+```
+
+--------------------------
 ### close
 **关闭当前流对象**
 
@@ -214,28 +214,6 @@ Long RadosStream.copyTo(Stream stm,
 
 返回结果:
 * Long, 返回复制的字节数
-
---------------------------
-### dispose
-**强制回收对象，调用此方法后，对象资源将立即释放**
-
-```JavaScript
-RadosStream.dispose();
-```
-
---------------------------
-### equals
-**比较当前对象与给定的对象是否相等**
-
-```JavaScript
-Boolean RadosStream.equals(object expected);
-```
-
-调用参数:
-* expected: [object](object.md), 制定比较的目标对象
-
-返回结果:
-* Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString

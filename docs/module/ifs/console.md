@@ -365,8 +365,19 @@ static console.time(String label = "time");
 * label: String, 标题，缺省为空字符串。
 
 --------------------------
+### timeElapse
+**输出指定计时器当前计时值**
+
+```JavaScript
+static console.timeElapse(String label = "time");
+```
+
+调用参数:
+* label: String, 标题，缺省为空字符串。
+
+--------------------------
 ### timeEnd
-**统计指定计时器的数值**
+**结束指定计时器，并输出最后计时值**
 
 ```JavaScript
 static console.timeEnd(String label = "time");
@@ -652,14 +663,6 @@ static String console.readLine(String msg = "") async;
 
 ```JavaScript
 static Integer console.loglevel;
-```
-
---------------------------
-### colors
-**[TextColor](../../object/ifs/TextColor.md), 终端输出颜色配置对象，详见 [TextColor](../../object/ifs/TextColor.md)**
-
-```JavaScript
-static readonly TextColor console.colors;
 ```
 
 --------------------------

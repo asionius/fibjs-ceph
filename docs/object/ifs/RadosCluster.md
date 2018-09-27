@@ -4,7 +4,7 @@
 [rados](../../module/ifs/rados.md)集群对象，用于创建对[rados](../../module/ifs/rados.md)集群进行存取的ioctx对象，可使用 [rados](../../module/ifs/rados.md) 模块创建
 ```
 var rados = require('rados');
-var cluster = new rados.Rados('clusterName', 'userName', '/path/to/myceph.conf');
+var cluster = rados.create('clusterName', 'userName', '/path/to/myceph.conf');
 cluster.connect();
 var io = cluster.createIoCtx('poolName');
 var s = io.open('key');
@@ -17,28 +17,12 @@ console.log(s.readAll().toString());
 digraph {
     node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
 
-    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
-    RadosCluster [tooltip="RadosCluster", fillcolor="lightgray", label="{RadosCluster|new RadosCluster()\l|connect()\lcreatePool()\llistPool()\ldeletePool()\lcreateIoCtx()\lshutdown()\l}"];
+    object [tooltip="object", URL="object.md", label="{object|toString()\ltoJSON()\l}"];
+    RadosCluster [tooltip="RadosCluster", fillcolor="lightgray", id="me", label="{RadosCluster|connect()\lcreatePool()\llistPool()\ldeletePool()\lcreateIoCtx()\lshutdown()\l}"];
 
     object -> RadosCluster [dir=back];
 }
 ```
-
-## 构造函数
-        
-### RadosCluster
-**RadosCluster 构造方法, 创建连接[rados](../../module/ifs/rados.md)集群的客户端**
-
-```JavaScript
-new RadosCluster(String clusterName,
-    String userName,
-    String confPath);
-```
-
-调用参数:
-* clusterName: String, 指定要连接的集群的名称
-* userName: String, 指定连接者的用户名
-* confPath: String, 指定配置文件路径
 
 ## 成员函数
         
@@ -69,11 +53,11 @@ RadosCluster.createPool(String poolName,
 **列出集群内所有的pool**
 
 ```JavaScript
-List RadosCluster.listPool() async;
+NArray RadosCluster.listPool() async;
 ```
 
 返回结果:
-* [List](List.md), 集群内所有pool的名称列表
+* NArray, 集群内所有pool的名称列表
 
 --------------------------
 ### deletePool
@@ -107,28 +91,6 @@ RadosIoCtx RadosCluster.createIoCtx(String poolName) async;
 ```JavaScript
 RadosCluster.shutdown() async;
 ```
-
---------------------------
-### dispose
-**强制回收对象，调用此方法后，对象资源将立即释放**
-
-```JavaScript
-RadosCluster.dispose();
-```
-
---------------------------
-### equals
-**比较当前对象与给定的对象是否相等**
-
-```JavaScript
-Boolean RadosCluster.equals(object expected);
-```
-
-调用参数:
-* expected: [object](object.md), 制定比较的目标对象
-
-返回结果:
-* Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString

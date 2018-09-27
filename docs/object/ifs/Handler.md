@@ -6,22 +6,18 @@
 digraph {
     node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
 
-    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
-    Handler [tooltip="Handler", fillcolor="lightgray", label="{Handler|new Handler()\l|invoke()\l}"];
-    AsyncWait [tooltip="AsyncWait", URL="AsyncWait.md", label="{AsyncWait|end()\l}"];
-    Chain [tooltip="Chain", URL="Chain.md", label="{Chain|new Chain()\l|append()\l}"];
-    HandlerEx [tooltip="HandlerEx", URL="HandlerEx.md", label="{HandlerEx|handler\lstats\l|onerror()\l}"];
-    HttpHandler [tooltip="HttpHandler", URL="HttpHandler.md", label="{HttpHandler|new HttpHandler()\l|crossDomain\lforceGZIP\lmaxHeadersCount\lmaxBodySize\lserverName\l}"];
-    WebSocketHandler [tooltip="WebSocketHandler", URL="WebSocketHandler.md", label="{WebSocketHandler|new WebSocketHandler()\l|maxSize\l}"];
-    Routing [tooltip="Routing", URL="Routing.md", label="{Routing|new Routing()\l|append()\lall()\lget()\lpost()\ldel()\lput()\lpatch()\l}"];
-    SslHandler [tooltip="SslHandler", URL="SslHandler.md", label="{SslHandler|new SslHandler()\l|verification\lca\lhandler\l}"];
+    object [tooltip="object", URL="object.md", label="{object|toString()\ltoJSON()\l}"];
+    Handler [tooltip="Handler", fillcolor="lightgray", id="me", label="{Handler|new Handler()\l|invoke()\l}"];
+    Chain [tooltip="Chain", URL="Chain.md", label="{Chain}"];
+    HandlerEx [tooltip="HandlerEx", URL="HandlerEx.md", label="{HandlerEx}"];
+    HttpHandler [tooltip="HttpHandler", URL="HttpHandler.md", label="{HttpHandler}"];
+    Routing [tooltip="Routing", URL="Routing.md", label="{Routing}"];
+    SslHandler [tooltip="SslHandler", URL="SslHandler.md", label="{SslHandler}"];
 
     object -> Handler [dir=back];
-    Handler -> AsyncWait [dir=back];
     Handler -> Chain [dir=back];
     Handler -> HandlerEx [dir=back];
     HandlerEx -> HttpHandler [dir=back];
-    HandlerEx -> WebSocketHandler [dir=back];
     Handler -> Routing [dir=back];
     Handler -> SslHandler [dir=back];
 }
@@ -73,28 +69,6 @@ Handler Handler.invoke(object v) async;
 
 返回结果:
 * Handler, 返回下一步的处理器
-
---------------------------
-### dispose
-**强制回收对象，调用此方法后，对象资源将立即释放**
-
-```JavaScript
-Handler.dispose();
-```
-
---------------------------
-### equals
-**比较当前对象与给定的对象是否相等**
-
-```JavaScript
-Boolean Handler.equals(object expected);
-```
-
-调用参数:
-* expected: [object](object.md), 制定比较的目标对象
-
-返回结果:
-* Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString

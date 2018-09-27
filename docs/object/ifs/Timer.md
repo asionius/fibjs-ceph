@@ -6,43 +6,52 @@
 digraph {
     node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
 
-    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
-    Timer [tooltip="Timer", fillcolor="lightgray", label="{Timer|clear()\l}"];
+    object [tooltip="object", URL="object.md", label="{object|toString()\ltoJSON()\l}"];
+    Timer [tooltip="Timer", fillcolor="lightgray", id="me", label="{Timer|stopped\l|ref()\lunref()\lclear()\l}"];
 
     object -> Timer [dir=back];
 }
 ```
 
+## 成员属性
+        
+### stopped
+**Boolean, 查询当前定时器是否已经终止**
+
+```JavaScript
+readonly Boolean Timer.stopped;
+```
+
 ## 成员函数
         
+### ref
+**维持 fibjs 进程不退出，在定时器等待期间阻止 fibjs 进程退出**
+
+```JavaScript
+Timer Timer.ref();
+```
+
+返回结果:
+* Timer, 返回定时器对象
+
+--------------------------
+### unref
+**允许 fibjs 进程退出，在定时器等待期间允许 fibjs 进程退出**
+
+```JavaScript
+Timer Timer.unref();
+```
+
+返回结果:
+* Timer, 返回定时器对象
+
+--------------------------
 ### clear
 **取消当前定时器**
 
 ```JavaScript
 Timer.clear();
 ```
-
---------------------------
-### dispose
-**强制回收对象，调用此方法后，对象资源将立即释放**
-
-```JavaScript
-Timer.dispose();
-```
-
---------------------------
-### equals
-**比较当前对象与给定的对象是否相等**
-
-```JavaScript
-Boolean Timer.equals(object expected);
-```
-
-调用参数:
-* expected: [object](object.md), 制定比较的目标对象
-
-返回结果:
-* Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString

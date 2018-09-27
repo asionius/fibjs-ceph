@@ -13,8 +13,8 @@ var reg1 = hyperscan.compile(["hello"]);
 digraph {
     node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
 
-    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
-    HsRegExp [tooltip="HsRegExp", fillcolor="lightgray", label="{HsRegExp|scan()\l}"];
+    object [tooltip="object", URL="object.md", label="{object|toString()\ltoJSON()\l}"];
+    HsRegExp [tooltip="HsRegExp", fillcolor="lightgray", id="me", label="{HsRegExp|scan()\l}"];
 
     object -> HsRegExp [dir=back];
 }
@@ -23,39 +23,19 @@ digraph {
 ## 成员函数
         
 ### scan
-**使用[hyperscan](../../module/ifs/hyperscan.md)对文本进行扫描**
+**使用[hyperscan](../../module/ifs/hyperscan.md)对二进制buffer进行扫描**
 
 ```JavaScript
-Value HsRegExp.scan(String text);
+Value HsRegExp.scan(Buffer buff,
+    String codec = "utf8") async;
 ```
 
 调用参数:
-* text: String, 需要扫描的文本
+* buff: [Buffer](Buffer.md), 需要扫描的缓冲区
+* codec: String, buff的编码格式
 
 返回结果:
-* Value, 返回扫描结果
-
---------------------------
-### dispose
-**强制回收对象，调用此方法后，对象资源将立即释放**
-
-```JavaScript
-HsRegExp.dispose();
-```
-
---------------------------
-### equals
-**比较当前对象与给定的对象是否相等**
-
-```JavaScript
-Boolean HsRegExp.equals(object expected);
-```
-
-调用参数:
-* expected: [object](object.md), 制定比较的目标对象
-
-返回结果:
-* Boolean, 返回对象比较的结果
+* Value, 返回扫描结果。返回扫描结果。未匹配到则返回null, 匹配到返回一个kv对象，其中k为正则字符串，v是一个数组，为匹配到的正则在文本中出现的位置。如[[0, 1]]，第一个元素是[0, 1], 代表该正则匹配到的字符串从位置0开始从位置1结束。数组的长度为1，代表匹配到了一处。如果在编译正则时使用了'H'选项，则匹配到一次后停止。
 
 --------------------------
 ### toString

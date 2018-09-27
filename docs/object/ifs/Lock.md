@@ -15,11 +15,11 @@ l.release();
 digraph {
     node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
 
-    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
-    Lock [tooltip="Lock", fillcolor="lightgray", label="{Lock|new Lock()\l|acquire()\lrelease()\lcount()\l}"];
-    Condition [tooltip="Condition", URL="Condition.md", label="{Condition|new Condition()\l|wait()\lnotify()\lnotifyAll()\l}"];
-    Event [tooltip="Event", URL="Event.md", label="{Event|new Event()\l|isSet()\lset()\lpulse()\lclear()\lwait()\l}"];
-    Semaphore [tooltip="Semaphore", URL="Semaphore.md", label="{Semaphore|new Semaphore()\l|wait()\lpost()\ltrywait()\l}"];
+    object [tooltip="object", URL="object.md", label="{object|toString()\ltoJSON()\l}"];
+    Lock [tooltip="Lock", fillcolor="lightgray", id="me", label="{Lock|new Lock()\l|acquire()\lrelease()\lcount()\l}"];
+    Condition [tooltip="Condition", URL="Condition.md", label="{Condition}"];
+    Event [tooltip="Event", URL="Event.md", label="{Event}"];
+    Semaphore [tooltip="Semaphore", URL="Semaphore.md", label="{Semaphore}"];
 
     object -> Lock [dir=back];
     Lock -> Condition [dir=back];
@@ -78,28 +78,6 @@ Integer Lock.count();
 
 返回结果:
 * Integer, 返回任务数
-
---------------------------
-### dispose
-**强制回收对象，调用此方法后，对象资源将立即释放**
-
-```JavaScript
-Lock.dispose();
-```
-
---------------------------
-### equals
-**比较当前对象与给定的对象是否相等**
-
-```JavaScript
-Boolean Lock.equals(object expected);
-```
-
-调用参数:
-* expected: [object](object.md), 制定比较的目标对象
-
-返回结果:
-* Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString

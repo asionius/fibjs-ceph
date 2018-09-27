@@ -12,8 +12,8 @@ var k = new crypto.PKey();
 digraph {
     node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
 
-    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
-    PKey [tooltip="PKey", fillcolor="lightgray", label="{PKey|new PKey()\l|name\lkeySize\lpublicKey\l|genRsaKey()\lgenEcKey()\lisPrivate()\lclone()\limportKey()\limportFile()\lexportPem()\lexportDer()\lexportJson()\lencrypt()\ldecrypt()\lsign()\lverify()\l}"];
+    object [tooltip="object", URL="object.md", label="{object|toString()\ltoJSON()\l}"];
+    PKey [tooltip="PKey", fillcolor="lightgray", id="me", label="{PKey|new PKey()\l|name\lkeySize\lpublicKey\l|genRsaKey()\lgenEcKey()\lisPrivate()\lclone()\limportKey()\limportFile()\lexportPem()\lexportDer()\lexportJson()\lencrypt()\ldecrypt()\lsign()\lverify()\l}"];
 
     object -> PKey [dir=back];
 }
@@ -26,6 +26,89 @@ digraph {
 
 ```JavaScript
 new PKey();
+```
+
+--------------------------
+**通过 DER 格式的密钥构造 PKey**
+
+```JavaScript
+new PKey(Buffer DerKey,
+    String password = "");
+```
+
+调用参数:
+* DerKey: [Buffer](Buffer.md), DER 格式的密钥
+* password: String, 解密密码
+
+--------------------------
+**通过 PEM 格式的密钥构造 PKey**
+
+```JavaScript
+new PKey(String pemKey,
+    String password = "");
+```
+
+调用参数:
+* pemKey: String, PEM 格式的密钥
+* password: String, 解密密码
+
+--------------------------
+**通过 JSON 格式的密钥构造 PKey**
+
+```JavaScript
+new PKey(Object jsonKey);
+```
+
+调用参数:
+* jsonKey: Object, JSON 格式的密钥
+
+jsonKey 的格式支持以下四种，RSA 私钥：
+
+```JavaScript
+{
+    "kty": "RSA",
+    "n": "0m5lvKpWqy9JS7tV2HIPqHCYHLquSuxIC3F8strIQLJKO3rZmTT96KTnhsOfBO7Y1bI7mnT0PB3_vcHd9ekWMEoZJQw7MuB8KeM_Wn54-elJr5DNLk5bMppSGxX7ZnumiXGG51_X3Yp-_EbGtDG80GxXXix7Mucyo7K25uE0uW8=",
+    "e": "AQAB",
+    "d": "agN2O9NxMHL1MTMi75WfL9Pxvl-KWXKqZSF6mjzAsF9iKI8euyHIXYFepzU8kual1RsjDhCnzvWqFvZplW8lXqrHf_P-rS_9Y4gBUw6pjnI_DnFIRwWHRvrUHHSCfWOdTCIKdOTkgLZuGFuhEY3RMIW0WSYejjLtftwy0RVxAzk=",
+    "p": "6a4G1qmfwWmn1biigN7IVFlkbLf9oVe6g7rOmHxI-hn1GRxKDSVuAUrmR1IhuAnca9M0y7SD-7TUs6wjOxWxaw==",
+    "q": "5ofkxFKdPBD0CQHMb9q13AMHUVe0rJ-hSjqqIBrmqApUOneyAcMV76M0QyIQnI2p3POa4Qu_7XChDwRVl7LlDQ==",
+    "dp": "2mXGiGwCHl8j-FBWuID-1C6z-BRB3MBEVoeKPOOzxOPruatB3mWEGXsqG7A8SWgV9URxTI2K6P3J6Z7RUpBkvw==",
+    "dq": "oagn5vfb5NQqnOpS9xkSsD67cfIj821ZSFlNFYhnuOzNVda7z_qCtnHm4zDPH0lEFXoKYMfBhfqWJpaugttjPQ==",
+    "qi": "dqEQgxNmOVFrF4s776hTqeC6oEDila8EvpVb2F2ZvwAOLjCQ66OiAZK1BiYGHqUy0NeqNmtlsLSuBEZQZvqZwg=="
+}
+```
+
+RSA 公钥：
+
+```JavaScript
+{
+    "kty": "RSA",
+    "n": "0m5lvKpWqy9JS7tV2HIPqHCYHLquSuxIC3F8strIQLJKO3rZmTT96KTnhsOfBO7Y1bI7mnT0PB3_vcHd9ekWMEoZJQw7MuB8KeM_Wn54-elJr5DNLk5bMppSGxX7ZnumiXGG51_X3Yp-_EbGtDG80GxXXix7Mucyo7K25uE0uW8=",
+    "e": "AQAB"
+}
+```
+
+EC 私钥：
+
+```JavaScript
+{
+    "kty": "EC",
+    "crv": "P-521",
+    "x": "ATfNNFuuvlGxrTGoXgyfSAGgRNNDnO3rN3k74urKJdVS14RYhdnSwm91Bm-F1l-T1XKlAY2yRnzG9w1Ukvo8c0wL",
+    "y": "ASBHqrruB6kdkEUB3vlW3-UIkk4HtKdUeTwN-7m3j2rgZvYR1ffRAapDvWqKGiBjomqWafxokBkbDI0c95f6f4XU",
+    "d": "AfkIbUHXfW41njdpoKuqqKludcoLJS8D_oMEwkj-GVaXFNKccIoF5iKGu2c69kNDjo83R_7wyGlfRczsklkik1ST"
+}
+```
+
+EC 公钥：
+
+```JavaScript
+{
+    "kty": "EC",
+    "crv": "P-521",
+    "x": "ATfNNFuuvlGxrTGoXgyfSAGgRNNDnO3rN3k74urKJdVS14RYhdnSwm91Bm-F1l-T1XKlAY2yRnzG9w1Ukvo8c0wL",
+    "y": "ASBHqrruB6kdkEUB3vlW3-UIkk4HtKdUeTwN-7m3j2rgZvYR1ffRAapDvWqKGiBjomqWafxokBkbDI0c95f6f4XU"
+}
 ```
 
 ## 成员属性
@@ -292,28 +375,6 @@ Boolean PKey.verify(Buffer data,
 
 返回结果:
 * Boolean, 返回验证后的结果
-
---------------------------
-### dispose
-**强制回收对象，调用此方法后，对象资源将立即释放**
-
-```JavaScript
-PKey.dispose();
-```
-
---------------------------
-### equals
-**比较当前对象与给定的对象是否相等**
-
-```JavaScript
-Boolean PKey.equals(object expected);
-```
-
-调用参数:
-* expected: [object](object.md), 制定比较的目标对象
-
-返回结果:
-* Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString

@@ -4,7 +4,7 @@ rbd image对象，用于读写rbd image
 rbd image对象,用于对rbd image进行操作，可使用 [RadosIoCtx](RadosIoCtx.md) 对象创建
 ```
 var rados = require('rados');
-var cluster = new rados.Rados('clusterName', 'userName', '/path/to/myceph.conf');
+var cluster = rados.create('clusterName', 'userName', '/path/to/myceph.conf');
 cluster.connect();
 var io = cluster.createIoCtx('poolName');
 io.createImage("myImage");
@@ -18,10 +18,10 @@ console.log(image.readAll().toString());
 digraph {
     node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
 
-    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
-    Stream [tooltip="Stream", URL="Stream.md", label="{Stream|read()\lwrite()\lclose()\lcopyTo()\l}"];
-    SeekableStream [tooltip="SeekableStream", URL="SeekableStream.md", label="{SeekableStream|seek()\ltell()\lrewind()\lsize()\lreadAll()\ltruncate()\leof()\lflush()\lstat()\l}"];
-    RbdImage [tooltip="RbdImage", fillcolor="lightgray", label="{RbdImage|stripe_unit\lstripe_count\lfeatures\lcreate_timestamp\lblock_name_prefix\l|resize()\lcreateSnap()\lremoveSnap()\lrollbackSnap()\llistSnaps()\lprotectSnap()\lunprotectSnap()\lsetSnap()\lisSnapProtected()\l}"];
+    object [tooltip="object", URL="object.md", label="{object|toString()\ltoJSON()\l}"];
+    Stream [tooltip="Stream", URL="Stream.md", label="{Stream|read()\lwrite()\lflush()\lclose()\lcopyTo()\l}"];
+    SeekableStream [tooltip="SeekableStream", URL="SeekableStream.md", label="{SeekableStream|seek()\ltell()\lrewind()\lsize()\lreadAll()\ltruncate()\leof()\lstat()\l}"];
+    RbdImage [tooltip="RbdImage", fillcolor="lightgray", id="me", label="{RbdImage|stripe_unit\lstripe_count\lfeatures\lcreate_timestamp\lblock_name_prefix\l|resize()\lcreateSnap()\lremoveSnap()\lrollbackSnap()\llistSnaps()\lprotectSnap()\lunprotectSnap()\lsetSnap()\lisSnapProtected()\l}"];
 
     object -> Stream [dir=back];
     Stream -> SeekableStream [dir=back];
@@ -120,11 +120,11 @@ RbdImage.rollbackSnap(String snapname) async;
 **列举一个rbd镜像的所有快照**
 
 ```JavaScript
-List RbdImage.listSnaps() async;
+NArray RbdImage.listSnaps() async;
 ```
 
 返回结果:
-* [List](List.md), 包含所有快照名称的列表
+* NArray, 包含所有快照名称的列表
 
 --------------------------
 ### protectSnap
@@ -250,14 +250,6 @@ Boolean RbdImage.eof();
 * Boolean, 返回 True 表示结尾
 
 --------------------------
-### flush
-**将文件缓冲区内容写入物理设备**
-
-```JavaScript
-RbdImage.flush() async;
-```
-
---------------------------
 ### stat
 **查询当前文件的基础信息**
 
@@ -294,6 +286,14 @@ RbdImage.write(Buffer data) async;
 * data: [Buffer](Buffer.md), 给定要写入的数据
 
 --------------------------
+### flush
+**将文件缓冲区内容写入物理设备**
+
+```JavaScript
+RbdImage.flush() async;
+```
+
+--------------------------
 ### close
 **关闭当前流对象**
 
@@ -316,28 +316,6 @@ Long RbdImage.copyTo(Stream stm,
 
 返回结果:
 * Long, 返回复制的字节数
-
---------------------------
-### dispose
-**强制回收对象，调用此方法后，对象资源将立即释放**
-
-```JavaScript
-RbdImage.dispose();
-```
-
---------------------------
-### equals
-**比较当前对象与给定的对象是否相等**
-
-```JavaScript
-Boolean RbdImage.equals(object expected);
-```
-
-调用参数:
-* expected: [object](object.md), 制定比较的目标对象
-
-返回结果:
-* Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString

@@ -23,10 +23,10 @@ var svr = new http.Server(80, function(req) {
 digraph {
     node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
 
-    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
+    object [tooltip="object", URL="object.md", label="{object|toString()\ltoJSON()\l}"];
     TcpServer [tooltip="TcpServer", URL="TcpServer.md", label="{TcpServer|new TcpServer()\l|socket\lhandler\lstats\l|run()\lasyncRun()\lstop()\l}"];
-    HttpServer [tooltip="HttpServer", fillcolor="lightgray", label="{HttpServer|new HttpServer()\l|crossDomain\lforceGZIP\lmaxHeadersCount\lmaxBodySize\lserverName\lhttpStats\l|onerror()\l}"];
-    HttpsServer [tooltip="HttpsServer", URL="HttpsServer.md", label="{HttpsServer|new HttpsServer()\l|verification\lca\l}"];
+    HttpServer [tooltip="HttpServer", fillcolor="lightgray", id="me", label="{HttpServer|new HttpServer()\l|forceGZIP\lmaxHeadersCount\lmaxBodySize\lserverName\lhttpStats\l|onerror()\lenableCrossOrigin()\l}"];
+    HttpsServer [tooltip="HttpsServer", URL="HttpsServer.md", label="{HttpsServer}"];
 
     object -> TcpServer [dir=back];
     TcpServer -> HttpServer [dir=back];
@@ -64,14 +64,6 @@ new HttpServer(String addr,
 
 ## 成员属性
         
-### crossDomain
-**Boolean, 查询和设置是否允许跨域请求，缺省为 false**
-
-```JavaScript
-Boolean HttpServer.crossDomain;
-```
-
---------------------------
 ### forceGZIP
 **Boolean, 查询和设置是否允强制使用 gzip 压缩输出，缺省为 false**
 
@@ -185,6 +177,17 @@ hdlr.onerror({
 ```
 
 --------------------------
+### enableCrossOrigin
+**允许跨域请求**
+
+```JavaScript
+HttpServer.enableCrossOrigin(String allowHeaders = "Content-Type");
+```
+
+调用参数:
+* allowHeaders: String, 指定接受的 [http](../../module/ifs/http.md) 头字段
+
+--------------------------
 ### run
 **运行服务器并开始接收和分发连接，此函数不会返回**
 
@@ -207,28 +210,6 @@ HttpServer.asyncRun();
 ```JavaScript
 HttpServer.stop() async;
 ```
-
---------------------------
-### dispose
-**强制回收对象，调用此方法后，对象资源将立即释放**
-
-```JavaScript
-HttpServer.dispose();
-```
-
---------------------------
-### equals
-**比较当前对象与给定的对象是否相等**
-
-```JavaScript
-Boolean HttpServer.equals(object expected);
-```
-
-调用参数:
-* expected: [object](object.md), 制定比较的目标对象
-
-返回结果:
-* Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString

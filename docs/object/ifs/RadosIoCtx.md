@@ -4,7 +4,7 @@
 [rados](../../module/ifs/rados.md)集群读写[io](../../module/ifs/io.md)上下文对象，可使用 [RadosCluster](RadosCluster.md) 对象创建
 ```
 var rados = require('rados');
-var cluster = new rados.Rados('clusterName', 'userName', '/path/to/myceph.conf');
+var cluster = rados.create('clusterName', 'userName', '/path/to/myceph.conf');
 cluster.connect();
 var io = cluster.createIoCtx('poolName');
 var s = io.open('key');
@@ -17,8 +17,8 @@ console.log(s.readAll().toString());
 digraph {
     node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
 
-    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
-    RadosIoCtx [tooltip="RadosIoCtx", fillcolor="lightgray", label="{RadosIoCtx|createImage()\lcloneImage()\lremoveImage()\lrenameImage()\llistImages()\lopenImage()\lversion()\lopen()\lremove()\lcreateSnap()\lremoveSnap()\lrollbackSnap()\llistOids()\lgetXattr()\lsetXattr()\lrmXattr()\lgetXattrs()\ldestroy()\l}"];
+    object [tooltip="object", URL="object.md", label="{object|toString()\ltoJSON()\l}"];
+    RadosIoCtx [tooltip="RadosIoCtx", fillcolor="lightgray", id="me", label="{RadosIoCtx|createImage()\lcloneImage()\lremoveImage()\lrenameImage()\llistImages()\lopenImage()\lversion()\lopen()\lremove()\lcreateSnap()\lremoveSnap()\lrollbackSnap()\llistOids()\lgetXattr()\lsetXattr()\lrmXattr()\lgetXattrs()\ldestroy()\l}"];
 
     object -> RadosIoCtx [dir=back];
 }
@@ -33,7 +33,7 @@ digraph {
 RadosIoCtx.createImage(String name,
     Long size,
     Long stripe_unit = -1,
-    Long stripe_count = 1);
+    Long stripe_count = 1) async;
 ```
 
 调用参数:
@@ -52,7 +52,7 @@ RadosIoCtx.cloneImage(String pName,
     RadosIoCtx dstio,
     String cName,
     Long stripe_unit = -1,
-    Integer stripe_count = 0);
+    Integer stripe_count = 0) async;
 ```
 
 调用参数:
@@ -68,7 +68,7 @@ RadosIoCtx.cloneImage(String pName,
 **删除一个rbd image对象**
 
 ```JavaScript
-RadosIoCtx.removeImage(String name);
+RadosIoCtx.removeImage(String name) async;
 ```
 
 调用参数:
@@ -80,7 +80,7 @@ RadosIoCtx.removeImage(String name);
 
 ```JavaScript
 RadosIoCtx.renameImage(String src,
-    String dst);
+    String dst) async;
 ```
 
 调用参数:
@@ -92,11 +92,11 @@ RadosIoCtx.renameImage(String src,
 **列出当前pool中所有的镜像名称**
 
 ```JavaScript
-List RadosIoCtx.listImages();
+NArray RadosIoCtx.listImages() async;
 ```
 
 返回结果:
-* [List](List.md), 返回的镜像名称列表
+* NArray, 返回的镜像名称列表
 
 --------------------------
 ### openImage
@@ -104,7 +104,7 @@ List RadosIoCtx.listImages();
 
 ```JavaScript
 RbdImage RadosIoCtx.openImage(String name,
-    String snapshot = "");
+    String snapshot = "") async;
 ```
 
 调用参数:
@@ -130,7 +130,7 @@ String RadosIoCtx.version();
 **打开一个kv对象**
 
 ```JavaScript
-RadosStream RadosIoCtx.open(String key);
+RadosStream RadosIoCtx.open(String key) async;
 ```
 
 调用参数:
@@ -190,24 +190,24 @@ RadosIoCtx.rollbackSnap(String oid,
 **列出当前pool内所有的key**
 
 ```JavaScript
-List RadosIoCtx.listOids() async;
+NArray RadosIoCtx.listOids() async;
 ```
 
 返回结果:
-* [List](List.md), 列出的所有key的列表
+* NArray, 列出的所有key的列表
 
 --------------------------
 **列出当前pool中匹配reg正则表达式的所有key**
 
 ```JavaScript
-List RadosIoCtx.listOids(String pattern) async;
+NArray RadosIoCtx.listOids(String pattern) async;
 ```
 
 调用参数:
 * pattern: String, 为列出的key指定正则
 
 返回结果:
-* [List](List.md), 列出的匹配reg的key的列表
+* NArray, 列出的匹配reg的key的列表
 
 --------------------------
 ### getXattr
@@ -258,14 +258,14 @@ RadosIoCtx.rmXattr(String oid,
 **获取指定key的所有属性**
 
 ```JavaScript
-Object RadosIoCtx.getXattrs(String oid) async;
+NObject RadosIoCtx.getXattrs(String oid) async;
 ```
 
 调用参数:
 * oid: String, 指定的key
 
 返回结果:
-* Object, 获取的所有属性的集合, 格式如下
+* NObject, 获取的所有属性的集合, 格式如下
 
 --------------------------
 ### destroy
@@ -274,28 +274,6 @@ Object RadosIoCtx.getXattrs(String oid) async;
 ```JavaScript
 RadosIoCtx.destroy() async;
 ```
-
---------------------------
-### dispose
-**强制回收对象，调用此方法后，对象资源将立即释放**
-
-```JavaScript
-RadosIoCtx.dispose();
-```
-
---------------------------
-### equals
-**比较当前对象与给定的对象是否相等**
-
-```JavaScript
-Boolean RadosIoCtx.equals(object expected);
-```
-
-调用参数:
-* expected: [object](object.md), 制定比较的目标对象
-
-返回结果:
-* Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString

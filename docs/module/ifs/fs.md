@@ -326,14 +326,14 @@ static fs.fsync(Integer fd) async;
 **读取指定目录的文件信息**
 
 ```JavaScript
-static List fs.readdir(String path) async;
+static NArray fs.readdir(String path) async;
 ```
 
 调用参数:
 * path: String, 指定查询的目录
 
 返回结果:
-* [List](../../object/ifs/List.md), 返回目录的文件信息数组
+* NArray, 返回目录的文件信息数组
 
 --------------------------
 ### openFile
@@ -504,6 +504,30 @@ static fs.appendFile(String fname,
 调用参数:
 * fname: String, 指定文件名
 * data: [Buffer](../../object/ifs/Buffer.md), 指定要写入的二进制数据
+
+--------------------------
+### setZipFS
+**设置 [zip](zip.md) 虚拟文件映射**
+
+```JavaScript
+static fs.setZipFS(String fname,
+    Buffer data);
+```
+
+调用参数:
+* fname: String, 指定映射路径
+* data: [Buffer](../../object/ifs/Buffer.md), 指定映射的 [zip](zip.md) 文件数据
+
+--------------------------
+### clearZipFS
+**清除 [zip](zip.md) 虚拟文件映射**
+
+```JavaScript
+static fs.clearZipFS(String fname = "");
+```
+
+调用参数:
+* fname: String, 指定映射路径，缺省清除全部缓存
 
 ## 静态属性
         

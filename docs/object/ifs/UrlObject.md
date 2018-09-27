@@ -17,8 +17,8 @@ var url = new net.Url({
 digraph {
     node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
 
-    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
-    UrlObject [tooltip="UrlObject", fillcolor="lightgray", label="{UrlObject|new UrlObject()\l|href\lprotocol\lslashes\lauth\lusername\lpassword\lhost\lhostname\lport\lpath\lpathname\lsearch\lquery\lhash\l|parse()\lformat()\lresolve()\lnormalize()\l}"];
+    object [tooltip="object", URL="object.md", label="{object|toString()\ltoJSON()\l}"];
+    UrlObject [tooltip="UrlObject", fillcolor="lightgray", id="me", label="{UrlObject|new UrlObject()\l|href\lprotocol\lslashes\lauth\lusername\lpassword\lhost\lhostname\lport\lpath\lpathname\lsearch\lquery\lhash\l|parse()\lformat()\lresolve()\lnormalize()\l}"];
 
     object -> UrlObject [dir=back];
 }
@@ -41,12 +41,14 @@ new UrlObject(Object args);
 
 ```JavaScript
 new UrlObject(String url = "",
-    Boolean parseQueryString = false);
+    Boolean parseQueryString = false,
+    Boolean slashesDenoteHost = false);
 ```
 
 调用参数:
 * url: String, 指定构造 [url](../../module/ifs/url.md) 字符串
 * parseQueryString: Boolean, 指定是否解析 query
+* slashesDenoteHost: Boolean, 默认为false, 如果设置为true，则从字符串'//'之后到下一个'/'之前的字符串会被解析为host，例如'//foo/bar', 结果应该是{host: 'foo', pathname: '/bar'}而不是{pathname: '//foo/bar'}
 
 ## 成员属性
         
@@ -168,12 +170,14 @@ String UrlObject.hash;
 
 ```JavaScript
 UrlObject.parse(String url,
-    Boolean parseQueryString = false);
+    Boolean parseQueryString = false,
+    Boolean slashesDenoteHost = false);
 ```
 
 调用参数:
 * url: String, 指定需要解析的 [url](../../module/ifs/url.md) 字符串
 * parseQueryString: Boolean, 指定是否解析 query
+* slashesDenoteHost: Boolean, 默认为false, 如果设置为true，则从字符串'//'之后到下一个'/'之前的字符串会被解析为host，例如'//foo/bar', 结果应该是{host: 'foo', pathname: '/bar'}而不是{pathname: '//foo/bar'}
 
 --------------------------
 ### format
@@ -207,28 +211,6 @@ UrlObject UrlObject.resolve(String url);
 ```JavaScript
 UrlObject.normalize();
 ```
-
---------------------------
-### dispose
-**强制回收对象，调用此方法后，对象资源将立即释放**
-
-```JavaScript
-UrlObject.dispose();
-```
-
---------------------------
-### equals
-**比较当前对象与给定的对象是否相等**
-
-```JavaScript
-Boolean UrlObject.equals(object expected);
-```
-
-调用参数:
-* expected: [object](object.md), 制定比较的目标对象
-
-返回结果:
-* Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString

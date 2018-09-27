@@ -1,5 +1,5 @@
 # 模块 http
-超文本传输协议模块，用以支持 http 协议处理
+超文本传输协议模块，用以支持 http 协议处理，模块别名：https
 
 ## 对象
         
@@ -102,73 +102,29 @@ static HttpResponse http.request(Stream conn,
 ```JavaScript
 static HttpResponse http.request(String method,
     String url,
-    Object headers = {}) async;
+    Object opts = {}) async;
 ```
 
 调用参数:
 * method: String, 指定 http 请求方法：GET, POST 等
 * url: String, 指定 [url](url.md)，必须是包含主机的完整 [url](url.md)
-* headers: Object, 指定附加的 http 头，缺省无附加头
+* opts: Object, 指定附加信息
 
 返回结果:
 * [HttpResponse](../../object/ifs/HttpResponse.md), 返回服务器响应
 
---------------------------
-**请求指定的 [url](url.md)，并返回结果**
+opts 包含请求的附加选项，支持的内容如下：
 
 ```JavaScript
-static HttpResponse http.request(String method,
-    String url,
-    SeekableStream body,
-    Map headers) async;
+{
+    "query": {},
+    "body": SeekedStream | Buffer | String | {},
+    "json": {},
+    "headers": {}
+}
 ```
 
-调用参数:
-* method: String, 指定 http 请求方法：GET, POST 等
-* url: String, 指定 [url](url.md)，必须是包含主机的完整 [url](url.md)
-* body: [SeekableStream](../../object/ifs/SeekableStream.md), 指定发送的 body 内容
-* headers: [Map](../../object/ifs/Map.md), 指定附加的 http 头
-
-返回结果:
-* [HttpResponse](../../object/ifs/HttpResponse.md), 返回服务器响应
-
---------------------------
-**请求指定的 [url](url.md)，并返回结果**
-
-```JavaScript
-static HttpResponse http.request(String method,
-    String url,
-    SeekableStream body,
-    Object headers = {}) async;
-```
-
-调用参数:
-* method: String, 指定 http 请求方法：GET, POST 等
-* url: String, 指定 [url](url.md)，必须是包含主机的完整 [url](url.md)
-* body: [SeekableStream](../../object/ifs/SeekableStream.md), 指定发送的 body 内容
-* headers: Object, 指定附加的 http 头，缺省无附加头
-
-返回结果:
-* [HttpResponse](../../object/ifs/HttpResponse.md), 返回服务器响应
-
---------------------------
-**请求指定的 [url](url.md)，并返回结果**
-
-```JavaScript
-static HttpResponse http.request(String method,
-    String url,
-    Buffer body,
-    Object headers = {}) async;
-```
-
-调用参数:
-* method: String, 指定 http 请求方法：GET, POST 等
-* url: String, 指定 [url](url.md)，必须是包含主机的完整 [url](url.md)
-* body: [Buffer](../../object/ifs/Buffer.md), 指定发送的 body 内容
-* headers: Object, 指定附加的 http 头，缺省无附加头
-
-返回结果:
-* [HttpResponse](../../object/ifs/HttpResponse.md), 返回服务器响应
+其中 body，[json](json.md) 不得同时出现。缺省为 {}，不包含任何附加信息
 
 --------------------------
 ### get
@@ -176,15 +132,28 @@ static HttpResponse http.request(String method,
 
 ```JavaScript
 static HttpResponse http.get(String url,
-    Object headers = {}) async;
+    Object opts = {}) async;
 ```
 
 调用参数:
 * url: String, 指定 [url](url.md)，必须是包含主机的完整 [url](url.md)
-* headers: Object, 指定附加的 http 头，缺省无附加头
+* opts: Object, 指定附加信息
 
 返回结果:
 * [HttpResponse](../../object/ifs/HttpResponse.md), 返回服务器响应
+
+opts 包含请求的附加选项，支持的内容如下：
+
+```JavaScript
+{
+    "query": {},
+    "body": SeekedStream | Buffer | String | {},
+    "json": {},
+    "headers": {}
+}
+```
+
+其中 body，[json](json.md) 不得同时出现。缺省为 {}，不包含任何附加信息
 
 --------------------------
 ### post
@@ -192,49 +161,28 @@ static HttpResponse http.get(String url,
 
 ```JavaScript
 static HttpResponse http.post(String url,
-    SeekableStream body,
-    Object headers = {}) async;
+    Object opts = {}) async;
 ```
 
 调用参数:
 * url: String, 指定 [url](url.md)，必须是包含主机的完整 [url](url.md)
-* body: [SeekableStream](../../object/ifs/SeekableStream.md), 指定发送的 body 内容
-* headers: Object, 指定附加的 http 头，缺省无附加头
+* opts: Object, 指定附加信息
 
 返回结果:
 * [HttpResponse](../../object/ifs/HttpResponse.md), 返回服务器响应
 
---------------------------
-**用 POST 方法请求指定的 [url](url.md)，并返回结果，等同于 request("POST", ...)**
+opts 包含请求的附加选项，支持的内容如下：
 
 ```JavaScript
-static HttpResponse http.post(String url,
-    Buffer body,
-    Object headers = {}) async;
+{
+    "query": {},
+    "body": SeekedStream | Buffer | String | {},
+    "json": {},
+    "headers": {}
+}
 ```
 
-调用参数:
-* url: String, 指定 [url](url.md)，必须是包含主机的完整 [url](url.md)
-* body: [Buffer](../../object/ifs/Buffer.md), 指定发送的 body 内容
-* headers: Object, 指定附加的 http 头，缺省无附加头
-
-返回结果:
-* [HttpResponse](../../object/ifs/HttpResponse.md), 返回服务器响应
-
---------------------------
-**用 POST 方法请求指定的 [url](url.md)，并返回结果，等同于 request("POST", ...)**
-
-```JavaScript
-static HttpResponse http.post(String url,
-    Object headers = {}) async;
-```
-
-调用参数:
-* url: String, 指定 [url](url.md)，必须是包含主机的完整 [url](url.md)
-* headers: Object, 指定附加的 http 头，缺省无附加头
-
-返回结果:
-* [HttpResponse](../../object/ifs/HttpResponse.md), 返回服务器响应
+其中 body，[json](json.md) 不得同时出现。缺省为 {}，不包含任何附加信息
 
 --------------------------
 ### del
@@ -242,15 +190,28 @@ static HttpResponse http.post(String url,
 
 ```JavaScript
 static HttpResponse http.del(String url,
-    Object headers = {}) async;
+    Object opts = {}) async;
 ```
 
 调用参数:
 * url: String, 指定 [url](url.md)，必须是包含主机的完整 [url](url.md)
-* headers: Object, 指定附加的 http 头，缺省无附加头
+* opts: Object, 指定附加信息
 
 返回结果:
 * [HttpResponse](../../object/ifs/HttpResponse.md), 返回服务器响应
+
+opts 包含请求的附加选项，支持的内容如下：
+
+```JavaScript
+{
+    "query": {},
+    "body": SeekedStream | Buffer | String | {},
+    "json": {},
+    "headers": {}
+}
+```
+
+其中 body，[json](json.md) 不得同时出现。缺省为 {}，不包含任何附加信息
 
 --------------------------
 ### put
@@ -258,49 +219,28 @@ static HttpResponse http.del(String url,
 
 ```JavaScript
 static HttpResponse http.put(String url,
-    SeekableStream body,
-    Object headers = {}) async;
+    Object opts = {}) async;
 ```
 
 调用参数:
 * url: String, 指定 [url](url.md)，必须是包含主机的完整 [url](url.md)
-* body: [SeekableStream](../../object/ifs/SeekableStream.md), 指定发送的 body 内容
-* headers: Object, 指定附加的 http 头，缺省无附加头
+* opts: Object, 指定附加信息
 
 返回结果:
 * [HttpResponse](../../object/ifs/HttpResponse.md), 返回服务器响应
 
---------------------------
-**用 PUT 方法请求指定的 [url](url.md)，并返回结果，等同于 request("PUT", ...)**
+opts 包含请求的附加选项，支持的内容如下：
 
 ```JavaScript
-static HttpResponse http.put(String url,
-    Buffer body,
-    Object headers = {}) async;
+{
+    "query": {},
+    "body": SeekedStream | Buffer | String | {},
+    "json": {},
+    "headers": {}
+}
 ```
 
-调用参数:
-* url: String, 指定 [url](url.md)，必须是包含主机的完整 [url](url.md)
-* body: [Buffer](../../object/ifs/Buffer.md), 指定发送的 body 内容
-* headers: Object, 指定附加的 http 头，缺省无附加头
-
-返回结果:
-* [HttpResponse](../../object/ifs/HttpResponse.md), 返回服务器响应
-
---------------------------
-**用 PUT 方法请求指定的 [url](url.md)，并返回结果，等同于 request("PUT", ...)**
-
-```JavaScript
-static HttpResponse http.put(String url,
-    Object headers = {}) async;
-```
-
-调用参数:
-* url: String, 指定 [url](url.md)，必须是包含主机的完整 [url](url.md)
-* headers: Object, 指定附加的 http 头，缺省无附加头
-
-返回结果:
-* [HttpResponse](../../object/ifs/HttpResponse.md), 返回服务器响应
+其中 body，[json](json.md) 不得同时出现。缺省为 {}，不包含任何附加信息
 
 --------------------------
 ### patch
@@ -308,57 +248,44 @@ static HttpResponse http.put(String url,
 
 ```JavaScript
 static HttpResponse http.patch(String url,
-    SeekableStream body,
-    Object headers = {}) async;
+    Object opts = {}) async;
 ```
 
 调用参数:
 * url: String, 指定 [url](url.md)，必须是包含主机的完整 [url](url.md)
-* body: [SeekableStream](../../object/ifs/SeekableStream.md), 指定发送的 body 内容
-* headers: Object, 指定附加的 http 头，缺省无附加头
+* opts: Object, 指定附加信息
 
 返回结果:
 * [HttpResponse](../../object/ifs/HttpResponse.md), 返回服务器响应
 
---------------------------
-**用 PATCH 方法请求指定的 [url](url.md)，并返回结果，等同于 request("PATCH", ...)**
+opts 包含请求的附加选项，支持的内容如下：
 
 ```JavaScript
-static HttpResponse http.patch(String url,
-    Buffer body,
-    Object headers = {}) async;
+{
+    "query": {},
+    "body": SeekedStream | Buffer | String | {},
+    "json": {},
+    "headers": {}
+}
 ```
 
-调用参数:
-* url: String, 指定 [url](url.md)，必须是包含主机的完整 [url](url.md)
-* body: [Buffer](../../object/ifs/Buffer.md), 指定发送的 body 内容
-* headers: Object, 指定附加的 http 头，缺省无附加头
-
-返回结果:
-* [HttpResponse](../../object/ifs/HttpResponse.md), 返回服务器响应
-
---------------------------
-**用 PATCH 方法请求指定的 [url](url.md)，并返回结果，等同于 request("PATCH", ...)**
-
-```JavaScript
-static HttpResponse http.patch(String url,
-    Object headers = {}) async;
-```
-
-调用参数:
-* url: String, 指定 [url](url.md)，必须是包含主机的完整 [url](url.md)
-* headers: Object, 指定附加的 http 头，缺省无附加头
-
-返回结果:
-* [HttpResponse](../../object/ifs/HttpResponse.md), 返回服务器响应
+其中 body，[json](json.md) 不得同时出现。缺省为 {}，不包含任何附加信息
 
 ## 静态属性
         
-### cookies
-**[List](../../object/ifs/List.md), 返回http客户端的 [HttpCookie](../../object/ifs/HttpCookie.md) 对象列表**
+### STATUS_CODES
+**Array, 返回标准的 HTTP 响应状态码的集合，以及各自的简短描述。**
 
 ```JavaScript
-static readonly List http.cookies;
+static readonly Array http.STATUS_CODES;
+```
+
+--------------------------
+### cookies
+**NArray, 返回http客户端的 [HttpCookie](../../object/ifs/HttpCookie.md) 对象列表**
+
+```JavaScript
+static readonly NArray http.cookies;
 ```
 
 --------------------------
@@ -386,6 +313,14 @@ static Boolean http.autoRedirect;
 ```
 
 --------------------------
+### maxBodySize
+**Integer, 查询和设置 body 最大尺寸，以 MB 为单位，缺省为 -1，不限制尺寸**
+
+```JavaScript
+static Integer http.maxBodySize;
+```
+
+--------------------------
 ### userAgent
 **String, 查询和设置 http 请求中的浏览器标识**
 
@@ -393,12 +328,19 @@ static Boolean http.autoRedirect;
 static String http.userAgent;
 ```
 
-## 成员属性
-        
-### maxBodySize
-**Integer, 查询和设置 body 最大尺寸，以 MB 为单位，缺省为 -1，不限制尺寸**
+--------------------------
+### poolSize
+**Integer, 查询和设置 keep-alive 最大缓存连接数，缺省 128**
 
 ```JavaScript
-Integer http.maxBodySize;
+static Integer http.poolSize;
+```
+
+--------------------------
+### poolTimeout
+**Integer, 查询和设置 keep-alive 缓存连接超时时间，缺省 10000 ms**
+
+```JavaScript
+static Integer http.poolTimeout;
 ```
 

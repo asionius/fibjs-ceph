@@ -6,13 +6,13 @@
 digraph {
     node [fontname="Helvetica,sans-Serif", fontsize=10, shape="record", style="filled", fillcolor="white"];
 
-    object [tooltip="object", URL="object.md", label="{object|dispose()\lequals()\ltoString()\ltoJSON()\l}"];
-    Stream [tooltip="Stream", URL="Stream.md", label="{Stream|read()\lwrite()\lclose()\lcopyTo()\l}"];
-    SeekableStream [tooltip="SeekableStream", fillcolor="lightgray", label="{SeekableStream|seek()\ltell()\lrewind()\lsize()\lreadAll()\ltruncate()\leof()\lflush()\lstat()\l}"];
-    File [tooltip="File", URL="File.md", label="{File|name\lfd\l|chmod()\l}"];
-    MemoryStream [tooltip="MemoryStream", URL="MemoryStream.md", label="{MemoryStream|new MemoryStream()\l|setTime()\lclone()\lclear()\l}"];
-    RadosStream [tooltip="RadosStream", URL="RadosStream.md", label="{RadosStream|key\l|radosStat()\lwriteFull()\lappend()\l}"];
-    RbdImage [tooltip="RbdImage", URL="RbdImage.md", label="{RbdImage|stripe_unit\lstripe_count\lfeatures\lcreate_timestamp\lblock_name_prefix\l|resize()\lcreateSnap()\lremoveSnap()\lrollbackSnap()\llistSnaps()\lprotectSnap()\lunprotectSnap()\lsetSnap()\lisSnapProtected()\l}"];
+    object [tooltip="object", URL="object.md", label="{object|toString()\ltoJSON()\l}"];
+    Stream [tooltip="Stream", URL="Stream.md", label="{Stream|read()\lwrite()\lflush()\lclose()\lcopyTo()\l}"];
+    SeekableStream [tooltip="SeekableStream", fillcolor="lightgray", id="me", label="{SeekableStream|seek()\ltell()\lrewind()\lsize()\lreadAll()\ltruncate()\leof()\lstat()\l}"];
+    File [tooltip="File", URL="File.md", label="{File}"];
+    MemoryStream [tooltip="MemoryStream", URL="MemoryStream.md", label="{MemoryStream}"];
+    RadosStream [tooltip="RadosStream", URL="RadosStream.md", label="{RadosStream}"];
+    RbdImage [tooltip="RbdImage", URL="RbdImage.md", label="{RbdImage}"];
 
     object -> Stream [dir=back];
     Stream -> SeekableStream [dir=back];
@@ -101,14 +101,6 @@ Boolean SeekableStream.eof();
 * Boolean, 返回 True 表示结尾
 
 --------------------------
-### flush
-**将文件缓冲区内容写入物理设备**
-
-```JavaScript
-SeekableStream.flush() async;
-```
-
---------------------------
 ### stat
 **查询当前文件的基础信息**
 
@@ -145,6 +137,14 @@ SeekableStream.write(Buffer data) async;
 * data: [Buffer](Buffer.md), 给定要写入的数据
 
 --------------------------
+### flush
+**将文件缓冲区内容写入物理设备**
+
+```JavaScript
+SeekableStream.flush() async;
+```
+
+--------------------------
 ### close
 **关闭当前流对象**
 
@@ -167,28 +167,6 @@ Long SeekableStream.copyTo(Stream stm,
 
 返回结果:
 * Long, 返回复制的字节数
-
---------------------------
-### dispose
-**强制回收对象，调用此方法后，对象资源将立即释放**
-
-```JavaScript
-SeekableStream.dispose();
-```
-
---------------------------
-### equals
-**比较当前对象与给定的对象是否相等**
-
-```JavaScript
-Boolean SeekableStream.equals(object expected);
-```
-
-调用参数:
-* expected: [object](object.md), 制定比较的目标对象
-
-返回结果:
-* Boolean, 返回对象比较的结果
 
 --------------------------
 ### toString

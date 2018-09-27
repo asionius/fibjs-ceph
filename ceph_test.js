@@ -21,7 +21,7 @@ describe('rados', () => {
 	it('create cluster', () => {
 		if (win) return;
 		try {
-			radosCluster = new rados.Rados(ceph_cluster, ceph_username, ceph_config);
+			radosCluster = rados.create(ceph_cluster, ceph_username, ceph_config);
 		} catch (e) {
 			radosCluster = null;
 			console.error(e.toString());
@@ -299,7 +299,7 @@ describe('rbd', () => {
 	before(() => {
 		if (win) return;
 		try {
-			radosCluster = new rados.Rados(ceph_cluster, ceph_username, ceph_config);
+			radosCluster = rados.create(ceph_cluster, ceph_username, ceph_config);
 			radosCluster.connect();
 			radosCluster.createPool(poolName);
 			radosCluster.createPool(poolName2);
